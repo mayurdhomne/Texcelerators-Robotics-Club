@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <title>Texcelerators Robotics Club</title>
+  <meta name="description" content="Texcelerators Robotics Club - Pioneering the future of robotics through innovation, collaboration, and excellence.">
+  
+  <!-- Open Graph Tags -->
+  <meta property="og:title" content="Texcelerators Robotics Club">
+  <meta property="og:description" content="Pioneering the future of robotics through innovation, collaboration, and excellence.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/logo.jpg">
+  
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Outfit:wght@300;400;600&family=Audiowide&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Fonts -->
+  <link href=
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="main.css">
+
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="logo-container">
+        <div class="logo-image">
+          <img src="Assets/images/endversion.png" alt="Texcelerators Logo">
+        </div>
+        <h1 class="logo-text">
+          <span>TEX</span>CELERATORS
+        </h1>
+      </div>
+      
+      <nav class="desktop-nav">
+        <a href="#home" class="nav-link scroll-spy-active">Home</a>
+        <a href="#achievements" class="nav-link">Achievements</a>
+        <a href="#" class="nav-link">Team</a>
+        <a href="#bots" class="nav-link">Bots</a>
+        <a href="#about" class="nav-link">About Us</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+      
+      <button id="mobile-menu-button" class="mobile-menu-button" aria-label="Toggle mobile menu">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+    
+    <!-- Mobile Navigation Menu -->
+    <div id="mobile-menu" class="mobile-menu">
+      <div class="mobile-menu-inner">
+        <a href="#home" class="mobile-nav-link scroll-spy-active">Home</a>
+        <a href="#achievements" class="mobile-nav-link">Achievements</a>
+        <a href="#" class="mobile-nav-link">Team</a>
+        <a href="#bots" class="mobile-nav-link">Bots</a>
+        <a href="#about" class="mobile-nav-link">About Us</a>
+        <a href="#contact" class="mobile-nav-link">Contact</a>
+      </div>
+    </div>
+  </header>
+  
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="slide active">
+      <div class="slide-bg"></div>
+      <img src="Assets/images/Soldering.jpg" alt="Robotics showcase">
+      <div class="slide-content">
+        <h2 class="slide-title">Building the <span class="gradient-text">Future</span> of Robotics</h2>
+        <p class="slide-subtitle">Where innovation meets engineering excellence</p>
+      </div>
+    </div>
+    
+    <div class="slide">
+      <div class="slide-bg"></div>
+      <img src="Assets/images/IITB2024.JPG" alt="Team collaboration">
+      <div class="slide-content">
+        <h2 class="slide-title">Teamwork Makes The <span class="gradient-text">Dream Work</span></h2>
+        <p class="slide-subtitle">Collaborative innovation driving technological advancement</p>
+      </div>
+    </div>
+    
+    <div class="slide">
+      <div class="slide-bg"></div>
+      <img src="Assets/images/trial.JPG" alt="Award-winning robotics">
+      <div class="slide-content">
+        <h2 class="slide-title">Champions of <span class="gradient-text">Innovation</span></h2>
+        <p class="slide-subtitle">Creating award-winning solutions through creative engineering</p>
+      </div>
+    </div>
+    
+    <div class="slide-indicators">
+      <button class="slide-dot active" aria-label="Go to slide 1"></button>
+      <button class="slide-dot" aria-label="Go to slide 2"></button>
+      <button class="slide-dot" aria-label="Go to slide 3"></button>
+    </div>
+    
+    <button class="slide-arrow prev" aria-label="Previous slide">
+      <i class="fas fa-chevron-left"></i>
+    </button>
+    <button class="slide-arrow next" aria-label="Next slide">
+      <i class="fas fa-chevron-right"></i>
+    </button>
+  </section>
+  
+  <!-- Achievements Section -->
+  <section id="achievements" class="achievements">
+    <div class="container" data-aos="zoom-in-left">
+      <h2 class="section-title">Our <span>Achievements</span></h2>
+      
+      <div class="achievements-grid">
+        <div class="achievement-card animate-on-scroll">
+          <div class="achievement-icon primary">
+            <i class="fas fa-trophy fa-2x"></i>
+          </div>
+          <h3 class="achievement-title">National Championships</h3>
+          <p class="achievement-count primary" data-count="12">12</p>
+          <p class="achievement-description">Top 3 places finishes in national-level competitions</p>
+        </div>
+        
+        <div class="achievement-card animate-on-scroll">
+          <div class="achievement-icon secondary">
+            <i class="fas fa-robot fa-2x"></i>
+          </div>
+          <h3 class="achievement-title">Robots Built</h3>
+          <p class="achievement-count secondary" data-count="18">18</p>
+          <p class="achievement-description">Unique robot designs created by our team</p>
+        </div>
+        
+        <div class="achievement-card animate-on-scroll">
+          <div class="achievement-icon accent">
+            <i class="fas fa-medal fa-2x"></i>
+          </div>
+          <h3 class="achievement-title">International Awards</h3>
+          <p class="achievement-count accent" data-count="3">3</p>
+          <p class="achievement-description">Recognition at prestigious global competitions</p>
+        </div>
+        
+        <div class="achievement-card animate-on-scroll">
+          <div class="achievement-icon dark">
+            <i class="fas fa-users fa-2x"></i>
+          </div>
+          <h3 class="achievement-title">Team Members</h3>
+          <p class="achievement-count dark" data-count="36">36</p>
+          <p class="achievement-description">Talented students comprising our vibrant community</p>
+        </div>
+      </div>
+      
+      <div class="highlighted-achievements">
+        <div class="highlighted-card animate-on-scroll">
+          <img src="https://images.unsplash.com/photo-1535378620166-273708d44e4c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=500" alt="National Champions 2023">
+          <div class="highlighted-card-content">
+            <h3 class="highlighted-card-title">National Champions 2023</h3>
+            <p class="highlighted-card-description">Our team secured first place at the prestigious National Robotics Championship with our innovative autonomous navigation system.</p>
+            <div class="highlighted-card-date">
+              <i class="fas fa-calendar-alt"></i>
+              <span>March 2023</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="highlighted-card animate-on-scroll">
+          <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=500" alt="Innovation Award">
+          <div class="highlighted-card-content">
+            <h3 class="highlighted-card-title">Innovation Award</h3>
+            <p class="highlighted-card-description">Recognized for our groundbreaking AI-powered object recognition system that sets new standards in robotics vision technology.</p>
+            <div class="highlighted-card-date">
+              <i class="fas fa-calendar-alt"></i>
+              <span>November 2022</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Bots Showcase -->
+<!-- Bots Showcase -->
+<section id="bots" class="bots">
+  <div class="container">
+    <h2 class="bots-title">Our <span>Robots</span></h2>
+    
+    <div class="bot-carousel animate-on-scroll">
+      <!-- Header with info and controls -->
+      <div class="bot-carousel-header">
+        <div class="bot-carousel-info">
+          <span class="bot-carousel-badge">
+            <i class="fas fa-robot"></i> Featured Robots
+          </span>
+          <p class="bot-carousel-subtitle">Swipe or use arrows to explore our award-winning robotics lineup</p>
+        </div>
+        
+        <div class="bot-carousel-controls desktop-only">
+          <button class="bot-control-button" id="bot-autoplay-toggle">
+            <i class="fas fa-pause"></i>
+          </button>
+          <button class="bot-control-button" id="bot-fullscreen-toggle">
+            <i class="fas fa-expand"></i>
+          </button>
+        </div>
+      </div>
+      
+      <div class="overflow-hidden bot-carousel-container">
+        <div class="bots-slider">
+          <!-- Bot Slide 1 -->
+          <div class="bot-slide">
+            <div class="bot-card">
+              <div class="bot-card-media">
+                <div class="bot-card-badge primary">
+                  <i class="fas fa-futbol"></i> Flagship
+                </div>
+                <img src="Assets/images/aaa.jpg" alt="RoboSoccer">
+                <div class="bot-card-overlay">
+                  <button class="bot-details-button">
+                    <i class="fas fa-info-circle"></i> Details
+                  </button>
+                </div>
+              </div>
+              <div class="bot-card-content">
+                <div class="bot-card-header">
+                  <h3 class="bot-card-title">Robo<span class="text-primary">Soccer</span></h3>
+                  <div class="bot-card-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                  </div>
+                </div>
+                <p class="bot-card-description">High-performance soccer robot engineered with precision drive control and tactical maneuvering capabilities for competitive matches.</p>
+                <div class="bot-card-specs">
+                  <div class="bot-spec">
+                    <i class="fas fa-microchip"></i>
+                    <span>AI-powered</span>
+                  </div>
+                  <div class="bot-spec">
+                    <i class="fas fa-bullseye"></i>
+                    <span>High precision</span>
+                  </div>
+                </div>
+                <div class="bot-tags">
+                  <span class="bot-tag primary">Precision Control</span>
+                  <span class="bot-tag secondary">Computer Vision</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Bot Slide 2 -->
+          <div class="bot-slide">
+            <div class="bot-card">
+              <div class="bot-card-media">
+                <div class="bot-card-badge secondary">
+                  <i class="fas fa-compass"></i> Explorer
+                </div>
+                <img src="Assets/images/RoboSumo.jpg" alt="RoboSumo">
+                <div class="bot-card-overlay">
+                  <button class="bot-details-button">
+                    <i class="fas fa-info-circle"></i> Details
+                  </button>
+                </div>
+              </div>
+              <div class="bot-card-content">
+                <div class="bot-card-header">
+                  <h3 class="bot-card-title">Robo<span class="text-secondary">Sumo</span></h3>
+                  <div class="bot-card-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                  </div>
+                </div>
+                <p class="bot-card-description">Championship sumo robot combining robust mechanical design with intelligent combat strategies for competitive dominance.</p>
+                <div class="bot-card-specs">
+                  <div class="bot-spec">
+                    <i class="fas fa-broadcast-tower"></i>
+                    <span>Long range</span>
+                  </div>
+                  <div class="bot-spec">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <span>Terrain mapping</span>
+                  </div>
+                </div>
+                <div class="bot-tags">
+                  <span class="bot-tag accent">LIDAR</span>
+                  <span class="bot-tag dark">Autonomous</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Bot Slide 3 -->
+          <div class="bot-slide">
+            <div class="bot-card">
+              <div class="bot-card-media">
+                <div class="bot-card-badge accent">
+                  <i class="fas fa-medkit"></i> Rescue
+                </div>
+                <img src="Assets/images/Roborace.JPG" alt="RescueTech">
+                <div class="bot-card-overlay">
+                  <button class="bot-details-button">
+                    <i class="fas fa-info-circle"></i> Details
+                  </button>
+                </div>
+              </div>
+              <div class="bot-card-content">
+                <div class="bot-card-header">
+                  <h3 class="bot-card-title">Robo<span class="text-accent">Race</span></h3>
+                  <div class="bot-card-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+                <p class="bot-card-description">Compact search and rescue robot designed to navigate through debris with ease and speed.</p>
+                <div class="bot-card-specs">
+                  <div class="bot-spec">
+                    <i class="fas fa-temperature-high"></i>
+                    <span>Thermal imaging</span>
+                  </div>
+                  <div class="bot-spec">
+                    <i class="fas fa-tools"></i>
+                    <span>Rugged design</span>
+                  </div>
+                </div>
+                <div class="bot-tags">
+                  <span class="bot-tag primary">Precision</span>
+                  <span class="bot-tag secondary">All-Terrain</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Bot Slide 4 -->
+          <div class="bot-slide">
+            <div class="bot-card">
+              <div class="bot-card-media">
+                <div class="bot-card-badge purple">
+                  <i class="fas fa-mountain"></i> Climber
+                </div>
+                <img src="https://images.unsplash.com/photo-1546776310-eef45dd6d63c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400" alt="VerticalEdge">
+                <div class="bot-card-overlay">
+                  <button class="bot-details-button">
+                    <i class="fas fa-info-circle"></i> Details
+                  </button>
+                </div>
+              </div>
+              <div class="bot-card-content">
+                <div class="bot-card-header">
+                  <h3 class="bot-card-title">Vertical<span class="text-purple">Edge</span></h3>
+                  <div class="bot-card-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <i class="far fa-star"></i>
+                  </div>
+                </div>
+                <p class="bot-card-description">Wall-climbing robot with biomimetic adhesion technology inspired by geckos for vertical infrastructure inspection.</p>
+                <div class="bot-card-specs">
+                  <div class="bot-spec">
+                    <i class="fas fa-magnet"></i>
+                    <span>Adhesion tech</span>
+                  </div>
+                  <div class="bot-spec">
+                    <i class="fas fa-camera"></i>
+                    <span>HD inspection</span>
+                  </div>
+                </div>
+                <div class="bot-tags">
+                  <span class="bot-tag accent">Biomimetic</span>
+                  <span class="bot-tag dark">Inspection</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- TEMPLATE: To add a new robot, copy from here -->
+          <!--
+          <div class="bot-slide">
+            <div class="bot-card">
+              <div class="bot-card-media">
+                <div class="bot-card-badge cyan">
+                  <i class="fas fa-lightbulb"></i> AI Bot
+                </div>
+                <img src="https://images.unsplash.com/photo-add-your-image-url-here" alt="Bot Name">
+                <div class="bot-card-overlay">
+                  <button class="bot-details-button">
+                    <i class="fas fa-info-circle"></i> Details
+                  </button>
+                </div>
+              </div>
+              <div class="bot-card-content">
+                <div class="bot-card-header">
+                  <h3 class="bot-card-title">Smart<span class="text-cyan">Thinker</span></h3>
+                  <div class="bot-card-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                  </div>
+                </div>
+                <p class="bot-card-description">Advanced AI robot with machine learning capabilities for adaptive problem solving and task optimization.</p>
+                <div class="bot-card-specs">
+                  <div class="bot-spec">
+                    <i class="fas fa-brain"></i>
+                    <span>Neural network</span>
+                  </div>
+                  <div class="bot-spec">
+                    <i class="fas fa-server"></i>
+                    <span>Edge computing</span>
+                  </div>
+                </div>
+                <div class="bot-tags">
+                  <span class="bot-tag primary">Machine Learning</span>
+                  <span class="bot-tag secondary">Edge AI</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          -->
+          <!-- TEMPLATE: To here -->
+          
+        </div>
+      </div>
+      
+      <div class="bot-carousel-footer">
+        <button class="bot-arrow prev" aria-label="Previous slide">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        
+        <div class="bot-dots">
+          <button class="bot-dot active" aria-label="Go to slide 1"></button>
+          <button class="bot-dot" aria-label="Go to slide 2"></button>
+          <button class="bot-dot" aria-label="Go to slide 3"></button>
+          <button class="bot-dot" aria-label="Go to slide 4"></button>
+        </div>
+        
+        <button class="bot-arrow next" aria-label="Next slide">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="container">
+      <h2 class="about-title">About <span>Texcelerators</span></h2>
+      
+      <div class="about-grid">
+        <div class="about-image animate-on-scroll">
+          <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" alt="Team working on robotics project">
+        </div>
+        
+        <div class="about-content animate-on-scroll">
+          <h3>Our Mission</h3>
+          <p class="about-text">
+            Texcelerators is a student-led robotics club dedicated to pushing the boundaries of technology through innovation, collaboration, and competitive excellence. We believe in combining theoretical knowledge with hands-on experience to create cutting-edge robotic solutions.
+          </p>
+          
+          <h3>Our Values</h3>
+          <div class="values">
+            <div class="value-item animate-on-scroll">
+              <div class="value-icon">
+                <i class="fas fa-lightbulb"></i>
+              </div>
+              <div class="value-content">
+                <h4>Innovation</h4>
+                <p class="value-description">Developing creative solutions to complex challenges</p>
+              </div>
+            </div>
+            
+            <div class="value-item animate-on-scroll">
+              <div class="value-icon">
+                <i class="fas fa-users"></i>
+              </div>
+              <div class="value-content">
+                <h4>Collaboration</h4>
+                <p class="value-description">Working together to achieve extraordinary results</p>
+              </div>
+            </div>
+            
+            <div class="value-item animate-on-scroll">
+              <div class="value-icon">
+                <i class="fas fa-chart-line"></i>
+              </div>
+              <div class="value-content">
+                <h4>Excellence</h4>
+                <p class="value-description">Striving for the highest standards in everything we do</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2 class="contact-title">Future <span class="goals">Goals</span> & <span class="contact">Contact</span></h2>
+      
+      <div class="contact-grid">
+        <div class="goals-section animate-on-scroll">
+          <h3>Our Vision</h3>
+          
+          <div class="goals-list">
+            <div class="goal-card">
+              <div class="goal-header">
+                <div class="goal-icon primary">
+                  <i class="fas fa-rocket"></i>
+                </div>
+                <h4 class="goal-title">Expanding Horizons</h4>
+              </div>
+              <p class="goal-description">
+                We aim to participate in more international competitions and expand our community outreach programs to inspire the next generation of robotics engineers.
+              </p>
+            </div>
+            
+            <div class="goal-card">
+              <div class="goal-header">
+                <div class="goal-icon secondary">
+                  <i class="fas fa-microscope"></i>
+                </div>
+                <h4 class="goal-title">Research Initiatives</h4>
+              </div>
+              <p class="goal-description">
+                Developing cutting-edge research projects in artificial intelligence, machine learning, and advanced sensor technologies for the next generation of robots.
+              </p>
+            </div>
+            
+            <div class="goal-card">
+              <div class="goal-header">
+                <div class="goal-icon accent">
+                  <i class="fas fa-hands-helping"></i>
+                </div>
+                <h4 class="goal-title">Community Impact</h4>
+              </div>
+              <p class="goal-description">
+                Creating robotics solutions that address real-world challenges and improve the quality of life in our communities through technology.
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="contact-form-container animate-on-scroll">
+          <div class="contact-form">
+            <h3>Get In Touch</h3>
+            
+            <form id="contact-form">
+              <div class="form-group">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" id="name" name="name" class="form-input" placeholder="Your name" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" id="email" name="email" class="form-input" placeholder="Your email" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="message" class="form-label">Message</label>
+                <textarea id="message" name="message" class="form-textarea" placeholder="Your message" required></textarea>
+              </div>
+              
+              <button type="submit" class="form-submit">Send Message</button>
+            </form>
+            
+            <div class="social-section">
+              <h4>Connect With Us</h4>
+              <div class="social-links">
+                <a href="#" class="social-link bg-facebook" aria-label="Facebook">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="social-link bg-twitter" aria-label="Twitter">
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" class="social-link bg-youtube" aria-label="YouTube">
+                  <i class="fab fa-youtube"></i>
+                </a>
+                <a href="#" class="social-link bg-instagram" aria-label="Instagram">
+                  <i class="fab fa-instagram"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-logo">
+            <div class="footer-logo-image">
+              <img src="Assets/images/endversion.png" alt="Texcelerators Logo">
+            </div>
+            <h3 class="logo-text">
+              <span>TEX</span>CELERATORS
+            </h3>
+          </div>
+          <p class="footer-description">
+            Pioneering the future of robotics through innovation, collaboration, and excellence.
+          </p>
+          <p class="footer-copyright">
+            © <script>document.write(new Date().getFullYear())</script> Texcelerators Robotics Club. All rights reserved.
+          </p>
+        </div>
+        
+        <div>
+          <h4 class="footer-section-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li class="footer-link-item">
+              <a href="#home" class="footer-link">Home</a>
+            </li>
+            <li class="footer-link-item">
+              <a href="#achievements" class="footer-link">Achievements</a>
+            </li>
+            <li class="footer-link-item">
+              <a href="#" class="footer-link">Team</a>
+            </li>
+            <li class="footer-link-item">
+              <a href="#bots" class="footer-link">Our Robots</a>
+            </li>
+            <li class="footer-link-item">
+              <a href="#about" class="footer-link">About Us</a>
+            </li>
+            <li class="footer-link-item">
+              <a href="#contact" class="footer-link">Contact</a>
+            </li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="footer-section-title">Programs</h4>
+          <ul class="footer-links">
+            <li class="footer-link-item">
+              <a href="#" class="footer-link">Workshops</a>
+            </li>
+            <li class="footer-link-item">
+              <a href="#" class="footer-link">Competitions</a>
+            </li>
+            <li class="footer-link-item">
+              <a href="#" class="footer-link">Mentorship</a>
+            </li>
+            <li class="footer-link-item">
+              <a href="#" class="footer-link">Community Outreach</a>
+            </li>
+            <li class="footer-link-item">
+              <a href="#" class="footer-link">Research Projects</a>
+            </li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="footer-section-title">Contact Info</h4>
+          <ul class="footer-links">
+            <li class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <span class="contact-text">St. Vincent Pallotti College of Engineering and Technology, Nagpur 441108</span>
+            </li>
+            <li class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <a href="mailto:info@texcelerators.org" class="contact-link">texcelerators@gmail.com</a>
+            </li>
+            <li class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-phone"></i>
+              </div>
+              <a href="tel:+11234567890" class="contact-link">+91 8855921249</a>
+            </li>
+          </ul>
+          
+          <div class="follow-section">
+            <h4 class="follow-title">Follow Us</h4>
+            <div class="follow-links">
+              <a href="#" class="follow-link" aria-label="Facebook">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" class="follow-link" aria-label="Twitter">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#" class="follow-link" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="#" class="follow-link" aria-label="YouTube">
+                <i class="fab fa-youtube"></i>
+              </a>
+              <a href="#" class="follow-link" aria-label="LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="main.js"></script>
+  </body>
+  </html>
