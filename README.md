@@ -68,7 +68,7 @@ Interested in robotics? Join Texcelerators!
 - **Location**: St. Vincent Pallotti College of Engineering & Technology Nagpur Maharashtra
 - **Social Media**:
   - [LinkedIn](#)
-  - [Instagram]([#](https://www.instagram.com/texcelrators2.0_mh31?utm_source=ig_web_button_share_sheet&igsh=MTVwaXp2aXp1d2RkeQ==))
+  - [Instagram](https://www.instagram.com/texcelrators2.0_mh31?utm_source=ig_web_button_share_sheet&igsh=MTVwaXp2aXp1d2RkeQ==))
 
 ## 🔧 Development Setup
 ```bash
