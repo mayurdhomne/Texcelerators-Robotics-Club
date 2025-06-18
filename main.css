@@ -1,5 +1,3 @@
-  /* Main CSS Styles for Texcelerators Robotics Club Website */
-
 /* Base styles */
 :root {
   --primary: #2563eb;         /* Enhanced blue */
@@ -1406,6 +1404,7 @@ nav.desktop-nav {
   opacity: 1;
   transform: translateY(0);
 }
+
 /* Enhanced Bot Carousel Styles */
 
 /* Bot Carousel Header */
@@ -1687,4 +1686,143 @@ animation: slideIn 0.5s ease forwards;
   display: block;
   margin: 0.25rem 0;
 }
+}
+
+/* Base responsive adjustments */
+@media (max-width: 480px) {
+  .container {
+    padding: 0 0.75rem;
+  }
+
+  /* Header adjustments */
+  .logo-container {
+    gap: 0.25rem;
+  }
+
+  .logo-image {
+    height: 3.5rem;
+    width: 3.5rem;
+  }
+
+  .logo-text {
+    font-size: 1.25rem;
+  }
+
+  /* Hero section */
+  .slide-title {
+    font-size: 1.75rem;
+    padding: 0 1rem;
+  }
+
+  .slide-subtitle {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+
+  /* Achievements section */
+  .section-title {
+    font-size: 1.75rem;
+  }
+
+  .achievement-card {
+    padding: 1.5rem 1rem;
+  }
+
+  /* Bot carousel */
+  .bot-carousel-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .bot-carousel-badge {
+    width: 100%;
+    text-align: center;
+  }
+
+  .bot-card-media img {
+    height: 12rem;
+  }
+
+  /* Contact section */
+  .contact-form {
+    padding: 1.5rem;
+  }
+
+  .form-submit {
+    padding: 0.75rem 1rem;
+  }
+
+  /* Footer */
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+/* Tablet adjustments */
+@media (min-width: 481px) and (max-width: 768px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+
+  /* Achievements grid */
+  .achievements-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Bot carousel */
+  .bot-slide {
+    min-width: 100%;
+    flex: 0 0 100%;
+  }
+
+  /* Contact grid */
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+/* Additional responsive utilities */
+.hide-on-mobile {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .hide-on-mobile {
+    display: block;
+  }
+
+  .hide-on-desktop {
+    display: none;
+  }
+}
+
+/* Responsive spacing utilities */
+@media (max-width: 768px) {
+  .section-spacing {
+    padding: 3rem 0;
+  }
+
+  .content-spacing {
+    margin-bottom: 2rem;
+  }
+}
+
+/* Touch device optimizations */
+@media (hover: none) {
+  .nav-link:hover::after {
+    width: 0;
+  }
+
+  .bot-card:hover {
+    transform: none;
+  }
+
+  .bot-card-overlay {
+    opacity: 1;
+    transform: none;
+    background: linear-gradient(to top, rgba(15, 23, 42, 0.9), transparent);
+  }
 }

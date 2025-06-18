@@ -1,5 +1,3 @@
-// Main JavaScript for Texcelerators Robotics Club Website
-
 document.addEventListener('DOMContentLoaded', function() {
     // Mobile Navigation Menu Toggle
     const mobileMenuButton = document.getElementById('mobile-menu-button');
@@ -308,6 +306,7 @@ document.addEventListener('DOMContentLoaded', function() {
   let botSlideInterval;
   let isAnimating = false;
   let touchStartX = 0;
+  let touchStartY = 0;
   
   // Initialize the carousel
   function initBotCarousel() {
@@ -534,8 +533,23 @@ document.addEventListener('DOMContentLoaded', function() {
     if (botCarouselContainer) {
       botCarouselContainer.addEventListener('touchstart', (e) => {
         touchStartX = e.touches[0].clientX;
-        stopAutoplay(); // Pause during touch
+        touchStartY = e.touches[0].clientY;
+        stopAutoplay();
       }, { passive: true });
+      
+      botCarouselContainer.addEventListener('touchmove', (e) => {
+        if (!touchStartX || !touchStartY) return;
+        
+        const touchEndX = e.touches[0].clientX;
+        const touchEndY = e.touches[0].clientY;
+        const diffX = touchEndX - touchStartX;
+        const diffY = touchEndY - touchStartY;
+        
+        // Only prevent default if horizontal scroll is greater than vertical
+        if (Math.abs(diffX) > Math.abs(diffY)) {
+          e.preventDefault();
+        }
+      }, { passive: false });
       
       botCarouselContainer.addEventListener('touchend', (e) => {
         const touchEndX = e.changedTouches[0].clientX;
@@ -601,6 +615,43 @@ document.addEventListener('DOMContentLoaded', function() {
     initBotCarousel();
   }
 });
+
+// Add to main.js
+function handleResponsiveLayouts() {
+  // Handle mobile menu height
+  const mobileMenu = document.getElementById('mobile-menu');
+  if (mobileMenu && mobileMenu.classList.contains('open')) {
+    const headerHeight = document.querySelector('header').offsetHeight;
+    mobileMenu.style.height = `calc(100vh - ${headerHeight}px)`;
+  }
+
+  // Recalculate carousel dimensions
+  updateSlidesToShow();
+  
+  // Update animations for mobile
+  if (window.innerWidth < 768) {
+    document.querySelectorAll('.animate-on-scroll').forEach(element => {
+      element.style.transform = 'none';
+      element.style.opacity = '1';
+    });
+  }
+}
+
+// Add resize listener
+window.addEventListener('resize', debounce(handleResponsiveLayouts, 250));
+
+// Debounce helper
+function debounce(func, wait) {
+  let timeout;
+  return function executedFunction(...args) {
+    const later = () => {
+      clearTimeout(timeout);
+      func(...args);
+    };
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+  };
+}
 
 /* 
   To add a new robot:
