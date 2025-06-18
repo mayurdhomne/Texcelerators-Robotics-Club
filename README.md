@@ -1,6 +1,6 @@
 # Texcelerators Robotics Club 🤖
 
-![Club Logo](assets/endversion.png)
+![Club Logo](assets/images/endversion.png)
 
 ## About Us
 Texcelerators is a dynamic robotics club dedicated to fostering innovation, collaboration, and excellence in robotics engineering. We bring together passionate individuals to create cutting-edge robotic solutions and participate in national-level competitions.
