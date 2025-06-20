@@ -502,7 +502,7 @@ nav.desktop-nav {
 }
 
 .highlighted-achievements {
-  margin-top: 4rem;
+  margin-top: 5rem;
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
@@ -530,7 +530,7 @@ nav.desktop-nav {
 
 .highlighted-card img {
   width: 100%;
-  height: 12rem;
+  height: 20rem;
   object-fit: cover;
 }
 

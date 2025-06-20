@@ -1,3 +1,5 @@
+// Main JavaScript for Our Robots Page 
+
 document.addEventListener('DOMContentLoaded', function() {
     // Mobile Navigation Menu Toggle
     const mobileMenuButton = document.getElementById('mobile-menu-button');
