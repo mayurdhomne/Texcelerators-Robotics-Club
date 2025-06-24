@@ -16,7 +16,7 @@ To pioneer the future of robotics through innovative engineering, collaborative 
 
 ## 🤖 Our Robots
 - **T-X1**: Autonomous Navigation Robot
-- **Mechinator**: Industrial Task Robot
+- **Mechinator**: Industrial Task Robot 
 - **CyberPro**: Humanoid Robot
 - **RoboArm**: 6-DOF Robotic Arm
 
