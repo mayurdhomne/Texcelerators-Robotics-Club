@@ -1,0 +1,1199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <title>Texcelerators Robotics Club - Interactive Robot Showcase</title>
+  <meta name="description" content="Explore our comprehensive robotics showcase featuring interactive galleries of competition robots, autonomous systems, and innovative designs across multiple categories.">
+  
+  <!-- Open Graph Tags -->
+  <meta property="og:title" content="Texcelerators Robotics Club - Interactive Robot Showcase">
+  <meta property="og:description" content="Interactive showcase of our award-winning robots across multiple categories including RoboSoccer, Autonomous Systems, Combat Robots, and Research & Development.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/logo.jpg">
+  
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Outfit:wght@300;400;600&family=Audiowide&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- StyleSheets -->
+  <link rel="stylesheet" href="Robots.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="logo-container">
+        <div class="logo-image">
+          <img src="Assets/images/Robots/endversion.png" alt="Texcelerators Logo">
+        </div>
+        <h1 class="logo-text">
+          <span>TEX</span>CELERATORS
+        </h1>
+      </div>
+      
+      <nav class="desktop-nav">
+        <a href="#home" class="nav-link scroll-spy-active">Home</a>
+        <a href="#achievements" class="nav-link">Achievements</a>
+        <a href="#" class="nav-link">Team</a>
+        <a href="#bots" class="nav-link">Robots</a>
+        <a href="#about" class="nav-link">About Us</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+      
+      <button id="mobile-menu-button" class="mobile-menu-button" aria-label="Toggle mobile menu">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+    
+    <!-- Mobile Navigation Menu -->
+    <div id="mobile-menu" class="mobile-menu">
+      <div class="mobile-menu-inner">
+        <a href="#home" class="mobile-nav-link scroll-spy-active">Home</a>
+        <a href="#achievements" class="mobile-nav-link">Achievements</a>
+        <a href="#" class="mobile-nav-link">Team</a>
+        <a href="#bots" class="mobile-nav-link">Bots</a>
+        <a href="#about" class="mobile-nav-link">About Us</a>
+        <a href="#contact" class="mobile-nav-link">Contact</a>
+      </div>
+    </div>
+  </header>
+  
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h2 class="hero-title">Building the <span class="gradient-text">Future</span> of Robotics</h2>
+      <p class="hero-subtitle">Interactive showcase of our award-winning robots across multiple innovative categories</p>
+    </div>
+  </section>
+
+  <!-- 🚀 Section Template Start -->
+<!-- <section id="section-id" class="section">
+  <div class="container">
+    <div class="category-header animate-on-scroll">
+      <div class="category-badge">
+        <i class="fas fa-icon-name"></i>
+        Section Label
+      </div>
+      <h2 class="section-title">Section <span>Title</span></h2>
+      <p class="category-description">
+        Short description about what this robot category or section is about.
+      </p>
+    </div>
+
+    <div class="robots-grid"> -->
+      <!-- ⬇️ Paste robot cards here -->
+      <!-- Include the reusable robot card template from previous answer -->
+    <!-- </div>
+  </div>
+</section> -->
+<!-- 🚀 Section Template End -->
+
+
+  <!-- RoboSoccer Section -->
+  <section id="robosoccer" class="section">
+    <div class="container">
+      <div class="category-header animate-on-scroll">
+        <div class="category-badge">
+          <i class="fas fa-futbol"></i>
+          RoboSoccer Championship
+        </div>
+        <h2 class="section-title">Robo<span> Soccer</span> Division</h2>
+        <p class="category-description">
+          High-performance soccer robots engineered with precision drive control and tactical maneuvering capabilities for competitive matches.
+        </p>
+      </div>
+
+      
+      
+      
+      <div class="robots-grid">
+        <!-- Soccer Bot Alpha -->
+        
+        <div class="robot-card animate-on-scroll slide-left" >
+          <div class="robot-card-image">
+            <div class="robot-badge primary">
+              <i class="fas fa-trophy"></i> Championship
+            </div>
+            <img src="https://images.unsplash.com/photo-1574680178050-55c6a6a96e0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" alt="Soccer Bot Alpha">
+            <button class="bot-details-button" class="magnetic" onclick="toggleRobotDetails('soccer-alpha')">
+              <i class="fas fa-info-circle"></i> Details
+            </button>
+          </div>
+          <div class="robot-card-content">
+            <div class="robot-card-header">
+              <h3 class="robot-card-title">Ai<span style="color: var(--primary);">ravat</span></h3>
+              <div class="robot-card-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+            </div>
+            <p class="robot-card-description">Premium competition soccer robot with AI-powered ball tracking and precision kicking mechanisms.</p>
+            <div class="robot-card-specs">
+              <div class="robot-spec">
+                <i class="fas fa-brain"></i>
+                <span>AI Vision</span>
+              </div>
+              <div class="robot-spec secondary">
+                <i class="fas fa-cog"></i>
+                <span>Omni-Wheels</span>
+              </div>
+              <div class="robot-spec accent">
+                <i class="fas fa-bolt"></i>
+                <span>Fast Response</span>
+              </div>
+            </div>
+          </div>
+          <div class="robot-details" id="soccer-alpha-details">
+            <h4>Technical Specifications</h4>
+            <div class="technical-specs">
+              <div class="spec-item">
+                <span class="spec-label">Processor:</span>
+                <span class="spec-value">ARM Cortex-A72</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Speed:</span>
+                <span class="spec-value">3.2 m/s max</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Vision:</span>
+                <span class="spec-value">360° Camera Array</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Battery:</span>
+                <span class="spec-value">90 min runtime</span>
+              </div>
+            </div>
+            <h4>Key Features</h4>
+            <ul class="features-list">
+              <li>Real-time ball trajectory prediction</li>
+              <li>Dynamic obstacle avoidance</li>
+              <li>Team coordination protocols</li>
+              <li>Adaptive strategy algorithms</li>
+            </ul>
+          </div>
+        </div> 
+
+        <!-- 🧩 Robot Card Template
+<div class="robot-card animate-on-scroll">
+  <div class="robot-card-image">
+    <div class="robot-badge primary">
+      <i class="fas fa-icon"></i> Badge Label
+    </div>
+    <img src="IMAGE_URL_HERE" alt="ROBOT NAME">
+    <button class="bot-details-button"  onclick="toggleRobotDetails('ROBOT_ID')">
+              <i class="fas fa-info-circle"></i> Details
+            </button>
+  </div>
+  <div class="robot-card-content">
+    <div class="robot-card-header">
+      <h3 class="robot-card-title">ROBOT <span style="color: var(--primary);">NAME</span></h3>
+      <div class="robot-card-rating">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="far fa-star"></i>
+      </div>
+    </div>
+    <p class="robot-card-description">One-line description of this robot's purpose or specialty.</p>
+    <div class="robot-card-specs">
+      <div class="robot-spec">
+        <i class="fas fa-cogs"></i>
+        <span>FEATURE 1</span>
+      </div>
+      <div class="robot-spec secondary">
+        <i class="fas fa-microchip"></i>
+        <span>FEATURE 2</span>
+      </div>
+      <div class="robot-spec accent">
+        <i class="fas fa-bolt"></i>
+        <span>FEATURE 3</span>
+      </div>
+    </div>
+  </div>
+
+  🔽 Expandable Technical Details -->
+  <!-- <div class="robot-details" id="robot-id-details">
+    <h4>Technical Specifications</h4>
+    <div class="technical-specs">
+      <div class="spec-item">
+        <span class="spec-label">Processor:</span>
+        <span class="spec-value">DETAIL</span>
+      </div>
+      <div class="spec-item">
+        <span class="spec-label">Speed:</span>
+        <span class="spec-value">DETAIL</span>
+      </div>
+      <div class="spec-item">
+        <span class="spec-label">Sensors:</span>
+        <span class="spec-value">DETAIL</span>
+      </div>
+      <div class="spec-item">
+        <span class="spec-label">Battery:</span>
+        <span class="spec-value">DETAIL</span>
+      </div>
+    </div>
+    <h4>Key Features</h4>
+    <ul class="features-list">
+      <li>Feature point 1</li>
+      <li>Feature point 2</li>
+      <li>Feature point 3</li>
+      <li>Feature point 4</li>
+    </ul>
+  </div>
+</div>
+ -->
+
+        <!-- Midfielder Pro -->
+        <div class="robot-card animate-on-scroll" >
+          <div class="robot-card-image">
+            <div class="robot-badge secondary">
+              <i class="fas fa-cog"></i> Tactical
+            </div>
+            <img src="https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" alt="Midfielder Pro">
+            <button class="bot-details-button" class="magnetic"  onclick="toggleRobotDetails('midfielder-pro')">
+              <i class="fas fa-info-circle"></i> Details
+            </button>
+          </div>
+          <div class="robot-card-content">
+            <div class="robot-card-header">
+              <h3 class="robot-card-title">Midfielder <span style="color: var(--secondary);">Pro</span></h3>
+              <div class="robot-card-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
+            </div>
+            <p class="robot-card-description">Strategic midfielder robot specializing in ball control and team play coordination.</p>
+            <div class="robot-card-specs">
+              <div class="robot-spec">
+                <i class="fas fa-brain"></i>
+                <span>Strategic AI</span>
+              </div>
+              <div class="robot-spec secondary">
+                <i class="fas fa-futbol"></i>
+                <span>Ball Control</span>
+              </div>
+              <div class="robot-spec accent">
+                <i class="fas fa-users"></i>
+                <span>Team Play</span>
+              </div>
+            </div>
+          </div>
+          <div class="robot-details" id="midfielder-pro-details">
+            <h4>Technical Specifications</h4>
+            <div class="technical-specs">
+              <div class="spec-item">
+                <span class="spec-label">Processor:</span>
+                <span class="spec-value">Raspberry Pi 4B</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Speed:</span>
+                <span class="spec-value">2.8 m/s max</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Vision:</span>
+                <span class="spec-value">Dual Camera System</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Battery:</span>
+                <span class="spec-value">75 min runtime</span>
+              </div>
+            </div>
+            <h4>Key Features</h4>
+            <ul class="features-list">
+              <li>Advanced ball possession control</li>
+              <li>Multi-robot communication</li>
+              <li>Field positioning optimization</li>
+              <li>Defensive coordination</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Striker Elite -->
+        <div class="robot-card animate-on-scroll slide-right">
+          <div class="robot-card-image">
+            <div class="robot-badge accent">
+              <i class="fas fa-bolt"></i> Power
+            </div>
+            <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" alt="Striker Elite">
+            <button class="bot-details-button"  onclick="toggleRobotDetails('striker-elite')">
+              <i class="fas fa-info-circle"></i> Details
+            </button>
+          </div>
+          <div class="robot-card-content">
+            <div class="robot-card-header">
+              <h3 class="robot-card-title">Striker <span style="color: var(--accent);">Elite</span></h3>
+              <div class="robot-card-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+            <p class="robot-card-description">High-powered striker robot with precise shooting mechanisms and aggressive offensive play.</p>
+            <div class="robot-card-specs">
+              <div class="robot-spec">
+                <i class="fas fa-rocket"></i>
+                <span>Power Shot</span>
+              </div>
+              <div class="robot-spec secondary">
+                <i class="fas fa-crosshairs"></i>
+                <span>Precision</span>
+              </div>
+              <div class="robot-spec accent">
+                <i class="fas fa-tachometer-alt"></i>
+                <span>Speed</span>
+              </div>
+            </div>
+          </div>
+          <div class="robot-details" id="striker-elite-details">
+            <h4>Technical Specifications</h4>
+            <div class="technical-specs">
+              <div class="spec-item">
+                <span class="spec-label">Processor:</span>
+                <span class="spec-value">NVIDIA Jetson Xavier</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Speed:</span>
+                <span class="spec-value">3.5 m/s max</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Vision:</span>
+                <span class="spec-value">Stereo Vision System</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Battery:</span>
+                <span class="spec-value">85 min runtime</span>
+              </div>
+            </div>
+            <h4>Key Features</h4>
+            <ul class="features-list">
+              <li>High-velocity kicking system</li>
+              <li>Goal detection algorithms</li>
+              <li>Rapid acceleration control</li>
+              <li>Defensive counter-attacks</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Robo Sumo Section -->
+  <section id="autonomous" class="section">
+    <div class="container">
+      <div class="category-header animate-on-scroll">
+        <div class="category-badge">
+          <i class="fas fa-robot"></i>
+          Raw Power
+        </div>
+        <h2 class="section-title">Robo <span>Sumo</span> Division</h2>
+        <p class="category-description">
+          Advanced exploration and navigation robots with real-time mapping and autonomous pathfinding capabilities.
+        </p>
+      </div>
+
+      <div class="robots-grid">
+        <!-- NavBot Explorer -->
+        <div class="robot-card animate-on-scroll slide-left">
+          <div class="robot-card-image">
+            <div class="robot-badge secondary">
+              <i class="fas fa-map"></i> SLAM
+            </div>
+            <img src="https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" alt="NavBot Explorer">
+            <button class="bot-details-button"  onclick="toggleRobotDetails('navbot-explorer')">
+              <i class="fas fa-info-circle"></i> Details
+            </button>
+          </div>
+          <div class="robot-card-content">
+            <div class="robot-card-header">
+              <h3 class="robot-card-title">Shatru <span style="color: var(--secondary);">dhar</span></h3>
+              <div class="robot-card-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+            </div>
+            <p class="robot-card-description">Advanced exploration robot with real-time mapping and autonomous pathfinding capabilities.</p>
+            <div class="robot-card-specs">
+              <div class="robot-spec">
+                <i class="fas fa-map-marked-alt"></i>
+                <span>SLAM Tech</span>
+              </div>
+              <div class="robot-spec secondary">
+                <i class="fas fa-radar-dish"></i>
+                <span>LiDAR</span>
+              </div>
+              <div class="robot-spec accent">
+                <i class="fas fa-satellite"></i>
+                <span>GPS</span>
+              </div>
+            </div>
+          </div>
+          <div class="robot-details" id="navbot-explorer-details">
+            <h4>Technical Specifications</h4>
+            <div class="technical-specs">
+              <div class="spec-item">
+                <span class="spec-label">Processor:</span>
+                <span class="spec-value">Intel i7-10th Gen</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Speed:</span>
+                <span class="spec-value">2.0 m/s max</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Sensors:</span>
+                <span class="spec-value">LiDAR + RGB-D</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Range:</span>
+                <span class="spec-value">5km autonomous</span>
+              </div>
+            </div>
+            <h4>Key Features</h4>
+            <ul class="features-list">
+              <li>Real-time SLAM mapping</li>
+              <li>Dynamic obstacle avoidance</li>
+              <li>Multi-terrain navigation</li>
+              <li>Weather-resistant design</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Cargo Mover -->
+        <div class="robot-card animate-on-scroll">
+          <div class="robot-card-image">
+            <div class="robot-badge primary">
+              <i class="fas fa-truck"></i> Cargo
+            </div>
+            <img src="https://images.unsplash.com/photo-1473968512647-3e447244af8f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" alt="Cargo Mover">
+             <button class="bot-details-button"  onclick="toggleRobotDetails('cargo-mover')">
+              <i class="fas fa-info-circle"></i> Details
+            </button>
+          </div>
+          <div class="robot-card-content">
+            <div class="robot-card-header">
+              <h3 class="robot-card-title">Cargo <span style="color: var(--primary);">Mover</span></h3>
+              <div class="robot-card-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
+            </div>
+            <p class="robot-card-description">Heavy-duty autonomous cargo transport robot with precision delivery capabilities.</p>
+            <div class="robot-card-specs">
+              <div class="robot-spec">
+                <i class="fas fa-weight-hanging"></i>
+                <span>Heavy Load</span>
+              </div>
+              <div class="robot-spec secondary">
+                <i class="fas fa-crosshairs"></i>
+                <span>Precision</span>
+              </div>
+              <div class="robot-spec accent">
+                <i class="fas fa-shield-alt"></i>
+                <span>Reliable</span>
+              </div>
+            </div>
+          </div>
+          <div class="robot-details" id="cargo-mover-details">
+            <h4>Technical Specifications</h4>
+            <div class="technical-specs">
+              <div class="spec-item">
+                <span class="spec-label">Load Capacity:</span>
+                <span class="spec-value">50kg payload</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Speed:</span>
+                <span class="spec-value">1.5 m/s loaded</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Navigation:</span>
+                <span class="spec-value">GPS + Visual</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Battery:</span>
+                <span class="spec-value">8 hour runtime</span>
+              </div>
+            </div>
+            <h4>Key Features</h4>
+            <ul class="features-list">
+              <li>Automated loading/unloading</li>
+              <li>Route optimization</li>
+              <li>Secure cargo tracking</li>
+              <li>Emergency stop protocols</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Rescue Ranger -->
+        <div class="robot-card animate-on-scroll slide-right">
+          <div class="robot-card-image">
+            <div class="robot-badge accent">
+              <i class="fas fa-life-ring"></i> Rescue
+            </div>
+            <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" alt="Rescue Ranger">
+            <button class="bot-details-button"  onclick="toggleRobotDetails('rescue-ranger')">
+              <i class="fas fa-info-circle"></i> Details
+            </button>
+          </div>
+          <div class="robot-card-content">
+            <div class="robot-card-header">
+              <h3 class="robot-card-title">Rescue <span style="color: var(--accent);">Ranger</span></h3>
+              <div class="robot-card-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+            <p class="robot-card-description">Emergency response robot designed for search and rescue operations in hazardous environments.</p>
+            <div class="robot-card-specs">
+              <div class="robot-spec">
+                <i class="fas fa-heartbeat"></i>
+                <span>Emergency</span>
+              </div>
+              <div class="robot-spec secondary">
+                <i class="fas fa-thermometer-half"></i>
+                <span>Thermal</span>
+              </div>
+              <div class="robot-spec accent">
+                <i class="fas fa-mountain"></i>
+                <span>Rugged</span>
+              </div>
+            </div>
+          </div>
+          <div class="robot-details" id="rescue-ranger-details">
+            <h4>Technical Specifications</h4>
+            <div class="technical-specs">
+              <div class="spec-item">
+                <span class="spec-label">Sensors:</span>
+                <span class="spec-value">Thermal + Audio</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Mobility:</span>
+                <span class="spec-value">All-terrain treads</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Range:</span>
+                <span class="spec-value">2km radio control</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Rating:</span>
+                <span class="spec-value">IP67 waterproof</span>
+              </div>
+            </div>
+            <h4>Key Features</h4>
+            <ul class="features-list">
+              <li>Heat signature detection</li>
+              <li>Debris navigation</li>
+              <li>Emergency communication</li>
+              <li>Victim location marking</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Robo Race Section -->
+  <section id="combat" class="section">
+    <div class="container">
+      <div class="category-header animate-on-scroll">
+        <div class="category-badge">
+          <i class="fas fa-shield-alt"></i>
+          Speed
+        </div>
+        <h2 class="section-title">Robo<span> Race</span> Division</h2>
+        <p class="category-description">
+          Heavy-duty combat robots with advanced weapon systems and armored protection for competitive robot fighting.
+        </p>
+      </div>
+
+      <div class="robots-grid">
+        <!-- Iron Gladiator -->
+        <div class="robot-card animate-on-scroll slide-left">
+          <div class="robot-card-image">
+            <div class="robot-badge accent">
+              <i class="fas fa-shield-alt"></i> Armored
+            </div>
+            <img src="https://images.unsplash.com/photo-1546776310-eef45dd6d63c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" alt="Iron Gladiator">
+            <button class="bot-details-button"  onclick="toggleRobotDetails('iron-gladiator')">
+              <i class="fas fa-info-circle"></i> Details
+            </button>
+          </div>
+          <div class="robot-card-content">
+            <div class="robot-card-header">
+              <h3 class="robot-card-title">Iron <span style="color: var(--accent);">Gladiator</span></h3>
+              <div class="robot-card-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+            </div>
+            <p class="robot-card-description">Heavy-weight combat robot with titanium armor plating and devastating spinning weapon systems.</p>
+            <div class="robot-card-specs">
+              <div class="robot-spec">
+                <i class="fas fa-shield-alt"></i>
+                <span>Titanium Armor</span>
+              </div>
+              <div class="robot-spec secondary">
+                <i class="fas fa-cog"></i>
+                <span>Spinner</span>
+              </div>
+              <div class="robot-spec accent">
+                <i class="fas fa-weight-hanging"></i>
+                <span>Heavy-Weight</span>
+              </div>
+            </div>
+          </div>
+          <div class="robot-details" id="iron-gladiator-details">
+            <h4>Technical Specifications</h4>
+            <div class="technical-specs">
+              <div class="spec-item">
+                <span class="spec-label">Weight:</span>
+                <span class="spec-value">220 lbs</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Weapon:</span>
+                <span class="spec-value">Horizontal Spinner</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Speed:</span>
+                <span class="spec-value">15 mph max</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Armor:</span>
+                <span class="spec-value">6mm Titanium</span>
+              </div>
+            </div>
+            <h4>Key Features</h4>
+            <ul class="features-list">
+              <li>10,000 RPM weapon motor</li>
+              <li>Self-righting mechanism</li>
+              <li>Reinforced drive system</li>
+              <li>Modular weapon system</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Speed Demon -->
+        <div class="robot-card animate-on-scroll">
+          <div class="robot-card-image">
+            <div class="robot-badge primary">
+              <i class="fas fa-bolt"></i> Speed
+            </div>
+            <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" alt="Speed Demon">
+            <button class="bot-details-button"  onclick="toggleRobotDetails('speed-demon')">
+              <i class="fas fa-info-circle"></i> Details
+            </button>
+          </div>
+          <div class="robot-card-content">
+            <div class="robot-card-header">
+              <h3 class="robot-card-title">Speed <span style="color: var(--primary);">Demon</span></h3>
+              <div class="robot-card-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
+            </div>
+            <p class="robot-card-description">Ultra-fast lightweight combat robot specializing in hit-and-run tactics and evasive maneuvers.</p>
+            <div class="robot-card-specs">
+              <div class="robot-spec">
+                <i class="fas fa-bolt"></i>
+                <span>High Speed</span>
+              </div>
+              <div class="robot-spec secondary">
+                <i class="fas fa-feather-alt"></i>
+                <span>Agile</span>
+              </div>
+              <div class="robot-spec accent">
+                <i class="fas fa-weight"></i>
+                <span>Lightweight</span>
+              </div>
+            </div>
+          </div>
+          <div class="robot-details" id="speed-demon-details">
+            <h4>Technical Specifications</h4>
+            <div class="technical-specs">
+              <div class="spec-item">
+                <span class="spec-label">Weight:</span>
+                <span class="spec-value">12 lbs</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Weapon:</span>
+                <span class="spec-value">Vertical Disk</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Speed:</span>
+                <span class="spec-value">35 mph max</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Armor:</span>
+                <span class="spec-value">AR500 Steel</span>
+              </div>
+            </div>
+            <h4>Key Features</h4>
+            <ul class="features-list">
+              <li>Instantaneous acceleration</li>
+              <li>360-degree maneuverability</li>
+              <li>Precision control system</li>
+              <li>Low-profile design</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Tank Destroyer -->
+        <div class="robot-card animate-on-scroll slide-right">
+          <div class="robot-card-image">
+            <div class="robot-badge secondary">
+              <i class="fas fa-hammer"></i> Crusher
+            </div>
+            <img src="https://images.unsplash.com/photo-1581092335878-2d9ff86ca2bf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" alt="Tank Destroyer">
+            <button class="bot-details-button"  onclick="toggleRobotDetails('tank-destroyer')">
+              <i class="fas fa-info-circle"></i> Details
+            </button>
+          </div>
+          <div class="robot-card-content">
+            <div class="robot-card-header">
+              <h3 class="robot-card-title">Tank <span style="color: var(--secondary);">Destroyer</span></h3>
+              <div class="robot-card-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+            <p class="robot-card-description">Powerful grappler robot with hydraulic crushing jaws and unbreakable defensive capabilities.</p>
+            <div class="robot-card-specs">
+              <div class="robot-spec">
+                <i class="fas fa-tools"></i>
+                <span>Hydraulic</span>
+              </div>
+              <div class="robot-spec secondary">
+                <i class="fas fa-hand-rock"></i>
+                <span>Grappler</span>
+              </div>
+              <div class="robot-spec accent">
+                <i class="fas fa-compress"></i>
+                <span>Crusher</span>
+              </div>
+            </div>
+          </div>
+          <div class="robot-details" id="tank-destroyer-details">
+            <h4>Technical Specifications</h4>
+            <div class="technical-specs">
+              <div class="spec-item">
+                <span class="spec-label">Weight:</span>
+                <span class="spec-value">250 lbs</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Weapon:</span>
+                <span class="spec-value">Hydraulic Crusher</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Pressure:</span>
+                <span class="spec-value">2000 PSI</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Armor:</span>
+                <span class="spec-value">10mm Hardox</span>
+              </div>
+            </div>
+            <h4>Key Features</h4>
+            <ul class="features-list">
+              <li>5-ton crushing force</li>
+              <li>360° rotating turret</li>
+              <li>Anti-weapon entanglement</li>
+              <li>Fortress-grade armor</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RC Boats Section -->
+  <section id="research" class="section">
+    <div class="container">
+      <div class="category-header animate-on-scroll">
+        <div class="category-badge">
+          <i class="fas fa-flask"></i>
+          RC Boats
+        </div>
+        <h2 class="section-title">RC <span>Boats</span> Division</h2>
+        <p class="category-description">
+          Cutting-edge research platforms testing advanced AI algorithms, machine learning, and next-generation robotics technologies.
+        </p>
+      </div>
+
+      <div class="robots-grid">
+        <!-- AI Researcher -->
+        <div class="robot-card animate-on-scroll slide-left">
+          <div class="robot-card-image">
+            <div class="robot-badge primary">
+              <i class="fas fa-brain"></i> AI Research
+            </div>
+            <img src="https://images.unsplash.com/photo-1531746790731-6c087fecd65a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" alt="AI Researcher">
+            <button class="bot-details-button"  onclick="toggleRobotDetails('ai-researcher')">
+              <i class="fas fa-info-circle"></i> Details
+            </button>
+          </div>
+          <div class="robot-card-content">
+            <div class="robot-card-header">
+              <h3 class="robot-card-title">AI <span style="color: var(--primary);">Researcher</span></h3>
+              <div class="robot-card-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+            </div>
+            <p class="robot-card-description">Advanced AI research platform testing machine learning algorithms and adaptive behavior systems.</p>
+            <div class="robot-card-specs">
+              <div class="robot-spec">
+                <i class="fas fa-brain"></i>
+                <span>Deep Learning</span>
+              </div>
+              <div class="robot-spec secondary">
+                <i class="fas fa-network-wired"></i>
+                <span>Neural Networks</span>
+              </div>
+              <div class="robot-spec accent">
+                <i class="fas fa-sync-alt"></i>
+                <span>Adaptive</span>
+              </div>
+            </div>
+          </div>
+          <div class="robot-details" id="ai-researcher-details">
+            <h4>Technical Specifications</h4>
+            <div class="technical-specs">
+              <div class="spec-item">
+                <span class="spec-label">Processor:</span>
+                <span class="spec-value">NVIDIA RTX 4090</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">RAM:</span>
+                <span class="spec-value">128GB DDR5</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">AI Framework:</span>
+                <span class="spec-value">TensorFlow/PyTorch</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Sensors:</span>
+                <span class="spec-value">Multi-modal Array</span>
+              </div>
+            </div>
+            <h4>Key Features</h4>
+            <ul class="features-list">
+              <li>Real-time learning algorithms</li>
+              <li>Behavioral adaptation system</li>
+              <li>Computer vision research</li>
+              <li>Natural language processing</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Humanoid Test Platform -->
+        <div class="robot-card animate-on-scroll">
+          <div class="robot-card-image">
+            <div class="robot-badge secondary">
+              <i class="fas fa-walking"></i> Humanoid
+            </div>
+            <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" alt="Humanoid Test Platform">
+            <button class="bot-details-button"  onclick="toggleRobotDetails('humanoid-platform')">
+              <i class="fas fa-info-circle"></i> Details
+            </button>
+          </div>
+          <div class="robot-card-content">
+            <div class="robot-card-header">
+              <h3 class="robot-card-title">Humanoid <span style="color: var(--secondary);">Platform</span></h3>
+              <div class="robot-card-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
+            </div>
+            <p class="robot-card-description">Bipedal humanoid robot testing advanced locomotion and human-robot interaction protocols.</p>
+            <div class="robot-card-specs">
+              <div class="robot-spec">
+                <i class="fas fa-walking"></i>
+                <span>Bipedal</span>
+              </div>
+              <div class="robot-spec secondary">
+                <i class="fas fa-balance-scale"></i>
+                <span>Balance</span>
+              </div>
+              <div class="robot-spec accent">
+                <i class="fas fa-handshake"></i>
+                <span>Interaction</span>
+              </div>
+            </div>
+          </div>
+          <div class="robot-details" id="humanoid-platform-details">
+            <h4>Technical Specifications</h4>
+            <div class="technical-specs">
+              <div class="spec-item">
+                <span class="spec-label">Height:</span>
+                <span class="spec-value">1.8m tall</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Joints:</span>
+                <span class="spec-value">32 DOF</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Balance:</span>
+                <span class="spec-value">Dynamic Control</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Interaction:</span>
+                <span class="spec-value">Voice + Gesture</span>
+              </div>
+            </div>
+            <h4>Key Features</h4>
+            <ul class="features-list">
+              <li>Dynamic walking balance</li>
+              <li>Facial recognition system</li>
+              <li>Natural gesture mimicry</li>
+              <li>Collaborative task execution</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Swarm Collective -->
+        <div class="robot-card animate-on-scroll slide-right">
+          <div class="robot-card-image">
+            <div class="robot-badge accent">
+              <i class="fas fa-network-wired"></i> Swarm
+            </div>
+            <img src="https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" alt="Swarm Collective">
+            <button class="bot-details-button"  onclick="toggleRobotDetails('swarm-collective')">
+              <i class="fas fa-info-circle"></i> Details
+            </button>
+          </div>
+          <div class="robot-card-content">
+            <div class="robot-card-header">
+              <h3 class="robot-card-title">Swarm <span style="color: var(--accent);">Collective</span></h3>
+              <div class="robot-card-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+            <p class="robot-card-description">Multi-robot swarm system researching collective intelligence and distributed task coordination.</p>
+            <div class="robot-card-specs">
+              <div class="robot-spec">
+                <i class="fas fa-brain"></i>
+                <span>Collective AI</span>
+              </div>
+              <div class="robot-spec secondary">
+                <i class="fas fa-project-diagram"></i>
+                <span>Distributed</span>
+              </div>
+              <div class="robot-spec accent">
+                <i class="fas fa-sync"></i>
+                <span>Coordinated</span>
+              </div>
+            </div>
+          </div>
+          <div class="robot-details" id="swarm-collective-details">
+            <h4>Technical Specifications</h4>
+            <div class="technical-specs">
+              <div class="spec-item">
+                <span class="spec-label">Units:</span>
+                <span class="spec-value">50+ micro-bots</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Communication:</span>
+                <span class="spec-value">Mesh Network</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Coordination:</span>
+                <span class="spec-value">Emergent Behavior</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Range:</span>
+                <span class="spec-value">1km collective</span>
+              </div>
+            </div>
+            <h4>Key Features</h4>
+            <ul class="features-list">
+              <li>Emergent task allocation</li>
+              <li>Self-organizing formation</li>
+              <li>Fault-tolerant operation</li>
+              <li>Scalable architecture</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+    <div class="container">
+      <h2 class="section-title">Get In <span>Touch</span></h2>
+      <div class="contact-form animate-on-scroll">
+        <form id="contact-form">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-logo">
+            <div class="footer-logo-image">
+              <img src="Assets/images/Robots/endversion.png" alt="Texcelerators Logo">
+            </div>
+            <h3 class="logo-text">
+              <span>TEX</span>CELERATORS
+            </h3>
+          </div>
+          <p class="footer-description">
+            Pioneering the future of robotics through innovation, collaboration, and excellence.
+          </p>
+          <p class="footer-copyright">
+            © <script>document.write(new Date().getFullYear())</script> Texcelerators Robotics Club. All rights reserved.
+          </p>
+        </div>
+        
+        <div>
+          <h4 class="footer-section-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li class="footer-link-item">
+              <a href="#home" class="footer-link">Home</a>
+            </li>
+            <li class="footer-link-item">
+              <a href="#achievements" class="footer-link">Achievements</a>
+            </li>
+            <li class="footer-link-item">
+              <a href="#" class="footer-link">Team</a>
+            </li>
+            <li class="footer-link-item">
+              <a href="#bots" class="footer-link">Our Robots</a>
+            </li>
+            <li class="footer-link-item">
+              <a href="#about" class="footer-link">About Us</a>
+            </li>
+            <li class="footer-link-item">
+              <a href="#contact" class="footer-link">Contact</a>
+            </li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="footer-section-title">Programs</h4>
+          <ul class="footer-links">
+            <li class="footer-link-item">
+              <a href="#" class="footer-link">Workshops</a>
+            </li>
+            <li class="footer-link-item">
+              <a href="#" class="footer-link">Competitions</a>
+            </li>
+            <li class="footer-link-item">
+              <a href="#" class="footer-link">Community Outreach</a>
+            </li>
+            <li class="footer-link-item">
+              <a href="#" class="footer-link">Research Projects</a>
+            </li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="footer-section-title">Contact Info</h4>
+          <ul class="footer-links">
+            <li class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <span class="contact-text">St. Vincent Pallotti College of Engineering and Technology, Nagpur 441108</span>
+            </li>
+            <li class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <a href="mailto:info@texcelerators.org" class="contact-link">texcelerators@gmail.com</a>
+            </li>
+            <li class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-phone"></i>
+              </div>
+              <a href="tel:+11234567890" class="contact-link">+91 8855921249</a>
+            </li>
+          </ul>
+          
+          <div class="follow-section">
+            <h4 class="follow-title">Follow Us</h4>
+            <div class="follow-links">
+              <a href="#" class="follow-link" aria-label="Facebook">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" class="follow-link" aria-label="Twitter">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#" class="follow-link" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="#" class="follow-link" aria-label="YouTube">
+                <i class="fab fa-youtube"></i>
+              </a>
+              <a href="#" class="follow-link" aria-label="LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="Robots.js"></script>
+  </body>
+  </html>

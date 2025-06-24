@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5">
+  <title>Our Team | Texcelerators Robotics Club</title>
+  <meta name="description" content="Meet the talented team behind Texcelerators Robotics Club - innovators, engineers, and visionaries shaping the future of robotics.">
+  <meta name="keywords" content="robotics team, Texcelerators members, robotics engineers, technology experts, innovation team">
+  <meta name="author" content="Texcelerators Robotics Team">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://texcelerators.com/team.html" />
+  <link rel="icon" href="assets/images/Team/endversion.png" type="image/jpeg" />
+  
+  <!-- Open Graph Tags for Social Media -->
+  <meta property="og:title" content="Meet Our Team | Texcelerators Robotics Club">
+  <meta property="og:description" content="Discover the talented engineers, designers and programmers behind our award-winning robotics innovations.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/logo.jpg">
+  <meta property="og:url" content="https://texcelerators.com/team.html">
+  
+  
+  <!-- Twitter Card Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Meet Our Team | Texcelerators Robotics Club">
+  <meta name="twitter:description" content="Discover the talented engineers, designers and programmers behind our award-winning robotics innovations.">
+  <meta name="twitter:image" content="assets/logo.jpg">
+  
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Outfit:wght@300;400;600&family=Audiowide&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="teammain.css">
+  <link rel="stylesheet" href="team.css">
+  <!-- Structured Data for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Texcelerators Robotics Club",
+    "description": "Student-led robotics club dedicated to innovation and excellence in robotics engineering",
+    "url": "https://texcelerators.com",
+    "logo": "https://texcelerators.com/assets/logo.jpg",
+    "member": [
+      {
+        "@type": "Person",
+        "name": "Alex Johnson",
+        "jobTitle": "Team Lead & Robotics Engineer",
+        "description": "Specializes in mechanical design and systems integration with 5+ years of competition experience."
+      },
+      {
+        "@type": "Person",
+        "name": "Sarah Chen",
+        "jobTitle": "Programming Lead",
+        "description": "AI/ML specialist with background in computer vision and autonomous systems development."
+      },
+      {
+        "@type": "Person",
+        "name": "Marcus Rodriguez",
+        "jobTitle": "Electronics Engineer",
+        "description": "Circuit design expert focusing on embedded systems and sensor integration for robotics."
+      },
+      {
+        "@type": "Person",
+        "name": "Emily Park",
+        "jobTitle": "Mechanical Designer",
+        "description": "CAD modeling expert with a background in materials science and 3D printing technologies."
+      }
+    ],
+    "sameAs": [
+      "https://twitter.com/texcelerators",
+      "https://facebook.com/texcelerators",
+      "https://instagram.com/texcelerators"
+    ]
+  }
+  </script>
+</head>
+<body>
+  <!-- Loader Animation -->
+  <div id="loader" class="loader">
+    <div class="loader-content">
+      <div class="circuit-loader">
+        <div class="circuit-board">
+          <div class="circuit-tracks">
+            <div class="circuit-track track-1"></div>
+            <div class="circuit-track track-2"></div>
+            <div class="circuit-track track-3"></div>
+            <div class="circuit-track track-4"></div>
+            <div class="circuit-track track-5"></div>
+            <div class="circuit-track track-6"></div>
+          </div>
+          <div class="pulse-dots">
+            <div class="pulse-dot dot-1"></div>
+            <div class="pulse-dot dot-2"></div>
+            <div class="pulse-dot dot-3"></div>
+            <div class="pulse-dot dot-4"></div>
+            <div class="pulse-dot dot-5"></div>
+          </div>
+          <div class="chip"></div>
+        </div>
+      </div>
+      <p class="loader-text">Initializing Team Interface...</p>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="logo-container">
+        <div class="logo-image">
+          <img src="Assets/images/endversion.png" alt="Texcelerators Logo">
+        </div>
+        <h1 class="logo-text">
+          <span>TEX</span>CELERATORS
+        </h1>
+      </div>
+      
+      <nav class="desktop-nav">
+        <a href="#home" class="nav-link scroll-spy-active">Home</a>
+        <a href="#achievements" class="nav-link">Achievements</a>
+        <a href="#" class="nav-link">Team</a>
+        <a href="#bots" class="nav-link">Robots</a>
+        <a href="#about" class="nav-link">About Us</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+      
+      <button id="mobile-menu-button" class="mobile-menu-button" aria-label="Toggle mobile menu">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>  
+    
+    <!-- Mobile Navigation Menu -->
+    <div id="mobile-menu" class="mobile-menu">
+      <div class="mobile-menu-inner">
+        <a href="#home" class="mobile-nav-link scroll-spy-active">Home</a>
+        <a href="#achievements" class="mobile-nav-link">Achievements</a>
+        <a href="#" class="mobile-nav-link">Team</a>
+        <a href="#bots" class="mobile-nav-link">Robots</a>
+        <a href="#about" class="mobile-nav-link">About Us</a>
+        <a href="#contact" class="mobile-nav-link">Contact</a>
+      </div>
+    </div>
+  </header>
+    
+  <!-- Interactive Robot Assistant (Attention-Grabbing Feature) -->
+  <div id="robot-assistant" class="robot-assistant">
+    <div class="robot-assistant-icon">
+      <i class="fas fa-robot"></i>
+    </div>
+    <div id="robot-assistant-dialog" class="robot-assistant-dialog">
+      <div class="robot-assistant-header">
+        <div class="robot-assistant-title">
+          <div class="robot-assistant-avatar">
+            <i class="fas fa-robot"></i>
+          </div>
+          <h3>T-Navigator</h3>
+        </div>
+        <button id="robot-assistant-close" class="robot-assistant-close">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="robot-assistant-body">
+        <p id="robot-assistant-message">Hello! I'm T-Navigator, your guide to the Texcelerators team. Would you like to know more about our leadership, core members, or how to join us?</p>
+        <div class="robot-assistant-options">
+          <button data-section="leadership-section" class="robot-option">Leadership Team</button>
+          <button data-section="core-section" class="robot-option">Core Members</button>
+          <button data-section="junior-section" class="robot-option">Junior Members</button>
+          <button data-section="join-section" class="robot-option">Join Our Team</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Team Page Hero -->
+  <section class="team-hero">
+    <img src="IITB2024.JPG" alt="Team Background" class="team-hero-image" />
+    <div class="team-hero-pattern"></div>
+    <div class="team-hero-overlay"></div>
+    <div class="container">
+      <section class="team-hero">
+        <div class="team-hero-content">
+        <h1 class="team-hero-title">Meet Our <span class="gradient-text">Team</span></h1>
+        <p class="team-hero-subtitle">The brilliant minds behind our award-winning robotics innovations</p>
+      </div>
+    </div>
+    <div class="team-hero-pattern"></div>
+  </section>
+
+  <!-- Team Leadership Section -->
+  <section id="leadership-section" class="team-leadership">
+    <div class="container">
+      <h2 class="section-title">Leadership <span>Team</span></h2>
+      
+      <div class="team-grid animate-on-scroll" style="justify-content: center;">
+        <!-- Leader 1 -->
+    <div class="team-wrapper">
+        <div class="team-card" style="justify-content: center;">
+          <div class="team-image-container">
+            <img src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400" alt="Alex Johnson - Texcelerators Team Lead and Robotics Engineer">
+          </div>
+          <div class="team-info">
+            <h3 class="team-name">Alex Johnson</h3>
+            <p class="team-position">Team Lead & Robotics Engineer</p>
+            <p class="team-bio">Specializes in mechanical design and systems integration with 5+ years of competition experience. Led the team to 3 national championships and pioneered our signature high-efficiency drive system.</p>
+            <div class="tech-skills">
+              <span class="tech-tag">Mechanical Design</span>
+              <span class="tech-tag">System Integration</span>
+            </div>
+            <div class="team-social">
+              <a href="#" class="leadership-social-link"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="leadership-social-link"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Leader 2 -->
+        <!-- <div class="team-card">
+          <div class="leadership-image-container">
+            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400" alt="Sarah Chen - Programming Lead">
+          </div>
+          <div class="leadership-info">
+            <h3 class="leadership-name">Sarah Chen</h3>
+            <p class="leadership-position">Programming Lead</p>
+            <p class="leadership-bio">AI/ML specialist with background in computer vision and autonomous systems development. Sarah's algorithms have revolutionized our robots' navigation precision and obstacle avoidance capabilities.</p>
+            <div class="tech-skills">
+              <span class="tech-tag">Computer Vision</span>
+              <span class="tech-tag">Machine Learning</span>
+              <span class="tech-tag">Autonomous Systems</span>
+            </div>
+            <div class="leadership-social">
+              <a href="#" class="leadership-social-link"><i class="fab fa-linkedin"></i></a>
+              <a href="#" class="leadership-social-link"><i class="fab fa-github"></i></a>
+              <a href="#" class="leadership-social-link"><i class="fab fa-medium"></i></a>
+            </div>
+          </div>
+        -->
+    </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- Core Team Section -->
+  <section id="core-section" class="team-core">
+    <div class="container">
+      <h2 class="section-title">Core <span>Members</span></h2>
+      
+      <div class="team-grid animate-on-scroll">
+        <!-- Team Member 1 -->
+        <div class="team-card">
+          <div class="team-image-container">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400" alt="Lisa Morgan - User Experience Designer">
+          </div>
+          <div class="team-info">
+            <h3 class="team-name">Lisa Morgan</h3>
+            <p class="team-position">UX Designer</p>
+            <p class="team-bio">Creates intuitive human-robot interaction interfaces that make our robots accessible to everyone.</p>
+            <div class="tech-skills">
+              <span class="tech-tag">User Research</span>
+              <span class="tech-tag">Interface Design</span>
+            </div>
+            <div class="team-social">
+              <a href="#" class="team-social-link"><i class="fab fa-linkedin"></i></a>
+              <a href="#" class="team-social-link"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Team Member 2 -->
+        <div class="team-card">
+          <div class="team-image-container">
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400" alt="Marcus Rodriguez - Electronics Engineer">
+          </div>
+          <div class="team-info">
+            <h3 class="team-name">Marcus Rodriguez</h3>
+            <p class="team-position">Electronics Engineer</p>
+            <p class="team-bio">Circuit design expert focusing on embedded systems and sensor integration for robotics.</p>
+            <div class="tech-skills">
+              <span class="tech-tag">Circuit Design</span>
+              <span class="tech-tag">Embedded Systems</span>
+            </div>
+            <div class="team-social">
+              <a href="#" class="team-social-link"><i class="fab fa-linkedin"></i></a>
+              <a href="#" class="team-social-link"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Team Member 3 -->
+        <div class="team-card">
+          <div class="team-image-container">
+            <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400" alt="Emily Park - Mechanical Designer">
+          </div>
+          <div class="team-info">
+            <h3 class="team-name">Emily Park</h3>
+            <p class="team-position">Mechanical Designer</p>
+            <p class="team-bio">CAD modeling expert with a background in materials science and 3D printing technologies.</p>
+            <div class="tech-skills">
+              <span class="tech-tag">CAD Design</span>
+              <span class="tech-tag">3D Printing</span>
+            </div>
+            <div class="team-social">
+              <a href="#" class="team-social-link"><i class="fab fa-linkedin"></i></a>
+              <a href="#" class="team-social-link"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Team Member 4 -->
+        <div class="team-card">
+          <div class="team-image-container">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400" alt="David Kim - Software Developer">
+          </div>
+          <div class="team-info">
+            <h3 class="team-name">David Kim</h3>
+            <p class="team-position">Software Developer</p>
+            <p class="team-bio">Full-stack developer who builds our web interfaces and data visualization dashboards.</p>
+            <div class="tech-skills">
+              <span class="tech-tag">Full-Stack</span>
+              <span class="tech-tag">Data Viz</span>
+            </div>
+            <div class="team-social">
+              <a href="#" class="team-social-link"><i class="fab fa-linkedin"></i></a>
+              <a href="#" class="team-social-link"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="team-card">
+          <div class="team-image-container">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400" alt="Lisa Morgan - User Experience Designer">
+          </div>
+          <div class="team-info">
+            <h3 class="team-name">Lisa Morgan</h3>
+            <p class="team-position">UX Designer</p>
+            <p class="team-bio">Creates intuitive human-robot interaction interfaces that make our robots accessible to everyone.</p>
+            <div class="tech-skills">
+              <span class="tech-tag">User Research</span>
+              <span class="tech-tag">Interface Design</span>
+            </div>
+            <div class="team-social">
+              <a href="#" class="team-social-link"><i class="fab fa-linkedin"></i></a>
+              <a href="#" class="team-social-link"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="team-card">
+          <div class="team-image-container">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400" alt="Lisa Morgan - User Experience Designer">
+          </div>
+          <div class="team-info">
+            <h3 class="team-name">Lisa Morgan</h3>
+            <p class="team-position">UX Designer</p>
+            <p class="team-bio">Creates intuitive human-robot interaction interfaces that make our robots accessible to everyone.</p>
+            <div class="tech-skills">
+              <span class="tech-tag">User Research</span>
+              <span class="tech-tag">Interface Design</span>
+            </div>
+            <div class="team-social">
+              <a href="#" class="team-social-link"><i class="fab fa-linkedin"></i></a>
+              <a href="#" class="team-social-link"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="team-card">
+          <div class="team-image-container">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400" alt="Lisa Morgan - User Experience Designer">
+          </div>
+          <div class="team-info">
+            <h3 class="team-name">Lisa Morgan</h3>
+            <p class="team-position">UX Designer</p>
+            <p class="team-bio">Creates intuitive human-robot interaction interfaces that make our robots accessible to everyone.</p>
+            <div class="tech-skills">
+              <span class="tech-tag">User Research</span>
+              <span class="tech-tag">Interface Design</span>
+            </div>
+            <div class="team-social">
+              <a href="#" class="team-social-link"><i class="fab fa-linkedin"></i></a>
+              <a href="#" class="team-social-link"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="team-card">
+          <div class="team-image-container">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400" alt="Lisa Morgan - User Experience Designer">
+          </div>
+          <div class="team-info">
+            <h3 class="team-name">Lisa Morgan</h3>
+            <p class="team-position">UX Designer</p>
+            <p class="team-bio">Creates intuitive human-robot interaction interfaces that make our robots accessible to everyone.</p>
+            <div class="tech-skills">
+              <span class="tech-tag">User Research</span>
+              <span class="tech-tag">Interface Design</span>
+            </div>
+            <div class="team-social">
+              <a href="#" class="team-social-link"><i class="fab fa-linkedin"></i></a>
+              <a href="#" class="team-social-link"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- Junior Members Section -->
+  <section id="junior-section" class="team-junior">
+    <div class="container">
+      <h2 class="section-title">Junior <span>Members</span></h2>
+      
+      <div class="team-grid animate-on-scroll">
+        <!-- Junior Member 1 -->
+        <div class="team-card">
+          <div class="team-image-container">
+            <img src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400" alt="Ryan Taylor - Junior Programmer">
+          </div>
+          <div class="team-info">
+            <h3 class="team-name">Ryan Taylor</h3>
+            <p class="team-position">Junior Programmer</p>
+            <p class="team-bio">Bringing fresh innovation to our codebase and specializing in sensor data processing.</p>
+            <div class="tech-skills">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Sensor Data</span>
+            </div>
+            <div class="team-social">
+              <a href="#" class="team-social-link"><i class="fab fa-linkedin"></i></a>
+              <a href="#" class="team-social-link"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Junior Member 2 -->
+        <div class="team-card">
+          <div class="team-image-container">
+            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400" alt="Mia Patel - Prototyping Specialist">
+          </div>
+          <div class="team-info">
+            <h3 class="team-name">Mia Patel</h3>
+            <p class="team-position">Prototyping Specialist</p>
+            <p class="team-bio">Skilled in rapid prototyping and iterative design processes for testing new robot components.</p>
+            <div class="tech-skills">
+              <span class="tech-tag">Prototyping</span>
+              <span class="tech-tag">Iterative Design</span>
+            </div>
+            <div class="team-social">
+              <a href="#" class="team-social-link"><i class="fab fa-linkedin"></i></a>
+              <a href="#" class="team-social-link"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Junior Member 3 -->
+        <div class="team-card">
+          <div class="team-image-container">
+            <img src="https://images.unsplash.com/photo-1552374196-c4e7ffc6e126?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400" alt="Jason Lee - Mechanical Engineering Intern">
+          </div>
+          <div class="team-info">
+            <h3 class="team-name">Jason Lee</h3>
+            <p class="team-position">Mechanical Engineering Intern</p>
+            <p class="team-bio">Engineering student focusing on optimizing mechanical systems for competition robots.</p>
+            <div class="tech-skills">
+              <span class="tech-tag">Mechanical</span>
+              <span class="tech-tag">Optimization</span>
+            </div>
+            <div class="team-social">
+              <a href="#" class="team-social-link"><i class="fab fa-linkedin"></i></a>
+              <a href="#" class="team-social-link"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Junior Member 4 -->
+        <div class="team-card">
+          <div class="team-image-container">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400" alt="Sophia Garcia - Electrical Engineering Intern">
+          </div>
+          <div class="team-info">
+            <h3 class="team-name">Sophia Garcia</h3>
+            <p class="team-position">Electrical Engineering Intern</p>
+            <p class="team-bio">Developing power management systems to improve robot performance and energy efficiency.</p>
+            <div class="tech-skills">
+              <span class="tech-tag">Power Systems</span>
+              <span class="tech-tag">Energy Efficiency</span>
+            </div>
+            <div class="team-social">
+              <a href="#" class="team-social-link"><i class="fab fa-linkedin"></i></a>
+              <a href="#" class="team-social-link"><i class="fab fa-twitter"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- Alumni Team Section -->
+    <section id="alumni-section" class="team-alumni">
+      <div class="container">
+        <h2 class="section-title">Our <span>Alumni</span></h2>
+        
+        <div class="team-grid animate-on-scroll">
+          <!-- Alumni Member 1 -->
+          <div class="team-card">
+            <div class="team-image-container">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400" alt="David Chen - Senior Robotics Engineer at SpaceTech">
+              <div class="alumni-badge">
+                <i class="fas fa-award"></i>
+                <span>Alumni</span>
+              </div>
+            </div>
+            <div class="team-info">
+              <h3 class="team-name">David Chen</h3>
+              <p class="team-position">Former Software Lead</p>
+              <p class="team-current">Now: Senior Robotics Engineer at SpaceTech</p>
+              <p class="team-bio">Pioneered our autonomous navigation systems and led software development for our championship-winning robots from 2018-2021.</p>
+              <div class="tech-skills">
+                <span class="tech-tag">Autonomous Systems</span>
+                <span class="tech-tag">Computer Vision</span>
+              </div>
+              <div class="team-social">
+                <a href="#" class="team-social-link"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="team-social-link"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Alumni Member 2 -->
+          <div class="team-card">
+            <div class="team-image-container">
+              <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400" alt="Maya Williams - Principal Designer at RoboInnovate">
+              <div class="alumni-badge">
+                <i class="fas fa-award"></i>
+                <span>Alumni</span>
+              </div>
+            </div>
+            <div class="team-info">
+              <h3 class="team-name">Maya Williams</h3>
+              <p class="team-position">Former Mechanical Designer</p>
+              <p class="team-current">Now: Principal Designer at RoboInnovate</p>
+              <p class="team-bio">Created our signature modular chassis designs and holds two patents for innovative robotic gripping mechanisms developed with our team.</p>
+              <div class="tech-skills">
+                <span class="tech-tag">Mechanical Design</span>
+                <span class="tech-tag">3D Modeling</span>
+              </div>
+              <div class="team-social">
+                <a href="#" class="team-social-link"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="team-social-link"><i class="fab fa-instagram"></i></a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Alumni Member 3 -->
+          <div class="team-card">
+            <div class="team-image-container">
+              <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400" alt="James Wilson - Founder of AutoBots Startup">
+              <div class="alumni-badge">
+                <i class="fas fa-award"></i>
+                <span>Alumni</span>
+              </div>
+            </div>
+            <div class="team-info">
+              <h3 class="team-name">James Wilson</h3>
+              <p class="team-position">Former Team Captain</p>
+              <p class="team-current">Now: Founder of AutoBots Startup</p>
+              <p class="team-bio">Led our team to national championships and leveraged his experience to launch a successful robotics startup focusing on warehouse automation.</p>
+              <div class="tech-skills">
+                <span class="tech-tag">Leadership</span>
+                <span class="tech-tag">Entrepreneurship</span>
+              </div>
+              <div class="team-social">
+                <a href="#" class="team-social-link"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="team-social-link"><i class="fab fa-twitter"></i></a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Alumni Member 4 -->
+          <div class="team-card">
+            <div class="team-image-container">
+              <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400" alt="Dr. Aisha Patel - Robotics Researcher at MIT">
+              <div class="alumni-badge">
+                <i class="fas fa-award"></i>
+                <span>Alumni</span>
+              </div>
+            </div>
+            <div class="team-info">
+              <h3 class="team-name">Dr. Aisha Patel</h3>
+              <p class="team-position">Former Electronics Lead</p>
+              <p class="team-current">Now: Robotics Researcher at MIT</p>
+              <p class="team-bio">Specialized in sensor fusion and robotics control systems. Her innovations in power management extended our robots' operational time by 40%.</p>
+              <div class="tech-skills">
+                <span class="tech-tag">Sensor Integration</span>
+                <span class="tech-tag">Circuit Design</span>
+              </div>
+              <div class="team-social">
+                <a href="#" class="team-social-link"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="team-social-link"><i class="fas fa-graduation-cap"></i></a>
+              </div>
+            </div>
+          </div>
+  
+          <!-- TEMPLATE: To add a new alumni, copy from here -->
+          <!--
+          <div class="team-card">
+            <div class="team-image-container">
+              <img src="https://example.com/your-image.jpg" alt="Name - Current Position">
+              <div class="alumni-badge">
+                <i class="fas fa-award"></i>
+                <span>Alumni</span>
+              </div>
+            </div>
+            <div class="team-info">
+              <h3 class="team-name">Full Name</h3>
+              <p class="team-position">Former Position at Texcelerators</p>
+              <p class="team-current">Now: Current Position at Company</p>
+              <p class="team-bio">Brief description of their contributions to the team and what they achieved during their time with us. Include any notable accomplishments.</p>
+              <div class="tech-skills">
+                <span class="tech-tag">Skill 1</span>
+                <span class="tech-tag">Skill 2</span>
+              </div>
+              <div class="team-social">
+                <a href="#" class="team-social-link"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="team-social-link"><i class="fab fa-github"></i></a>
+                <a href="#" class="team-social-link"><i class="fab fa-twitter"></i></a>
+              </div>
+            </div>
+          </div>
+          -->
+          <!-- TEMPLATE: To here -->
+          
+        </div>
+      </div>
+    </section>
+
+  <!-- Join Our Team Section -->
+  <section id="join-section" class="team-join">
+    <div class="container">
+      <div class="join-content">
+        <div class="join-text">
+          <h2 class="join-title">Join Our <span class="gradient-text">Team</span></h2>
+          <p class="join-description">Are you passionate about robotics and innovation? We're always looking for talented individuals to join our team. Whether you're a programmer, engineer, designer, or just enthusiastic about robotics, we have a place for you!</p>
+          <ul class="join-benefits">
+            <li><i class="fas fa-check-circle"></i> Work on cutting-edge robotics projects</li>
+            <li><i class="fas fa-check-circle"></i> Collaborate with a diverse team of experts</li>
+            <li><i class="fas fa-check-circle"></i> Participate in national and international competitions</li>
+            <li><i class="fas fa-check-circle"></i> Access to state-of-the-art equipment and facilities</li>
+          </ul>
+          <a href="https://docs.google.com/forms/d/1GedT3FILM3Z1lBdCou5bGl9IC4zf8TYoGnlqxYlfPAs/closedform?hl=en&pli=1&embedded=true" class="cta-button">Apply Now <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="join-image">
+          <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=700" alt="Team members collaborating on a robotics project">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-logo">
+            <div class="footer-logo-image">
+              <img src="Assets/images/endversion.png" alt="Texcelerators Logo">
+            </div>
+            <h3 class="logo-text">
+              <span>TEX</span>CELERATORS
+            </h3>
+          </div>
+          <p class="footer-description">
+            Pioneering the future of robotics through innovation, collaboration, and excellence.
+          </p>
+          <p class="footer-copyright">
+            © <script>document.write(new Date().getFullYear())</script> Texcelerators Robotics Club. All rights reserved.
+          </p>
+        </div>
+        
+        <div>
+          <h4 class="footer-section-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li class="footer-link-item">
+              <a href="#home" class="footer-link">Home</a>
+            </li>
+            <li class="footer-link-item">
+              <a href="#achievements" class="footer-link">Achievements</a>
+            </li>
+            <li class="footer-link-item">
+              <a href="#" class="footer-link">Team</a>
+            </li>
+            <li class="footer-link-item">
+              <a href="#bots" class="footer-link">Our Robots</a>
+            </li>
+            <li class="footer-link-item">
+              <a href="#about" class="footer-link">About Us</a>
+            </li>
+            <li class="footer-link-item">
+              <a href="#contact" class="footer-link">Contact</a>
+            </li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="footer-section-title">Programs</h4>
+          <ul class="footer-links">
+            <li class="footer-link-item">
+              <a href="#" class="footer-link">Workshops</a>
+            </li>
+            <li class="footer-link-item">
+              <a href="#" class="footer-link">Competitions</a>
+            </li>
+            <li class="footer-link-item">
+              <a href="#" class="footer-link">Community Outreach</a>
+            </li>
+            <li class="footer-link-item">
+              <a href="#" class="footer-link">Research Projects</a>
+            </li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="footer-section-title">Contact Info</h4>
+          <ul class="footer-links">
+            <li class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <span  class="contact-text">St. Vincent Pallotti College of Engineering and Technology, Nagpur 441108</span>
+            </li>
+            <li class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <a href="mailto:info@texcelerators.org" class="contact-link">texcelerators@gmail.com</a>
+            </li>
+            <li class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-phone"></i>
+              </div>
+              <a href="tel:+91 8855921249" class="contact-link">+91 8855921249</a>
+            </li>
+          </ul>
+          
+          <div class="follow-section">
+            <h4 class="follow-title">Follow Us</h4>
+            <div class="follow-links">
+              <a href="#" class="follow-link" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="#" class="follow-link" aria-label="YouTube">
+                <i class="fab fa-youtube"></i>
+              </a>
+              <a href="#" class="follow-link" aria-label="LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="index.js"></script>
+  <script src="team.js"></script>
+</body>
+</html>
