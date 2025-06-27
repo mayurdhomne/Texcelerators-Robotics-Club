@@ -871,3 +871,22 @@
         }
       }
       
+      .bot-details-button:hover {
+        box-shadow: 0 0 30px rgba(0, 255, 255, 0.5);
+        border-color: rgba(0, 255, 255, 0.5);
+      }
+
+      .bot-details-button {
+        backdrop-filter: blur(10px);
+        background: rgba(0, 0, 0, 0.3);
+        border: 1px solid rgba(0, 255, 255, 0.2);
+        border-radius: 12px;
+        box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
+        padding: 0.5rem 1rem;
+        color: #0ff;
+        font-weight: 300;
+        transition: all 0.3s ease;
+        cursor: pointer;
+      }
+      
+      

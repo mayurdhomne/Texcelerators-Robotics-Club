@@ -15,54 +15,139 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Outfit:wght@300;400;600&family=Audiowide&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
-  <!-- Fonts -->
-  <link href=
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
 
-  <!-- Styles -->
+<!-- StyleSheets -->
   <link rel="stylesheet" href="Homepage.css">
 
 </head>
 <body>
-  <!-- Header -->
-  <header>
-    <div class="container">
-      <div class="logo-container">
-        <div class="logo-image">
-          <img src="Assets/images/HomePage/LOGO.png" alt="Texcelerators Logo">
-        </div>
-        <h1 class="logo-text">
-          <span>TEX</span>CELERATORS
-        </h1>
-      </div>
-      
-      <nav class="desktop-nav">
-        <a href="#home" class="nav-link scroll-spy-active">Home</a>
-        <a href="#achievements" class="nav-link">Achievements</a>
-        <a href="#" class="nav-link">Team</a>
-        <a href="#bots" class="nav-link">Robots</a>
-        <a href="#about" class="nav-link">About Us</a>
-        <a href="#contact" class="nav-link">Contact</a>
-      </nav>
-      
-      <button id="mobile-menu-button" class="mobile-menu-button" aria-label="Toggle mobile menu">
-        <i class="fas fa-bars"></i>
-      </button>
-    </div>  
-    
-    <!-- Mobile Navigation Menu -->
-    <div id="mobile-menu" class="mobile-menu">
-      <div class="mobile-menu-inner">
-        <a href="#home" class="mobile-nav-link scroll-spy-active">Home</a>
-        <a href="#achievements" class="mobile-nav-link">Achievements</a>
-        <a href="#" class="mobile-nav-link">Team</a>
-        <a href="#bots" class="mobile-nav-link">Robots</a>
-        <a href="#about" class="mobile-nav-link">About Us</a>
-        <a href="#contact" class="mobile-nav-link">Contact</a>
+<!-- Header/Navbar -->
+<header id="main-header">
+  <div class="navbar-container">
+    <!-- Left Logo -->
+    <div class="navbar-logo left-logo">
+      <div class="logo-image">
+        <img src="Assets/images/HomePage/LOGO.png" alt="Texcelerators">
       </div>
     </div>
-  </header>
+    
+    <!-- Left Name -->
+    <div class="navbar-text left-text" class="font-addition">
+      <span class="logo-text">
+        <span>TEX</span>CELERATORS
+      </span>
+      <span class="tagline">Robo Club</span>
+    </div>
+    
+    <!-- Mobile Center Content -->
+    <div class="mobile-center">
+      <div class="mobile-logo">
+        <i class="fas fa-robot fa-2x"></i>
+      </div>
+      <div class="mobile-text">
+        <span class="mobile-title">TEXCELERATORS</span>
+        <span class="mobile-subtitle">Robo Club</span>
+      </div>
+    </div>
+    
+    <!-- Hamburger Menu -->
+    <div class="hamburger-container">
+      <button id="hamburger-btn" class="hamburger-btn" aria-label="Toggle navigation">
+        <i class="fa-sharp fa-solid fa-square-list"></i>
+      </button>
+    </div>
+    
+    <!-- Right Name -->
+    <div class="navbar-text right-text" class='font-addition'>
+      <span class="logo-text">
+        ST. <span>VINCENT PALLOTTI</span> COLLEGE
+      </span>
+      <span class="tagline">OF ENGINEERING AND TECHNOLOGY</span>
+    </div>
+    
+    <!-- Right Logo -->
+    <div class="navbar-logo right-logo">
+      <div class="logo-image">
+          <img src="Assets/images/HomePage/SVPCET  LOGO.png" alt="SVPCET">
+      </div>
+    </div>
+  </div>
   
+  <!-- Navigation Menu -->
+  <nav id="nav-menu" class="nav-menu">
+    <div class="nav-menu-content">
+      <a href="#home" class="nav-link active" data-section="home">
+        <i class="fas fa-home"></i>
+        <span>Home</span>
+      </a>
+      <a href="#achievements" class="nav-link" data-section="achievements">
+        <i class="fas fa-trophy"></i>
+        <span>Achievements</span>
+      </a>
+      <a href="#team" class="nav-link" data-section="team">
+        <i class="fas fa-users"></i>
+        <span>Team</span>
+      </a>
+      <a href="#bots" class="nav-link" data-section="bots">
+        <i class="fas fa-robot"></i>
+        <span>Robots</span>
+      </a>
+      <a href="#about" class="nav-link" data-section="about">
+        <i class="fas fa-info-circle"></i>
+        <span>About Us</span>
+      </a>
+      <a href="#contact" class="nav-link" data-section="contact">
+        <i class="fas fa-envelope"></i>
+        <span>Contact</span>
+      </a>
+    </div>
+  </nav>
+</header>
+
+<!-- Sidebar (hidden initially) -->
+<aside id="sidebar" class="sidebar">
+  <div class="sidebar-content">
+    <div class="sidebar-header">
+      <div class="sidebar-logo">
+        <img src="Assets/images/HomePage/LOGO.png" alt="Texcelerators">
+      </div>
+      <div class="sidebar-brand" class="font-addition">
+        <span class="sidebar-title">TEXCELERATORS</span>
+        <span class="sidebar-subtitle">Robo Club</span>
+      </div>
+    </div>
+    
+    <nav class="sidebar-nav">
+      <a href="#home" class="sidebar-link" data-section="home">
+        <i class="fas fa-home"></i>
+        <span>Home</span>
+      </a>
+      <a href="#achievements" class="sidebar-link active" data-section="achievements">
+        <i class="fas fa-trophy"></i>
+        <span>Achievements</span>
+      </a>
+      <a href="#team" class="sidebar-link" data-section="team">
+        <i class="fas fa-users"></i>
+        <span>Team</span>
+      </a>
+      <a href="#bots" class="sidebar-link" data-section="bots">
+        <i class="fas fa-robot"></i>
+        <span>Robots</span>
+      </a>
+      <a href="#about" class="sidebar-link" data-section="about">
+        <i class="fas fa-info-circle"></i>
+        <span>About Us</span>
+      </a>
+      <a href="#contact" class="sidebar-link" data-section="contact">
+        <i class="fas fa-envelope"></i>
+        <span>Contact</span>
+      </a>
+    </nav>
+  </div>
+</aside>
+
+<main id="main-content">
   <!-- Hero Section -->
   <section id="home" class="hero">
     <div class="slide active">
@@ -640,6 +725,7 @@
           <p class="footer-copyright">
             © <script>document.write(new Date().getFullYear())</script> Texcelerators Robotics Club. All rights reserved.
           </p>
+          <p> <span class="ri-heart-2-fill"></span> Made With Love</p>
         </div>
         
         <div>
@@ -689,7 +775,7 @@
           <ul class="footer-links">
             <li class="contact-item">
               <div class="contact-icon">
-                <i class="fas fa-map-marker-alt"></i>
+                <i class="ri-map-pin-2-fill"></i>
               </div>
               <span  class="contact-text">St. Vincent Pallotti College of Engineering and Technology, Nagpur 441108</span>
             </li>
@@ -725,7 +811,7 @@
       </div>
     </div>
   </footer>
-
+</main>
   <!-- JavaScript -->
   <script src="Homepage.js"></script>
   </body>

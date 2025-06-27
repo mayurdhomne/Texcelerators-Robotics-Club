@@ -17,6 +17,8 @@
           mobileMenuButton.innerHTML = '<i class="fas fa-times"></i>';
         }
       });
+
+      
       
       const mobileLinks = mobileMenu.querySelectorAll('a');
       mobileLinks.forEach(link => {
