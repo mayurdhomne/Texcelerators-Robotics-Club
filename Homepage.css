@@ -1,5 +1,6 @@
-/* Base styles */
+/* ===== BASE STYLES & VARIABLES ===== */
 :root {
+  /* Main Color Palette */
   --primary: #2563eb;         /* Enhanced blue */
   --secondary: #10b981;       /* Richer green */
   --accent: #f43f5e;          /* Vibrant rose */
@@ -17,29 +18,29 @@
   --cyan: #06b6d4;
   --emerald: #10b981;
 
-
- /* Sidebar variables */
---sidebar-width-collapsed: 80px;
---sidebar-width-expanded: 280px;
---navbar-height: 120px;
---transition-duration: 0.3s;
+  /* Layout Variables */
+  --sidebar-width-collapsed: 80px;
+  --sidebar-width-expanded: 280px;
+  --navbar-height: 120px;
+  --transition-duration: 0.3s;
 }
-  
 
-
+/* Global Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
- /* All fonts for main logo will go here  */
+
+/* Custom Font Definition - Fixed naming */
 @font-face {
-  font-family: 'Font';
+  font-family: 'Equinox';
   src: url('Assets/fonts/Equinox\ Bold.woff2') format('woff2');
   font-weight: normal;
-  font-style:normal;
+  font-style: normal;
 }
 
+/* Base Typography */
 html {
   scroll-behavior: smooth;
 }
@@ -51,6 +52,7 @@ body {
   line-height: 1.6;
 }
 
+/* Layout Container */
 .container {
   width: 100%;
   max-width: 1280px;
@@ -58,6 +60,7 @@ body {
   padding: 0 1rem;
 }
 
+/* Typography Classes */
 .font-heading {
   font-family: 'Space Grotesk', sans-serif;
 }
@@ -70,7 +73,11 @@ body {
   font-family: 'Audiowide', cursive;
 }
 
-/* Header/Navbar Styles */
+.font-addition {
+  font-family: 'Equinox', sans-serif;
+}
+
+/* ===== MAIN HEADER & NAVBAR ===== */
 #main-header {
   position: fixed;
   top: 0;
@@ -98,16 +105,7 @@ body {
   justify-content: center;
 }
 
-/* Remove the messy CSS you added and use this instead */
-.logo-image img,
-.mobile-logo img,
-.sidebar-logo img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  border-radius: 4px;
-}
-
+/* ===== LOGO STYLING ===== */
 .logo-image {
   width: 120px;
   height: 120px;
@@ -116,15 +114,20 @@ body {
   justify-content: center;
   transition: transform 0.3s ease;
 }
+
 .logo-image:hover {
   transform: scale(1.1);
 }
-/* Keep the hover effect on the container, not the image */
 
-.font-addition {
-  font-family: 'Font', sans-serif;
+.logo-image img,
+.sidebar-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 4px;
 }
 
+/* ===== NAVBAR TEXT STYLING ===== */
 .navbar-text {
   display: flex;
   flex-direction: column;
@@ -135,7 +138,7 @@ body {
 .logo-text {
   font-size: 1.5rem;
   font-weight: bold;
-  font-family: 'Font', sans-serif;
+  font-family: 'Equinox', sans-serif;
   margin: 0;
 }
 
@@ -145,7 +148,7 @@ body {
 
 .tagline {
   font-size: 0.8rem;
-  font-family: 'Font', sans-serif;
+  font-family: 'Equinox', sans-serif;
   font-weight: 400;
   color: rgba(148, 163, 184, 0.8);
   text-transform: uppercase;
@@ -153,7 +156,7 @@ body {
   margin-top: -2px;
 }
 
-/* Mobile Center Content */
+/* ===== MOBILE NAVIGATION ===== */
 .mobile-center {
   display: none;
   align-items: center;
@@ -163,16 +166,26 @@ body {
   padding-left: 1rem;
 }
 
-.mobile-logo {
-  width: 40px;
-  height: 40px;
+/* Mobile Logo Containers */
+.mobile-college-logo,
+.mobile-club-logo {
+  width: 45px;
+  height: 45px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--primary);
   flex-shrink: 0;
 }
 
+.mobile-college-logo img,
+.mobile-club-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+/* Mobile Text */
 .mobile-text {
   display: flex;
   flex-direction: column;
@@ -195,6 +208,7 @@ body {
   margin-top: -2px;
 }
 
+/* ===== HAMBURGER MENU ===== */
 .hamburger-container {
   display: flex;
   align-items: center;
@@ -203,37 +217,44 @@ body {
 }
 
 .hamburger-btn {
-  background: none;
-  border: none;
+  background: rgba(37, 99, 235, 0.1);
+  border: 2px solid rgba(37, 99, 235, 0.3);
   cursor: pointer;
-  padding: 10px;
+  padding: 15px;
   border-radius: 8px;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  transition: all 0.3s ease;
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 6px;
   align-items: center;
   justify-content: center;
-  width: 50px;
-  height: 50px;
+  width: 70px;
+  height: 70px;
 }
 
 .hamburger-btn:hover {
-  background-color: rgba(37, 99, 235, 0.1);
+  background-color: rgba(37, 99, 235, 0.2);
+  border-color: rgba(37, 99, 235, 0.5);
   transform: scale(1.05);
 }
 
 .hamburger-line {
-  width: 25px;
-  height: 3px;
+  width: 30px;
+  height: 4px;
   background-color: var(--foreground);
   border-radius: 2px;
   transition: all 0.3s ease;
   transform-origin: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
+.hamburger-btn:hover .hamburger-line {
+  background-color: var(--primary);
+}
+
+/* Hamburger Animation States */
 .hamburger-btn.active .hamburger-line:nth-child(1) {
-  transform: rotate(45deg) translate(6px, 6px);
+  transform: rotate(45deg) translate(8px, 8px);
 }
 
 .hamburger-btn.active .hamburger-line:nth-child(2) {
@@ -242,10 +263,10 @@ body {
 }
 
 .hamburger-btn.active .hamburger-line:nth-child(3) {
-  transform: rotate(-45deg) translate(6px, -6px);
+  transform: rotate(-45deg) translate(8px, -8px);
 }
 
-/* Navigation Menu */
+/* ===== DROPDOWN NAVIGATION MENU ===== */
 .nav-menu {
   position: absolute;
   top: 100%;
@@ -276,6 +297,7 @@ body {
   margin: 0 auto;
 }
 
+/* Navigation Links */
 .nav-link {
   display: flex;
   align-items: center;
@@ -320,7 +342,7 @@ body {
   font-size: 1rem;
 }
 
-/* Sidebar Styles */
+/* ===== SIDEBAR STYLES ===== */
 .sidebar {
   position: fixed;
   top: 0;
@@ -367,15 +389,13 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--primary);
-  font-size: 1.5rem;
   flex-shrink: 0;
 }
 
 .sidebar-brand {
   display: flex;
   flex-direction: column;
-  font-family: 'Font', sans-serif;
+  font-family: 'Equinox', sans-serif;
   opacity: 0;
   transition: opacity 0.3s ease 0.1s;
   white-space: nowrap;
@@ -452,7 +472,7 @@ body {
   opacity: 1;
 }
 
-/* Main Content Adjustments */
+/* ===== MAIN CONTENT ADJUSTMENTS ===== */
 body.sidebar-active #main-content {
   margin-left: var(--sidebar-width-collapsed);
   transition: margin-left var(--transition-duration) ease;
@@ -463,8 +483,9 @@ body.sidebar-active #main-header {
   transform: translateY(-100%);
 }
 
-/* Responsive Design */
+/* ===== RESPONSIVE DESIGN ===== */
 @media (max-width: 768px) {
+  /* Adjust navbar for mobile */
   .navbar-container {
     padding: 1rem;
   }
@@ -480,27 +501,35 @@ body.sidebar-active #main-header {
     display: flex;
   }
   
+  /* Adjust dropdown menu for mobile */
   .nav-menu-content {
     grid-template-columns: 1fr;
     padding: 1.5rem;
   }
   
-  @media (max-width: 768px) {
-    .sidebar {
-      width: var(--sidebar-width-collapsed);
-    }
-    
-    .sidebar:hover {
-      width: var(--sidebar-width-expanded);
-      max-width: 280px;
-    }
+  /* Disable sidebar completely on mobile */
+  .sidebar {
+    display: none !important;
   }
   
+  /* Ensure main content doesn't shift on mobile */
   body.sidebar-active #main-content {
-    margin-left: 0;
+    margin-left: 0 !important;
+  }
+  
+  /* Adjust navbar height for mobile */
+  :root {
+    --navbar-height: 100px;
   }
 }
 
+/* ===== HERO SECTION ===== */
+.hero {
+  padding-top: 4rem;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
 
 /* Hero Section */
 .hero {

@@ -12,38 +12,39 @@
   <meta property="og:type" content="website">
   <meta property="og:image" content="assets/logo.jpg">
   
-  <!-- Fonts -->
+  <!-- Essential Fonts Only -->
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Outfit:wght@300;400;600&family=Audiowide&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
 
-<!-- StyleSheets -->
+  <!-- StyleSheets -->
   <link rel="stylesheet" href="Homepage.css">
-
 </head>
 <body>
-<!-- Header/Navbar -->
+<!-- ===== NAVIGATION HEADER ===== -->
 <header id="main-header">
   <div class="navbar-container">
-    <!-- Left Logo -->
+    <!-- Desktop Left: Club Logo -->
     <div class="navbar-logo left-logo">
       <div class="logo-image">
         <img src="Assets/images/HomePage/LOGO.png" alt="Texcelerators">
       </div>
     </div>
     
-    <!-- Left Name -->
-    <div class="navbar-text left-text" class="font-addition">
+    <!-- Desktop Left: Club Name -->
+    <div class="navbar-text left-text font-addition">
       <span class="logo-text">
         <span>TEX</span>CELERATORS
       </span>
       <span class="tagline">Robo Club</span>
     </div>
     
-    <!-- Mobile Center Content -->
+    <!-- Mobile Center: Dual Logo + Club Name Layout -->
     <div class="mobile-center">
-      <div class="mobile-logo">
-        <i class="fas fa-robot fa-2x"></i>
+      <div class="mobile-college-logo">
+        <img src="Assets/images/HomePage/SVPCET  LOGO.png" alt="SVPCET">
+      </div>
+      <div class="mobile-club-logo">
+        <img src="Assets/images/HomePage/LOGO.png" alt="Texcelerators">
       </div>
       <div class="mobile-text">
         <span class="mobile-title">TEXCELERATORS</span>
@@ -51,22 +52,24 @@
       </div>
     </div>
     
-    <!-- Hamburger Menu -->
+    <!-- Hamburger Menu (3 Lines) -->
     <div class="hamburger-container">
       <button id="hamburger-btn" class="hamburger-btn" aria-label="Toggle navigation">
-        <i class="fa-sharp fa-solid fa-square-list"></i>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
       </button>
     </div>
     
-    <!-- Right Name -->
-    <div class="navbar-text right-text" class='font-addition'>
+    <!-- Desktop Right: College Name -->
+    <div class="navbar-text right-text font-addition">
       <span class="logo-text">
         ST. <span>VINCENT PALLOTTI</span> COLLEGE
       </span>
       <span class="tagline">OF ENGINEERING AND TECHNOLOGY</span>
     </div>
     
-    <!-- Right Logo -->
+    <!-- Desktop Right: College Logo -->
     <div class="navbar-logo right-logo">
       <div class="logo-image">
           <img src="Assets/images/HomePage/SVPCET  LOGO.png" alt="SVPCET">
@@ -74,7 +77,7 @@
     </div>
   </div>
   
-  <!-- Navigation Menu -->
+  <!-- Dropdown Navigation Menu -->
   <nav id="nav-menu" class="nav-menu">
     <div class="nav-menu-content">
       <a href="#home" class="nav-link active" data-section="home">
@@ -105,14 +108,14 @@
   </nav>
 </header>
 
-<!-- Sidebar (hidden initially) -->
+<!-- ===== DESKTOP SIDEBAR (Hidden on Mobile) ===== -->
 <aside id="sidebar" class="sidebar">
   <div class="sidebar-content">
     <div class="sidebar-header">
       <div class="sidebar-logo">
         <img src="Assets/images/HomePage/LOGO.png" alt="Texcelerators">
       </div>
-      <div class="sidebar-brand" class="font-addition">
+      <div class="sidebar-brand font-addition">
         <span class="sidebar-title">TEXCELERATORS</span>
         <span class="sidebar-subtitle">Robo Club</span>
       </div>
@@ -147,8 +150,9 @@
   </div>
 </aside>
 
+<!-- ===== MAIN CONTENT ===== -->
 <main id="main-content">
-  <!-- Hero Section -->
+  <!-- Hero Section with Slideshow -->
   <section id="home" class="hero">
     <div class="slide active">
       <div class="slide-bg"></div>
@@ -177,6 +181,7 @@
       </div>
     </div>
     
+    <!-- Slideshow Controls -->
     <div class="slide-indicators">
       <button class="slide-dot active" aria-label="Go to slide 1"></button>
       <button class="slide-dot" aria-label="Go to slide 2"></button>
@@ -196,6 +201,7 @@
     <div class="container" data-aos="zoom-in-left">
       <h2 class="section-title">Our <span>Achievements</span></h2>
       
+      <!-- Achievement Statistics Grid -->
       <div class="achievements-grid">
         <div class="achievement-card animate-on-scroll">
           <div class="achievement-icon primary">
@@ -234,6 +240,7 @@
         </div>
       </div>
       
+      <!-- Highlighted Achievement Cards -->
       <div class="highlighted-achievements">
         <div class="highlighted-card animate-on-scroll">
           <img src="Assets/images/HomePage/BITSG2025.jpg" alt="BITS GOA">
