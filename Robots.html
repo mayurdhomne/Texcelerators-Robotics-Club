@@ -20,46 +20,135 @@
   <link rel="stylesheet" href="Robots.css">
 </head>
 <body>
-  <!-- Header -->
-  <header>
-    <div class="container">
-      <div class="logo-container">
+  <header id="main-header">
+    <div class="navbar-container">
+      <!-- Desktop Left: College Logo -->
+      <div class="navbar-logo left-logo">
         <div class="logo-image">
-          <img src="Assets/images/Robots/endversion.png" alt="Texcelerators Logo">
+          <img src="Assets/images/HomePage/SVPCET  LOGO.png" alt="SVPCET">
         </div>
-        <h1 class="logo-text">
-          <span>TEX</span>CELERATORS
-        </h1>
       </div>
       
-      <nav class="desktop-nav">
-        <a href="#home" class="nav-link scroll-spy-active">Home</a>
-        <a href="#achievements" class="nav-link">Achievements</a>
-        <a href="#" class="nav-link">Team</a>
-        <a href="#bots" class="nav-link">Robots</a>
-        <a href="#about" class="nav-link">About Us</a>
-        <a href="#contact" class="nav-link">Contact</a>
-      </nav>
+      <!-- Desktop Left: College Name (Image) -->
+      <div class="navbar-text left-text font-addition">
+        <img src="Assets/images/Team/logo2.jpg" alt="St. Vincent Pallotti College of Engineering and Technology">
+      </div>
       
-      <button id="mobile-menu-button" class="mobile-menu-button" aria-label="Toggle mobile menu">
-        <i class="fas fa-bars"></i>
-      </button>
+      <!-- Mobile Center: Dual Logo + Club Name Layout -->
+      <div class="mobile-center">
+        <div class="mobile-college-logo">
+          <img src="Assets/images/HomePage/SVPCET  LOGO.png" alt="SVPCET">
+        </div>
+        <div class="mobile-club-logo">
+          <img src="Assets/images/HomePage/LOGO.png" alt="Texcelerators">
+        </div>
+        <div class="mobile-text">
+          <span class="mobile-title">TEXCELERATORS</span>
+          <span class="mobile-subtitle">Robo Club</span>
+        </div>
+      </div>
+      
+      <!-- Hamburger Menu (3 Lines) -->
+      <div class="hamburger-container">
+        <button id="hamburger-btn" class="hamburger-btn" aria-label="Toggle navigation">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+      
+      <!-- Desktop Right: Club Name -->
+      <div class="navbar-text right-text font-addition">
+        <span class="logo-text">
+          <span>TEX</span>CELERATORS
+        </span>
+        <span class="tagline">Robo Club</span>
+      </div>
+  
+      <!-- Desktop Right: Club Logo -->
+      <div class="navbar-logo right-logo">
+        <div class="logo-image">
+          <img src="Assets/images/HomePage/LOGO.png" alt="Texcelerators">
+        </div>
+      </div>
     </div>
     
-    <!-- Mobile Navigation Menu -->
-    <div id="mobile-menu" class="mobile-menu">
-      <div class="mobile-menu-inner">
-        <a href="#home" class="mobile-nav-link scroll-spy-active">Home</a>
-        <a href="#achievements" class="mobile-nav-link">Achievements</a>
-        <a href="#" class="mobile-nav-link">Team</a>
-        <a href="#bots" class="mobile-nav-link">Bots</a>
-        <a href="#about" class="mobile-nav-link">About Us</a>
-        <a href="#contact" class="mobile-nav-link">Contact</a>
+    <!-- Dropdown Navigation Menu -->
+    <nav id="nav-menu" class="nav-menu">
+      <div class="nav-menu-content">
+        <a href="#home" class="nav-link active" data-section="home">
+          <i class="fas fa-home"></i>
+          <span>Home</span>
+        </a>
+        <a href="#achievements" class="nav-link" data-section="achievements">
+          <i class="fas fa-trophy"></i>
+          <span>Achievements</span>
+        </a>
+        <a href="#team" class="nav-link" data-section="team">
+          <i class="fas fa-users"></i>
+          <span>Team</span>
+        </a>
+        <a href="#bots" class="nav-link" data-section="bots">
+          <i class="fas fa-robot"></i>
+          <span>Robots</span>
+        </a>
+        <a href="#about" class="nav-link" data-section="about">
+          <i class="fas fa-info-circle"></i>           
+          <span>About Us</span>
+        </a>
+        <a href="#contact" class="nav-link" data-section="contact">
+          <i class="fas fa-envelope"></i>
+          <span>Contact</span>
+        </a>
+        <a href="team.html#join-section"  class="nav-link" >
+          <i class="fas fa-envelope"></i>
+          <span>Join Us</span>
+        </a>
       </div>
-    </div>
+    </nav>
   </header>
   
 
+<!-- ===== DESKTOP SIDEBAR (Hidden on Mobile) ===== -->
+<aside id="sidebar" class="sidebar">
+  <div class="sidebar-content">
+    <div class="sidebar-header">
+      <div class="sidebar-logo">
+        <img src="Assets/images/HomePage/LOGO.png" alt="Texcelerators">
+      </div>
+      <div class="sidebar-brand font-addition">
+        <span class="sidebar-title">TEXCELERATORS</span>
+        <span class="sidebar-subtitle">Robo Club</span>
+      </div>
+    </div>
+    
+    <nav class="sidebar-nav">
+      <a href="#robosoccer" class="sidebar-link active" data-section="robosoccer">
+        <i class="fas fa-futbol"></i>
+        <span>RoboSoccer</span>
+      </a>
+      <a href="#robosumo" class="sidebar-link" data-section="robosumo">
+        <i class="fas fa-fist-raised"></i>
+        <span>RoboSumo</span>
+      </a>
+      <a href="#linefollower" class="sidebar-link" data-section="linefollower">
+        <i class="fas fa-route"></i>
+        <span>Line Follower</span>
+      </a>
+      <a href="#obstacle" class="sidebar-link" data-section="obstacle">
+        <i class="fas fa-shield-alt"></i>
+        <span>Obstacle Avoidance</span>
+      </a>
+    </nav>
+  </div>
+</aside>
+
+<!-- ===== MAIN CONTENT ===== -->
+<main id="main-content">
+  <!-- Back to Top Button -->
+<button id="backToTop" class="back-to-top-btn" title="Go to top">
+  <i class="fas fa-arrow-up"></i>
+</button>
   <!-- Hero Section -->
   <section id="home" class="hero">
     <div class="hero-content">
@@ -105,19 +194,15 @@
         </p>
       </div>
 
-      
-      
-      
       <div class="robots-grid">
         <!-- Soccer Bot Alpha -->
-        
         <div class="robot-card animate-on-scroll slide-left" >
           <div class="robot-card-image">
             <div class="robot-badge primary">
               <i class="fas fa-trophy"></i> Championship
             </div>
             <img src="https://images.unsplash.com/photo-1574680178050-55c6a6a96e0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" alt="Soccer Bot Alpha">
-            <button class="bot-details-button" class="magnetic" onclick="toggleRobotDetails('soccer-alpha')">
+            <button class="bot-details-button"  onclick="toggleRobotDetails('soccer-alpha')">
               <i class="fas fa-info-circle"></i> Details
             </button>
           </div>
@@ -256,7 +341,7 @@
               <i class="fas fa-cog"></i> Tactical
             </div>
             <img src="https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" alt="Midfielder Pro">
-            <button class="bot-details-button" class="magnetic"  onclick="toggleRobotDetails('midfielder-pro')">
+            <button class="bot-details-button"  onclick="toggleRobotDetails('midfielder-pro')">
               <i class="fas fa-info-circle"></i> Details
             </button>
           </div>
@@ -1054,33 +1139,294 @@
     </div>
   </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="section">
-    <div class="container">
-      <h2 class="section-title">Get In <span>Touch</span></h2>
-      <div class="contact-form animate-on-scroll">
-        <form id="contact-form">
-          <div class="form-group">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" required>
-          </div>
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
-          </div>
-          <div class="form-group">
-            <label for="subject">Subject</label>
-            <input type="text" id="subject" name="subject" required>
-          </div>
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
-          </div>
-          <button type="submit" class="submit-btn">Send Message</button>
-        </form>
+ <!-- Behind the Scenes Section -->
+<section id="behind-scenes" class="section">
+  <div class="container">
+    <div class="category-header animate-on-scroll">
+      <div class="category-badge">
+        <i class="fas fa-camera"></i>
+        Behind the Scenes
       </div>
+      <h2 class="section-title">The Real <span>Story</span></h2>
+      <p class="category-description">
+        Discover the untold moments, late-night sessions, and breakthrough discoveries that happen behind our robotics innovations.
+      </p>
     </div>
-  </section>
+
+    <!-- Photo Grid Container -->
+    <div class="scenes-grid">
+      
+      <!-- Story Moment 1: Late Night Coding -->
+      <div class="story-moment animate-on-scroll" data-category="workshop">
+        <div class="moment-image">
+          <img src="https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" alt="Late night coding session">
+          <div class="story-overlay">
+            <div class="story-content">
+              <span class="timestamp">
+                <i class="fas fa-clock"></i> 2:30 AM - March 15th
+              </span>
+              <h4 class="story-title">Debugging Marathon</h4>
+              <p class="story-description">Fixing sensor calibration issues 2 hours before competition deadline</p>
+              <div class="story-details">
+                <span class="challenge-level high">
+                  <i class="fas fa-fire"></i> All-Nighter
+                </span>
+                <span class="team-count">
+                  <i class="fas fa-users"></i> 4 Members
+                </span>
+                <span class="mood-indicator">
+                  ☕ 6th Coffee
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Story Moment 2: Workshop Session -->
+      <div class="story-moment animate-on-scroll" data-category="building">
+        <div class="moment-image">
+          <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" alt="Workshop session">
+          <div class="story-overlay">
+            <div class="story-content">
+              <span class="timestamp">
+                <i class="fas fa-clock"></i> 4:00 PM - January 8th
+              </span>
+              <h4 class="story-title">Chassis Assembly</h4>
+              <p class="story-description">Building the mechanical foundation for our new soccer bot</p>
+              <div class="story-details">
+                <span class="challenge-level medium">
+                  <i class="fas fa-wrench"></i> Steady Progress
+                </span>
+                <span class="team-count">
+                  <i class="fas fa-users"></i> 3 Members
+                </span>
+                <span class="outcome success">
+                  <i class="fas fa-check"></i> Success
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Story Moment 3: Testing Phase -->
+      <div class="story-moment animate-on-scroll large" data-category="testing">
+        <div class="moment-image">
+          <img src="https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=600" alt="Robot testing">
+          <div class="story-overlay">
+            <div class="story-content">
+              <span class="timestamp">
+                <i class="fas fa-clock"></i> 6:15 PM - February 22nd
+              </span>
+              <h4 class="story-title">First Movement Test</h4>
+              <p class="story-description">The moment our robot took its first steps - pure magic!</p>
+              <div class="story-details">
+                <span class="challenge-level low">
+                  <i class="fas fa-smile"></i> Breakthrough
+                </span>
+                <span class="team-count">
+                  <i class="fas fa-users"></i> 5 Members
+                </span>
+                <span class="outcome celebration">
+                  <i class="fas fa-star"></i> Milestone
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Story Moment 4: Problem Solving -->
+      <div class="story-moment animate-on-scroll" data-category="debugging">
+        <div class="moment-image">
+          <img src="https://images.unsplash.com/photo-1581092335878-2d9ff86ca2bf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" alt="Team problem solving">
+          <div class="story-overlay">
+            <div class="story-content">
+              <span class="timestamp">
+                <i class="fas fa-clock"></i> 11:00 AM - March 3rd
+              </span>
+              <h4 class="story-title">Brainstorming Session</h4>
+              <p class="story-description">Solving motor synchronization issues through collaborative thinking</p>
+              <div class="story-details">
+                <span class="challenge-level medium">
+                  <i class="fas fa-brain"></i> Problem Solving
+                </span>
+                <span class="team-count">
+                  <i class="fas fa-users"></i> 6 Members
+                </span>
+                <span class="lesson-learned">
+                  💡 Team Work
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Story Moment 5: Competition Prep -->
+      <div class="story-moment animate-on-scroll" data-category="competition">
+        <div class="moment-image">
+          <img src="https://images.unsplash.com/photo-1531746790731-6c087fecd65a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" alt="Competition preparation">
+          <div class="story-overlay">
+            <div class="story-content">
+              <span class="timestamp">
+                <i class="fas fa-clock"></i> 7:00 AM - March 16th
+              </span>
+              <h4 class="story-title">Competition Day Prep</h4>
+              <p class="story-description">Final calibrations and packing before heading to nationals</p>
+              <div class="story-details">
+                <span class="challenge-level high">
+                  <i class="fas fa-trophy"></i> Competition
+                </span>
+                <span class="team-count">
+                  <i class="fas fa-users"></i> 8 Members
+                </span>
+                <span class="mood-indicator">
+                  🚀 Ready to Win
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Story Moment 6: Failed Experiment -->
+      <div class="story-moment animate-on-scroll" data-category="learning">
+        <div class="moment-image">
+          <img src="https://images.unsplash.com/photo-1574680178050-55c6a6a96e0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" alt="Failed experiment">
+          <div class="story-overlay">
+            <div class="story-content">
+              <span class="timestamp">
+                <i class="fas fa-clock"></i> 3:45 PM - January 28th
+              </span>
+              <h4 class="story-title">Learning from Failure</h4>
+              <p class="story-description">When our prototype completely fell apart - but we learned so much!</p>
+              <div class="story-details">
+                <span class="challenge-level high">
+                  <i class="fas fa-exclamation-triangle"></i> Epic Fail
+                </span>
+                <span class="team-count">
+                  <i class="fas fa-users"></i> 4 Members
+                </span>
+                <span class="lesson-learned">
+                  📚 Valuable Lesson
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Filter Buttons (Optional Enhancement) -->
+    <div class="filter-controls animate-on-scroll">
+      <button class="filter-btn active" data-filter="all">
+        <i class="fas fa-th"></i> All Moments
+      </button>
+      <button class="filter-btn" data-filter="workshop">
+        <i class="fas fa-tools"></i> Workshop
+      </button>
+      <button class="filter-btn" data-filter="testing">
+        <i class="fas fa-flask"></i> Testing
+      </button>
+      <button class="filter-btn" data-filter="competition">
+        <i class="fas fa-trophy"></i> Competition
+      </button>
+      <button class="filter-btn" data-filter="learning">
+        <i class="fas fa-lightbulb"></i> Learning
+      </button>
+    </div>
+
+  </div>
+</section>
+
+<!-- Timeline Section - Add this where you want the timeline -->
+<section id="timeline" class="section">
+  <div class="container">
+    <!-- Timeline Header -->
+    <div class="timeline-header animate-on-scroll">
+      <div class="category-badge">
+        <i class="fas fa-history"></i>
+        Our Journey
+      </div>
+      <h2 class="timeline-header__title">Texcelerators</h2>
+      <h3 class="timeline-header__subtitle">From Concept to Champions</h3>
+    </div>
+
+    <!-- Timeline Container -->
+    <div class="timeline">
+      
+      <!-- Timeline Item 1: Formation -->
+      <div class="timeline-item" data-text="THE BEGINNING">
+        <div class="timeline__content">
+          <img class="timeline__img" src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" alt="Team formation">
+          <h2 class="timeline__content-title">2023</h2>
+          <p class="timeline__content-desc">
+            Texcelerators Robotics Club was founded by passionate engineering students at SVPCET. Starting with just 5 members and a shared dream to innovate in robotics, we began our journey in a small corner of the college lab.
+          </p>
+        </div>
+      </div>
+
+      <!-- Timeline Item 2: First Robot -->
+      <div class="timeline-item" data-text="FIRST CREATION">
+        <div class="timeline__content">
+          <img class="timeline__img" src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" alt="First robot">
+          <h2 class="timeline__content-title">Early 2023</h2>
+          <p class="timeline__content-desc">
+            After months of learning and experimenting, we built our first functional robot - a simple line-following bot. Though basic, it marked our transition from theory to practical robotics and ignited our passion for innovation.
+          </p>
+        </div>
+      </div>
+
+      <!-- Timeline Item 3: Team Growth -->
+      <div class="timeline-item" data-text="EXPANDING HORIZONS">
+        <div class="timeline__content">
+          <img class="timeline__img" src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" alt="Team collaboration">
+          <h2 class="timeline__content-title">Mid 2023</h2>
+          <p class="timeline__content-desc">
+            Word spread about our innovative approach and dedication. Our team grew to 15+ members from different engineering branches, bringing diverse skills in mechanical design, electronics, programming, and project management.
+          </p>
+        </div>
+      </div>
+
+      <!-- Timeline Item 4: First Competition -->
+      <div class="timeline-item" data-text="STEPPING UP">
+        <div class="timeline__content">
+          <img class="timeline__img" src="https://images.unsplash.com/photo-1531746790731-6c087fecd65a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" alt="Competition">
+          <h2 class="timeline__content-title">Late 2023</h2>
+          <p class="timeline__content-desc">
+            We participated in our first inter-college robotics competition. Despite finishing 4th, the experience taught us valuable lessons about competition pressure, time management, and the importance of robust design.
+          </p>
+        </div>
+      </div>
+
+      <!-- Timeline Item 5: Major Achievement -->
+      <div class="timeline-item" data-text="BREAKTHROUGH MOMENT">
+        <div class="timeline__content">
+          <img class="timeline__img" src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" alt="Award ceremony">
+          <h2 class="timeline__content-title">Early 2024</h2>
+          <p class="timeline__content-desc">
+            Our breakthrough came when we won 1st place at the State Level Robotics Championship with our autonomous navigation robot. This victory put Texcelerators on the map and validated our innovative approach to robotics.
+          </p>
+        </div>
+      </div>
+
+      <!-- Timeline Item 6: Current State -->
+      <div class="timeline-item" data-text="PRESENT DAY">
+        <div class="timeline__content">
+          <img class="timeline__img" src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" alt="Advanced robotics">
+          <h2 class="timeline__content-title">2024</h2>
+          <p class="timeline__content-desc">
+            Today, Texcelerators has 25+ active members, multiple award-winning robots, and partnerships with local industries. We're preparing for national competitions while mentoring the next generation of robotics enthusiasts.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
 
   <!-- Footer -->
   <footer class="footer">
@@ -1089,7 +1435,7 @@
         <div>
           <div class="footer-logo">
             <div class="footer-logo-image">
-              <img src="Assets/images/Robots/endversion.png" alt="Texcelerators Logo">
+              <img src="Assets/images/endversion.png" alt="Texcelerators Logo">
             </div>
             <h3 class="logo-text">
               <span>TEX</span>CELERATORS
@@ -1135,6 +1481,9 @@
             </li>
             <li class="footer-link-item">
               <a href="#" class="footer-link">Competitions</a>
+            </li>
+            <li class="footer-link-item">
+              <a href="#" class="footer-link">Mentorship</a>
             </li>
             <li class="footer-link-item">
               <a href="#" class="footer-link">Community Outreach</a>
@@ -1192,7 +1541,7 @@
       </div>
     </div>
   </footer>
-
+</main>
   <!-- JavaScript -->
   <script src="Robots.js"></script>
   </body>

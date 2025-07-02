@@ -251,20 +251,29 @@ function initializeRobotAssistant() {
         });
       }
   
-      // Navigation click handler
       function handleNavClick(e) {
+        const href = e.currentTarget.getAttribute('href');
+        
+        // Check if it's an external link (contains .html)
+        if (href.includes('.html')) {
+          // Let the browser handle the navigation normally
+          closeMenu();
+          return;
+        }
+        
+        // Handle internal section navigation
         e.preventDefault();
-        const targetId = e.currentTarget.getAttribute("href").substring(1);
+        const targetId = href.substring(1);
         const targetSection = document.getElementById(targetId);
-  
+        
         if (targetSection) {
           const offsetTop = targetSection.offsetTop - (isSidebarMode ? 0 : 120);
-  
+          
           window.scrollTo({
             top: offsetTop,
-            behavior: "smooth",
+            behavior: 'smooth'
           });
-  
+          
           closeMenu();
         }
       }
@@ -636,3 +645,73 @@ function initializeRobotAssistant() {
     };
     
   });
+
+  // ===== BEHIND THE SCENES FUNCTIONALITY =====
+function initializeBehindScenes() {
+  // Initialize filter functionality
+  initializeFilters();
+  
+  // Initialize story moment interactions
+  initializeStoryMoments();
+}
+
+function initializeFilters() {
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const storyMoments = document.querySelectorAll('.story-moment');
+  
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const filter = btn.getAttribute('data-filter');
+      
+      // Update active button
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      
+      // Filter story moments
+      storyMoments.forEach(moment => {
+        const category = moment.getAttribute('data-category');
+        
+        if (filter === 'all' || category === filter) {
+          moment.classList.remove('hidden');
+          // Trigger re-animation
+          setTimeout(() => {
+            moment.classList.add('visible');
+          }, 100);
+        } else {
+          moment.classList.add('hidden');
+          moment.classList.remove('visible');
+        }
+      });
+    });
+  });
+}
+
+function initializeStoryMoments() {
+  const storyMoments = document.querySelectorAll('.story-moment');
+  
+  storyMoments.forEach(moment => {
+    // Add click interaction for mobile
+    moment.addEventListener('click', (e) => {
+      // Toggle overlay visibility on mobile
+      if (window.innerWidth <= 768) {
+        const overlay = moment.querySelector('.story-overlay');
+        overlay.style.opacity = overlay.style.opacity === '1' ? '0' : '1';
+      }
+    });
+    
+    // Add keyboard accessibility
+    moment.setAttribute('tabindex', '0');
+    moment.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        moment.click();
+      }
+    });
+  });
+}
+
+// Initialize when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+  // Add this to your existing initialization
+  initializeBehindScenes();
+});

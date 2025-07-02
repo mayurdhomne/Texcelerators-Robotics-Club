@@ -490,7 +490,99 @@
     }
   }
 
+  /* Category Header Styling */
+.category-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.category-description {
+  font-size: 1.1rem;
+  color: var(--muted-foreground);
+  max-width: 600px;
+  margin: 1rem auto 0;
+  line-height: 1.6;
+  font-style: italic;
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  .category-description {
+    font-size: 1rem;
+    padding: 0 1rem;
+    max-width: 100%;
+  }
+} 
+ 
+
+  /* College Logo Styling (Left Side) */
+.navbar-text.left-text img {
+  height: 150px; /* Adjust height as needed */
+  width: auto; /* Maintain aspect ratio */
+  max-width: 350px; /* Maximum width to prevent overflow */
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.navbar-text.left-text img:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive adjustments for the left college logo */
+@media (max-width: 1200px) {
+  .navbar-text.left-text img {
+    height: 50px;
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 992px) {
+  .navbar-text.left-text img {
+    height: 45px;
+    max-width: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-text.left-text {
+    display: none; /* Hide on mobile as it's in mobile-center */
+  }
+}
   
+  /* College Logo Styling */
+.navbar-text.right-text img {
+  height: 150px; /* Adjust height as needed */
+  width: auto; /* Maintain aspect ratio */
+  max-width: 350px; /* Maximum width to prevent overflow */
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.navbar-text.right-text img:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive adjustments for the college logo */
+@media (max-width: 1200px) {
+  .navbar-text.right-text img {
+    height: 50px;
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 992px) {
+  .navbar-text.right-text img {
+    height: 45px;
+    max-width: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-text.right-text {
+    display: none; /* Hide on mobile as it's in mobile-center */
+  }
+}
+
   /* ===============================
      4. COMMON TEAM SECTION STYLES
      =============================== */
@@ -925,3 +1017,286 @@
     visibility: visible !important;
     opacity: 1 !important;
   }
+
+
+  /* ===== BEHIND THE SCENES SECTION ===== */
+
+/* =======To modify the grid layout:=========
+
+====Change minmax(350px, 1fr) in .scenes-grid for different card sizes=====
+====Add grid-column: span 2 to .story-moment.large for wider cards=====
+====Adjust grid-auto-rows for different heights =====*/
+.scenes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin: 3rem 0;
+  grid-auto-rows: minmax(300px, auto);
+}
+
+/* Large story moments span 2 columns */
+.story-moment.large {
+  grid-column: span 2;
+}
+
+.category-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, var(--primary), var(--purple));
+  color: white;
+}
+
+.story-moment {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  background: linear-gradient(135deg, rgba(30, 41, 59, 0.8), rgba(30, 41, 59, 0.4));
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: pointer;
+  /* Animation initial state */
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.story-moment.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.story-moment:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.moment-image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+  overflow: hidden;
+}
+
+.moment-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+  filter: brightness(0.8) contrast(1.1);
+}
+
+.story-moment:hover .moment-image img {
+  transform: scale(1.1);
+  filter: brightness(0.9) contrast(1.2);
+}
+
+/* Story Overlay - Initially Hidden */
+.story-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(15, 23, 42, 0.95) 0%,
+    rgba(30, 41, 59, 0.9) 100%
+  );
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.story-moment:hover .story-overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.story-content {
+  text-align: center;
+  color: var(--foreground);
+}
+
+.timestamp {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(37, 99, 235, 0.2);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+  border: 1px solid rgba(37, 99, 235, 0.3);
+}
+
+.story-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: var(--foreground);
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.story-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  color: var(--muted-foreground);
+}
+
+.story-details {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.story-details > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+/* Challenge Level Indicators */
+.challenge-level.low {
+  background: rgba(16, 185, 129, 0.2);
+  color: var(--secondary);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.challenge-level.medium {
+  background: rgba(245, 158, 11, 0.2);
+  color: var(--amber);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.challenge-level.high {
+  background: rgba(244, 63, 94, 0.2);
+  color: var(--accent);
+  border: 1px solid rgba(244, 63, 94, 0.3);
+}
+
+/* Other Indicators */
+.team-count {
+  background: rgba(139, 92, 246, 0.2);
+  color: var(--purple);
+  border: 1px solid rgba(139, 92, 246, 0.3);
+}
+
+.outcome.success {
+  background: rgba(16, 185, 129, 0.2);
+  color: var(--secondary);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.outcome.celebration {
+  background: rgba(245, 158, 11, 0.2);
+  color: var(--amber);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.mood-indicator,
+.lesson-learned {
+  background: rgba(37, 99, 235, 0.2);
+  color: var(--primary);
+  border: 1px solid rgba(37, 99, 235, 0.3);
+}
+
+/* Filter Controls */
+.filter-controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 3rem;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(135deg, rgba(30, 41, 59, 0.6), rgba(30, 41, 59, 0.3));
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 12px;
+  color: var(--muted-foreground);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background: linear-gradient(135deg, var(--primary), var(--purple));
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(37, 99, 235, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .scenes-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .story-moment.large {
+    grid-column: span 1;
+  }
+  
+  .story-overlay {
+    padding: 1.5rem;
+  }
+  
+  .story-title {
+    font-size: 1.25rem;
+  }
+  
+  .story-details {
+    gap: 0.5rem;
+  }
+  
+  .filter-controls {
+    gap: 0.5rem;
+  }
+  
+  .filter-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+  }
+}
+
+/* Hidden state for filtering */
+.story-moment.hidden {
+  display: none;
+}
+      /* Responsive adjustments */
+      @media (max-width: 768px) {
+        .robot-card-header {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 0.5rem;
+        }
+  
+        .robot-card-specs {
+          flex-direction: column;
+        }
+  
+        .technical-specs {
+          grid-template-columns: 1fr;
+        }
+      }

@@ -20,93 +20,96 @@
   <link rel="stylesheet" href="Homepage.css">
 </head>
 <body>
-<!-- ===== NAVIGATION HEADER ===== -->
-<header id="main-header">
-  <div class="navbar-container">
-    <!-- Desktop Left: Club Logo -->
-    <div class="navbar-logo left-logo">
-      <div class="logo-image">
-        <img src="Assets/images/HomePage/LOGO.png" alt="Texcelerators">
-      </div>
-    </div>
-    
-    <!-- Desktop Left: Club Name -->
-    <div class="navbar-text left-text font-addition">
-      <span class="logo-text">
-        <span>TEX</span>CELERATORS
-      </span>
-      <span class="tagline">Robo Club</span>
-    </div>
-    
-    <!-- Mobile Center: Dual Logo + Club Name Layout -->
-    <div class="mobile-center">
-      <div class="mobile-college-logo">
-        <img src="Assets/images/HomePage/SVPCET  LOGO.png" alt="SVPCET">
-      </div>
-      <div class="mobile-club-logo">
-        <img src="Assets/images/HomePage/LOGO.png" alt="Texcelerators">
-      </div>
-      <div class="mobile-text">
-        <span class="mobile-title">TEXCELERATORS</span>
-        <span class="mobile-subtitle">Robo Club</span>
-      </div>
-    </div>
-    
-    <!-- Hamburger Menu (3 Lines) -->
-    <div class="hamburger-container">
-      <button id="hamburger-btn" class="hamburger-btn" aria-label="Toggle navigation">
-        <span class="hamburger-line"></span>
-        <span class="hamburger-line"></span>
-        <span class="hamburger-line"></span>
-      </button>
-    </div>
-    
-    <!-- Desktop Right: College Name -->
-    <div class="navbar-text right-text font-addition">
-      <span class="logo-text">
-        ST. <span>VINCENT PALLOTTI</span> COLLEGE
-      </span>
-      <span class="tagline">OF ENGINEERING AND TECHNOLOGY</span>
-    </div>
-    
-    <!-- Desktop Right: College Logo -->
-    <div class="navbar-logo right-logo">
-      <div class="logo-image">
+  <!-- Navigation Header -->
+  <!-- ===== NAVIGATION HEADER ===== -->
+  <header id="main-header">
+    <div class="navbar-container">
+      <!-- Desktop Left: College Logo -->
+      <div class="navbar-logo left-logo">
+        <div class="logo-image">
           <img src="Assets/images/HomePage/SVPCET  LOGO.png" alt="SVPCET">
+        </div>
+      </div>
+      
+      <!-- Desktop Left: College Name (Image) -->
+      <div class="navbar-text left-text font-addition">
+        <img src="Assets/images/Team/logo2.jpg" alt="St. Vincent Pallotti College of Engineering and Technology">
+      </div>
+      
+      <!-- Mobile Center: Dual Logo + Club Name Layout -->
+      <div class="mobile-center">
+        <div class="mobile-college-logo">
+          <img src="Assets/images/HomePage/SVPCET  LOGO.png" alt="SVPCET">
+        </div>
+        <div class="mobile-club-logo">
+          <img src="Assets/images/HomePage/LOGO.png" alt="Texcelerators">
+        </div>
+        <div class="mobile-text">
+          <span class="mobile-title">TEXCELERATORS</span>
+          <span class="mobile-subtitle">Robo Club</span>
+        </div>
+      </div>
+      
+      <!-- Hamburger Menu (3 Lines) -->
+      <div class="hamburger-container">
+        <button id="hamburger-btn" class="hamburger-btn" aria-label="Toggle navigation">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+      
+      <!-- Desktop Right: Club Name -->
+      <div class="navbar-text right-text font-addition">
+        <span class="logo-text">
+          <span>TEX</span>CELERATORS
+        </span>
+        <span class="tagline">Robo Club</span>
+      </div>
+  
+      <!-- Desktop Right: Club Logo -->
+      <div class="navbar-logo right-logo">
+        <div class="logo-image">
+          <img src="Assets/images/HomePage/LOGO.png" alt="Texcelerators">
+        </div>
       </div>
     </div>
-  </div>
+    
+    <!-- Dropdown Navigation Menu -->
+    <nav id="nav-menu" class="nav-menu">
+      <div class="nav-menu-content">
+        <a href="#home" class="nav-link active" data-section="home">
+          <i class="fas fa-home"></i>
+          <span>Home</span>
+        </a>
+        <a href="#achievements" class="nav-link" data-section="achievements">
+          <i class="fas fa-trophy"></i>
+          <span>Achievements</span>
+        </a>
+        <a href="#team" class="nav-link" data-section="team">
+          <i class="fas fa-users"></i>
+          <span>Team</span>
+        </a>
+        <a href="#bots" class="nav-link" data-section="bots">
+          <i class="fas fa-robot"></i>
+          <span>Robots</span>
+        </a>
+        <a href="#about" class="nav-link" data-section="about">
+          <i class="fas fa-info-circle"></i>           
+          <span>About Us</span>
+        </a>
+        <a href="#contact" class="nav-link" data-section="contact">
+          <i class="fas fa-envelope"></i>
+          <span>Contact</span>
+        </a>
+        <a href="team.html#join-section"  class="nav-link" >
+          <i class="fas fa-envelope"></i>
+          <span>Join Us</span>
+        </a>
+      </div>
+    </nav>
+  </header>
   
-  <!-- Dropdown Navigation Menu -->
-  <nav id="nav-menu" class="nav-menu">
-    <div class="nav-menu-content">
-      <a href="#home" class="nav-link active" data-section="home">
-        <i class="fas fa-home"></i>
-        <span>Home</span>
-      </a>
-      <a href="#achievements" class="nav-link" data-section="achievements">
-        <i class="fas fa-trophy"></i>
-        <span>Achievements</span>
-      </a>
-      <a href="#team" class="nav-link" data-section="team">
-        <i class="fas fa-users"></i>
-        <span>Team</span>
-      </a>
-      <a href="#bots" class="nav-link" data-section="bots">
-        <i class="fas fa-robot"></i>
-        <span>Robots</span>
-      </a>
-      <a href="#about" class="nav-link" data-section="about">
-        <i class="fas fa-info-circle"></i>
-        <span>About Us</span>
-      </a>
-      <a href="#contact" class="nav-link" data-section="contact">
-        <i class="fas fa-envelope"></i>
-        <span>Contact</span>
-      </a>
-    </div>
-  </nav>
-</header>
 
 <!-- ===== DESKTOP SIDEBAR (Hidden on Mobile) ===== -->
 <aside id="sidebar" class="sidebar">

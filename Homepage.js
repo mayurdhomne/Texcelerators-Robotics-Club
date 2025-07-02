@@ -101,8 +101,18 @@ function initializeNavigation() {
   
   // ===== NAVIGATION CLICK HANDLER =====
   function handleNavClick(e) {
+    const href = e.currentTarget.getAttribute('href');
+    
+    // Check if it's an external link (contains .html)
+    if (href.includes('.html')) {
+      // Let the browser handle the navigation normally
+      closeMenu();
+      return;
+    }
+    
+    // Handle internal section navigation
     e.preventDefault();
-    const targetId = e.currentTarget.getAttribute('href').substring(1);
+    const targetId = href.substring(1);
     const targetSection = document.getElementById(targetId);
     
     if (targetSection) {
