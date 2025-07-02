@@ -770,3 +770,136 @@ window.NavbarSidebar = {
   updateActiveSection: () => window.NavSystem?.updateActiveSection(),
   showNotification: (msg, type) => window.NavSystem?.showNotification(msg, type)
 };
+
+// ===== TIMELINE FUNCTIONALITY =====
+function initializeTimeline() {
+  // Initialize timeline scroll animations
+  initializeTimelineAnimations();
+  
+  // Add enhanced timeline interactions
+  addTimelineInteractions();
+}
+
+function initializeTimelineAnimations() {
+  const timelineItems = document.querySelectorAll('.timeline-item');
+  
+  // Create intersection observer for timeline items
+  const timelineObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // Add staggered animation delay based on item index
+        const index = Array.from(timelineItems).indexOf(entry.target);
+        const delay = index * 200; // 200ms delay between each item
+        
+        setTimeout(() => {
+          entry.target.classList.add('visible');
+        }, delay);
+        
+        // Only animate once
+        timelineObserver.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.2, // Trigger when 20% of item is visible
+    rootMargin: '0px 0px -50px 0px' // Start animation slightly before item is fully visible
+  });
+  
+  // Observe all timeline items
+  timelineItems.forEach(item => {
+    timelineObserver.observe(item);
+  });
+}
+
+function addTimelineInteractions() {
+  const timelineItems = document.querySelectorAll('.timeline-item');
+  
+  timelineItems.forEach(item => {
+    // Add click functionality for mobile
+    item.addEventListener('click', function() {
+      // Smooth scroll to center the clicked item
+      this.scrollIntoView({
+        behavior: 'smooth',
+        block: 'center'
+      });
+      
+      // Add temporary highlight effect
+      this.style.transform = 'scale(1.02)';
+      setTimeout(() => {
+        this.style.transform = '';
+      }, 300);
+    });
+    
+    // Add keyboard accessibility
+    item.setAttribute('tabindex', '0');
+    item.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        this.click();
+      }
+    });
+    
+    // Enhanced hover effects for desktop
+    if (window.innerWidth > 768) {
+      item.addEventListener('mouseenter', function() {
+        // Highlight connected timeline line section
+        const indicator = this.querySelector('::after');
+        this.style.zIndex = '10';
+      });
+      
+      item.addEventListener('mouseleave', function() {
+        this.style.zIndex = '';
+      });
+    }
+  });
+}
+
+// Timeline navigation function (optional enhancement)
+function navigateTimeline(direction) {
+  const timelineItems = document.querySelectorAll('.timeline-item.visible');
+  const currentScroll = window.pageYOffset;
+  let targetItem = null;
+  
+  if (direction === 'next') {
+    // Find next item below current scroll position
+    for (let item of timelineItems) {
+      if (item.offsetTop > currentScroll + 100) {
+        targetItem = item;
+        break;
+      }
+    }
+  } else if (direction === 'prev') {
+    // Find previous item above current scroll position
+    for (let i = timelineItems.length - 1; i >= 0; i--) {
+      if (timelineItems[i].offsetTop < currentScroll - 100) {
+        targetItem = timelineItems[i];
+        break;
+      }
+    }
+  }
+  
+  if (targetItem) {
+    targetItem.scrollIntoView({
+      behavior: 'smooth',
+      block: 'center'
+    });
+  }
+}
+
+// Initialize timeline when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+  // Add this to your existing initialization
+  initializeTimeline();
+});
+
+// Handle window resize for responsive behavior
+window.addEventListener('resize', function() {
+  // Reinitialize interactions for responsive changes
+  if (window.innerWidth <= 768) {
+    // Mobile-specific adjustments
+    const timelineItems = document.querySelectorAll('.timeline-item');
+    timelineItems.forEach(item => {
+      item.style.transform = '';
+      item.style.zIndex = '';
+    });
+  }
+});
