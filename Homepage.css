@@ -557,17 +557,10 @@ body.sidebar-active #main-header {
 }
 
 /* ===== HERO SECTION ===== */
-.hero {
-  padding-top: 4rem;
-  height: 100vh;
-  position: relative;
-  overflow: hidden;
-}
 
-/* Hero Section */
 .hero {
-  padding-top: 4rem;
-  height: 100vh;
+  padding: 10rem 0 15rem;
+  height: 140vh;
   position: relative;
   overflow: hidden;
 }
