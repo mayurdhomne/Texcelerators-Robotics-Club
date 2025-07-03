@@ -296,208 +296,519 @@ function toggleRobotDetails(robotId) {
     }
   }
 }
-// ===== BEHIND THE SCENES FUNCTIONALITY =====
-function initializeBehindScenes() {
-  // Initialize filter functionality
-  initializeFilters();
-  
-  // Initialize story moment interactions
-  initializeStoryMoments();
+
+// ===== BEHIND THE BUILD FUNCTIONALITY =====
+// Interactive functionality for the Behind the Build section
+// Handles process details, story playback, and tool showcases
+
+// Initialize Behind the Build functionality when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+  initializeBehindBuild();
+});
+
+function initializeBehindBuild() {
+  // Initialize all Behind the Build components
+  initializeProcessDetails();
+  initializeStoryPlayback();
+  initializeToolShowcase();
+  initializeResponsiveFeatures();
 }
 
-function initializeFilters() {
-  const filterBtns = document.querySelectorAll('.filter-btn');
-  const storyMoments = document.querySelectorAll('.story-moment');
+// ===== PROCESS DETAILS FUNCTIONALITY =====
+// Handles expandable process details for each build phase
+function toggleProcessDetails(phase) {
+  const details = document.getElementById(phase + '-details');
+  const button = document.querySelector(`[data-phase="${phase}"] .expand-btn`);
   
-  filterBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const filter = btn.getAttribute('data-filter');
+  if (details && button) {
+    // Close all other expanded details first for cleaner UX
+    const allDetails = document.querySelectorAll('.process-details');
+    const allButtons = document.querySelectorAll('.expand-btn');
+    
+    allDetails.forEach(detail => {
+      if (detail.id !== phase + '-details') {
+        detail.classList.remove('expanded');
+      }
+    });
+    
+    allButtons.forEach(btn => {
+      if (btn !== button) {
+        btn.classList.remove('expanded');
+        const icon = btn.querySelector('i');
+        const text = btn.querySelector('span');
+        if (icon) icon.style.transform = 'rotate(0deg)';
+        if (text) text.textContent = 'View Details';
+      }
+    });
+    
+    // Toggle the clicked one
+    const isExpanded = details.classList.contains('expanded');
+    
+    if (isExpanded) {
+      details.classList.remove('expanded');
+      button.classList.remove('expanded');
+      const icon = button.querySelector('i');
+      const text = button.querySelector('span');
+      if (icon) icon.style.transform = 'rotate(0deg)';
+      if (text) text.textContent = 'View Details';
+    } else {
+      details.classList.add('expanded');
+      button.classList.add('expanded');
+      const icon = button.querySelector('i');
+      const text = button.querySelector('span');
+      if (icon) icon.style.transform = 'rotate(180deg)';
+      if (text) text.textContent = 'Hide Details';
       
-      // Update active button
-      filterBtns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      
-      // Filter story moments
-      storyMoments.forEach(moment => {
-        const category = moment.getAttribute('data-category');
-        
-        if (filter === 'all' || category === filter) {
-          moment.classList.remove('hidden');
-          // Trigger re-animation
-          setTimeout(() => {
-            moment.classList.add('visible');
-          }, 100);
-        } else {
-          moment.classList.add('hidden');
-          moment.classList.remove('visible');
-        }
-      });
+      // Smooth scroll to details after expansion
+      setTimeout(() => {
+        details.scrollIntoView({ 
+          behavior: 'smooth', 
+          block: 'nearest' 
+        });
+      }, 300);
+    }
+  }
+}
+
+function initializeProcessDetails() {
+  // Add event listeners for process detail toggles
+  const expandButtons = document.querySelectorAll('.expand-btn');
+  
+  expandButtons.forEach(button => {
+    // Extract phase from parent card's data attribute
+    const card = button.closest('.process-card');
+    if (card) {
+      const phase = card.getAttribute('data-phase');
+      if (phase) {
+        button.addEventListener('click', () => toggleProcessDetails(phase));
+      }
+    }
+  });
+  
+  // Add keyboard accessibility
+  expandButtons.forEach(button => {
+    button.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        button.click();
+      }
     });
   });
 }
 
-function initializeStoryMoments() {
-  const storyMoments = document.querySelectorAll('.story-moment');
+// ===== STORY PLAYBACK FUNCTIONALITY =====
+// Handles interactive story moments and playback
+function playStory(storyId) {
+  const storyCard = document.querySelector(`[data-story="${storyId}"]`);
   
-  storyMoments.forEach(moment => {
-    // Add click interaction for mobile
-    moment.addEventListener('click', (e) => {
-      // Toggle overlay visibility on mobile
-      if (window.innerWidth <= 768) {
-        const overlay = moment.querySelector('.story-overlay');
-        overlay.style.opacity = overlay.style.opacity === '1' ? '0' : '1';
+  if (storyCard) {
+    // Add visual feedback
+    storyCard.style.transform = 'scale(0.98)';
+    
+    // Create story modal or expanded view
+    showStoryModal(storyId);
+    
+    // Reset visual feedback after animation
+    setTimeout(() => {
+      storyCard.style.transform = '';
+    }, 200);
+  }
+}
+
+function showStoryModal(storyId) {
+  // Story content database - customize these stories for your team
+  const stories = {
+    breakthrough: {
+      title: "The 3 AM Breakthrough",
+      author: "Rahul, Lead Programmer",
+      fullText: `It was 3 AM and we'd been debugging for 14 straight hours. The robot would move forward but kept veering left during autonomous mode. We tried everything - sensor calibration, motor adjustments, even rewrote the entire navigation algorithm.
+
+Then Sarah noticed something in the debug output that we'd all missed. A single line of code where we were reading the gyroscope data incorrectly. One small fix, and suddenly our robot was moving perfectly straight.
+
+The whole team erupted in celebration. That moment taught us that sometimes the biggest problems have the smallest solutions, and that fresh eyes can see what tired ones miss.`,
+      image: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+      timestamp: "3:00 AM - March 15th, 2024",
+      tags: ["Debugging", "Breakthrough", "Teamwork"]
+    },
+    learning: {
+      title: "When Everything Went Wrong",
+      author: "Priya, Mechanical Lead",
+      fullText: `Our first prototype was a disaster. During the initial test, the chassis literally fell apart, motors stopped working, and the sensors gave random readings. It was embarrassing.
+
+But that failure was the best thing that happened to us. It forced us to question every design decision, research better materials, and understand the physics behind our mechanisms.
+
+Three weeks later, we built a robot that was 10x better than our original design. Sometimes you need to fail spectacularly to succeed brilliantly.`,
+      image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+      timestamp: "2:30 PM - January 28th, 2024",
+      tags: ["Learning", "Failure", "Growth"]
+    },
+    teamwork: {
+      title: "Power of Collaboration",
+      author: "Amit, Team Captain",
+      fullText: `We had an 'impossible' design challenge: create a mechanism that could pick up objects of different shapes and sizes with 90% accuracy. Individual approaches weren't working.
+
+Then we tried something different. Instead of one person leading, we made it a true collaborative effort. The mechanical team designed the physical gripper, programmers created adaptive algorithms, and the electronics team built smart sensors.
+
+The result? A gripper that exceeded our 90% target and reached 96% accuracy. It showed us that diverse perspectives aren't just nice to have - they're essential for innovation.`,
+      image: "https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+      timestamp: "4:45 PM - February 10th, 2024",
+      tags: ["Collaboration", "Innovation", "Success"]
+    }
+  };
+  
+  const story = stories[storyId];
+  if (!story) return;
+  
+  // Create modal HTML
+  const modalHTML = `
+    <div class="story-modal-overlay" onclick="closeStoryModal()">
+      <div class="story-modal" onclick="event.stopPropagation()">
+        <button class="story-modal-close" onclick="closeStoryModal()">
+          <i class="fas fa-times"></i>
+        </button>
+        <div class="story-modal-header">
+          <img src="${story.image}" alt="${story.title}">
+          <div class="story-modal-info">
+            <h3>${story.title}</h3>
+            <p class="story-modal-author">${story.author}</p>
+            <p class="story-modal-timestamp">
+              <i class="fas fa-clock"></i> ${story.timestamp}
+            </p>
+          </div>
+        </div>
+        <div class="story-modal-content">
+          <div class="story-modal-text">
+            ${story.fullText.split('\n\n').map(paragraph => `<p>${paragraph}</p>`).join('')}
+          </div>
+          <div class="story-modal-tags">
+            ${story.tags.map(tag => `<span class="story-modal-tag">#${tag}</span>`).join('')}
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+  
+  // Add modal to page
+  document.body.insertAdjacentHTML('beforeend', modalHTML);
+  
+  // Add entrance animation
+  const modal = document.querySelector('.story-modal-overlay');
+  setTimeout(() => {
+    modal.style.opacity = '1';
+    modal.querySelector('.story-modal').style.transform = 'scale(1)';
+  }, 10);
+}
+
+function closeStoryModal() {
+  const modal = document.querySelector('.story-modal-overlay');
+  if (modal) {
+    modal.style.opacity = '0';
+    modal.querySelector('.story-modal').style.transform = 'scale(0.9)';
+    setTimeout(() => {
+      modal.remove();
+    }, 300);
+  }
+}
+
+function initializeStoryPlayback() {
+  // Add click handlers for story cards
+  const storyCards = document.querySelectorAll('.story-card');
+  
+  storyCards.forEach(card => {
+    const storyId = card.getAttribute('data-story');
+    if (storyId) {
+      // Add click handler to card
+      card.addEventListener('click', () => playStory(storyId));
+      
+      // Add keyboard accessibility
+      card.setAttribute('tabindex', '0');
+      card.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          playStory(storyId);
+        }
+      });
+    }
+  });
+  
+  // Add escape key handler for modal
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      closeStoryModal();
+    }
+  });
+}
+
+// ===== TOOL SHOWCASE FUNCTIONALITY =====
+// Handles tool category switching and details display
+function switchToolCategory(category) {
+  // Update active tab
+  const tabs = document.querySelectorAll('.tool-tab');
+  tabs.forEach(tab => {
+    tab.classList.remove('active');
+    if (tab.getAttribute('data-category') === category) {
+      tab.classList.add('active');
+    }
+  });
+  
+  // Update active content
+  const contents = document.querySelectorAll('.tool-category-content');
+  contents.forEach(content => {
+    content.classList.remove('active');
+    if (content.id === category + '-tools') {
+      content.classList.add('active');
+    }
+  });
+  
+  // Add smooth transition effect
+  const activeContent = document.querySelector('.tool-category-content.active');
+  if (activeContent) {
+    activeContent.style.opacity = '0';
+    setTimeout(() => {
+      activeContent.style.opacity = '1';
+    }, 150);
+  }
+}
+
+function showToolDetails(toolId) {
+  // Tool information database - customize for your actual tools
+  const toolDetails = {
+    solidworks: {
+      name: "SolidWorks 2024",
+      description: "Professional 3D CAD software for mechanical design",
+      website: "https://www.solidworks.com",
+      features: ["3D Modeling", "Assembly Design", "Simulation", "Rendering"],
+      usedFor: "Robot chassis design, mechanism modeling, stress analysis"
+    },
+    fusion360: {
+      name: "Fusion 360",
+      description: "Cloud-based 3D CAD/CAM/CAE platform",
+      website: "https://www.autodesk.com/products/fusion-360",
+      features: ["Integrated CAD/CAM", "Cloud Collaboration", "Simulation"],
+      usedFor: "Collaborative design, manufacturing preparation"
+    },
+    arduino: {
+      name: "Arduino IDE",
+      description: "Integrated development environment for Arduino boards",
+      website: "https://www.arduino.cc",
+      features: ["Code Editor", "Library Manager", "Serial Monitor"],
+      usedFor: "Microcontroller programming, sensor integration"
+    },
+    python: {
+      name: "Python",
+      description: "High-level programming language for AI and automation",
+      website: "https://www.python.org",
+      features: ["Machine Learning", "Computer Vision", "Data Analysis"],
+      usedFor: "AI algorithms, image processing, automation scripts"
+    },
+    gazebo: {
+      name: "Gazebo Simulator",
+      description: "3D robotics simulation environment",
+      website: "http://gazebosim.org",
+      features: ["Physics Simulation", "Sensor Modeling", "Multi-robot"],
+      usedFor: "Robot testing, algorithm validation, virtual competitions"
+    },
+    matlab: {
+      name: "MATLAB",
+      description: "Technical computing platform for analysis and design",
+      website: "https://www.mathworks.com/products/matlab.html",
+      features: ["Mathematical Modeling", "Data Analysis", "Visualization"],
+      usedFor: "Control system design, signal processing, data analysis"
+    }
+  };
+  
+  const tool = toolDetails[toolId];
+  if (!tool) return;
+  
+  // Create tool details modal
+  const modalHTML = `
+    <div class="tool-modal-overlay" onclick="closeToolModal()">
+      <div class="tool-modal" onclick="event.stopPropagation()">
+        <button class="tool-modal-close" onclick="closeToolModal()">
+          <i class="fas fa-times"></i>
+        </button>
+        <div class="tool-modal-header">
+          <h3>${tool.name}</h3>
+          <p>${tool.description}</p>
+          <a href="${tool.website}" target="_blank" class="tool-website-link">
+            <i class="fas fa-external-link-alt"></i> Visit Website
+          </a>
+        </div>
+        <div class="tool-modal-content">
+          <div class="tool-modal-section">
+            <h4>Key Features</h4>
+            <ul class="tool-features-list">
+              ${tool.features.map(feature => `<li>${feature}</li>`).join('')}
+            </ul>
+          </div>
+          <div class="tool-modal-section">
+            <h4>How We Use It</h4>
+            <p>${tool.usedFor}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+  
+  // Add modal to page
+  document.body.insertAdjacentHTML('beforeend', modalHTML);
+  
+  // Add entrance animation
+  const modal = document.querySelector('.tool-modal-overlay');
+  setTimeout(() => {
+    modal.style.opacity = '1';
+    modal.querySelector('.tool-modal').style.transform = 'scale(1)';
+  }, 10);
+}
+
+function closeToolModal() {
+  const modal = document.querySelector('.tool-modal-overlay');
+  if (modal) {
+    modal.style.opacity = '0';
+    modal.querySelector('.tool-modal').style.transform = 'scale(0.9)';
+    setTimeout(() => {
+      modal.remove();
+    }, 300);
+  }
+}
+
+function initializeToolShowcase() {
+  // Add click handlers for tool tabs
+  const toolTabs = document.querySelectorAll('.tool-tab');
+  toolTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const category = tab.getAttribute('data-category');
+      if (category) {
+        switchToolCategory(category);
       }
     });
     
     // Add keyboard accessibility
-    moment.setAttribute('tabindex', '0');
-    moment.addEventListener('keydown', (e) => {
+    tab.addEventListener('keydown', (e) => {
       if (e.key === 'Enter' || e.key === ' ') {
         e.preventDefault();
-        moment.click();
+        tab.click();
       }
     });
   });
+  
+  // Add click handlers for tool detail buttons
+  const toolDetailButtons = document.querySelectorAll('.tool-details-btn');
+  toolDetailButtons.forEach(button => {
+    const toolCard = button.closest('.tool-card');
+    if (toolCard) {
+      const toolId = toolCard.getAttribute('data-tool');
+      if (toolId) {
+        button.addEventListener('click', (e) => {
+          e.stopPropagation();
+          showToolDetails(toolId);
+        });
+      }
+    }
+  });
+  
+  // Add escape key handler for tool modal
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      closeToolModal();
+    }
+  });
 }
 
-// Initialize when DOM is loaded
-document.addEventListener('DOMContentLoaded', function() {
-  // Add this to your existing initialization
-  initializeBehindScenes();
-});
-
-// ===== TIMELINE FUNCTIONALITY =====
-function initializeTimeline() {
-  // Initialize timeline scroll animations
-  initializeTimelineAnimations();
+// ===== RESPONSIVE FEATURES =====
+// Handle responsive behavior for mobile devices
+function initializeResponsiveFeatures() {
+  // Handle tool category switching on mobile
+  function handleMobileToolTabs() {
+    const toolTabs = document.querySelectorAll('.tool-tab');
+    
+    if (window.innerWidth <= 768) {
+      // Make tabs scrollable on mobile
+      const tabsContainer = document.querySelector('.tool-tabs');
+      if (tabsContainer) {
+        tabsContainer.style.overflowX = 'auto';
+        tabsContainer.style.scrollBehavior = 'smooth';
+      }
+    }
+  }
   
-  // Add enhanced timeline interactions
-  addTimelineInteractions();
+  // Handle story card interactions on mobile
+  function handleMobileStoryCards() {
+    const storyCards = document.querySelectorAll('.story-card');
+    
+    storyCards.forEach(card => {
+      if (window.innerWidth <= 768) {
+        // Add touch feedback
+        card.addEventListener('touchstart', () => {
+          card.style.transform = 'scale(0.98)';
+        });
+        
+        card.addEventListener('touchend', () => {
+          setTimeout(() => {
+            card.style.transform = '';
+          }, 200);
+        });
+      }
+    });
+  }
+  
+  // Initialize responsive features
+  handleMobileToolTabs();
+  handleMobileStoryCards();
+  
+  // Re-initialize on window resize
+  window.addEventListener('resize', debounce(() => {
+    handleMobileToolTabs();
+    handleMobileStoryCards();
+  }, 250));
 }
 
-function initializeTimelineAnimations() {
-  const timelineItems = document.querySelectorAll('.timeline-item');
-  
-  // Create intersection observer for timeline items
-  const timelineObserver = new IntersectionObserver((entries) => {
+// ===== UTILITY FUNCTIONS =====
+// Helper functions for smooth interactions
+function debounce(func, wait, immediate) {
+  let timeout;
+  return function() {
+    const context = this, args = arguments;
+    const later = function() {
+      timeout = null;
+      if (!immediate) func.apply(context, args);
+    };
+    const callNow = immediate && !timeout;
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+    if (callNow) func.apply(context, args);
+  };
+}
+
+// Add scroll animations for Behind the Build elements
+function initializeBehindBuildAnimations() {
+  const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        // Add staggered animation delay based on item index
-        const index = Array.from(timelineItems).indexOf(entry.target);
-        const delay = index * 200; // 200ms delay between each item
+        entry.target.classList.add('visible');
         
-        setTimeout(() => {
-          entry.target.classList.add('visible');
-        }, delay);
-        
-        // Only animate once
-        timelineObserver.unobserve(entry.target);
+        // Add staggered animation for grid items
+        if (entry.target.classList.contains('process-card')) {
+          const index = Array.from(entry.target.parentNode.children).indexOf(entry.target);
+          entry.target.style.animationDelay = (index * 0.2) + 's';
+        }
       }
     });
   }, {
-    threshold: 0.2, // Trigger when 20% of item is visible
-    rootMargin: '0px 0px -50px 0px' // Start animation slightly before item is fully visible
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
   });
   
-  // Observe all timeline items
-  timelineItems.forEach(item => {
-    timelineObserver.observe(item);
-  });
+  // Observe all animatable elements in Behind the Build section
+  const animatableElements = document.querySelectorAll('#behind-build .animate-on-scroll');
+  animatableElements.forEach(el => observer.observe(el));
 }
 
-function addTimelineInteractions() {
-  const timelineItems = document.querySelectorAll('.timeline-item');
-  
-  timelineItems.forEach(item => {
-    // Add click functionality for mobile
-    item.addEventListener('click', function() {
-      // Smooth scroll to center the clicked item
-      this.scrollIntoView({
-        behavior: 'smooth',
-        block: 'center'
-      });
-      
-      // Add temporary highlight effect
-      this.style.transform = 'scale(1.02)';
-      setTimeout(() => {
-        this.style.transform = '';
-      }, 300);
-    });
-    
-    // Add keyboard accessibility
-    item.setAttribute('tabindex', '0');
-    item.addEventListener('keydown', function(e) {
-      if (e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
-        this.click();
-      }
-    });
-    
-    // Enhanced hover effects for desktop
-    if (window.innerWidth > 768) {
-      item.addEventListener('mouseenter', function() {
-        // Highlight connected timeline line section
-        const indicator = this.querySelector('::after');
-        this.style.zIndex = '10';
-      });
-      
-      item.addEventListener('mouseleave', function() {
-        this.style.zIndex = '';
-      });
-    }
-  });
-}
-
-// Timeline navigation function (optional enhancement)
-function navigateTimeline(direction) {
-  const timelineItems = document.querySelectorAll('.timeline-item.visible');
-  const currentScroll = window.pageYOffset;
-  let targetItem = null;
-  
-  if (direction === 'next') {
-    // Find next item below current scroll position
-    for (let item of timelineItems) {
-      if (item.offsetTop > currentScroll + 100) {
-        targetItem = item;
-        break;
-      }
-    }
-  } else if (direction === 'prev') {
-    // Find previous item above current scroll position
-    for (let i = timelineItems.length - 1; i >= 0; i--) {
-      if (timelineItems[i].offsetTop < currentScroll - 100) {
-        targetItem = timelineItems[i];
-        break;
-      }
-    }
-  }
-  
-  if (targetItem) {
-    targetItem.scrollIntoView({
-      behavior: 'smooth',
-      block: 'center'
-    });
-  }
-}
-
-// Initialize timeline when DOM is loaded
+// Initialize animations when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
-  // Add this to your existing initialization
-  initializeTimeline();
+  initializeBehindBuildAnimations();
 });
 
-// Handle window resize for responsive behavior
-window.addEventListener('resize', function() {
-  // Reinitialize interactions for responsive changes
-  if (window.innerWidth <= 768) {
-    // Mobile-specific adjustments
-    const timelineItems = document.querySelectorAll('.timeline-item');
-    timelineItems.forEach(item => {
-      item.style.transform = '';
-      item.style.zIndex = '';
-    });
-  }
-});
 
 // ===== BACK TO TOP BUTTON FUNCTIONALITY =====
 function initializeBackToTop() {

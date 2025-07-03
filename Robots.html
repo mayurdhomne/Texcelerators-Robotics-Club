@@ -30,8 +30,8 @@
       </div>
       
       <!-- Desktop Left: College Name (Image) -->
-      <div class="navbar-text left-text font-addition">
-        <img src="Assets/images/Team/logo2.jpg" alt="St. Vincent Pallotti College of Engineering and Technology">
+      <div class="navbar-text left-text font-addition svpcet-banner">
+        <img src="Assets/images/Team/logo2.jpg" alt="St. Vincent Pallotti College of Engineering and Technology" class="svpcet-banner-img">
       </div>
       
       <!-- Mobile Center: Dual Logo + Club Name Layout -->
@@ -1139,292 +1139,462 @@
     </div>
   </section>
 
- <!-- Behind the Scenes Section -->
-<section id="behind-scenes" class="section">
+  <!-- ===== BEHIND THE BUILD SECTION ===== -->
+<!-- This section showcases our robot building process with authentic storytelling -->
+<!-- Features: Process showcase, prototype evolution, tools display, interactive elements -->
+<section id="behind-build" class="section">
   <div class="container">
+    
+    <!-- Section Header - Matches your existing section headers -->
     <div class="category-header animate-on-scroll">
       <div class="category-badge">
-        <i class="fas fa-camera"></i>
-        Behind the Scenes
+        <i class="fas fa-cogs"></i>
+        Behind the Build
       </div>
-      <h2 class="section-title">The Real <span>Story</span></h2>
+      <h2 class="section-title">The Making <span>Process</span></h2>
       <p class="category-description">
-        Discover the untold moments, late-night sessions, and breakthrough discoveries that happen behind our robotics innovations.
+        From concept sketches to competition-ready robots - witness the journey of innovation, iteration, and engineering excellence that brings our mechanical creations to life.
       </p>
     </div>
 
-    <!-- Photo Grid Container -->
-    <div class="scenes-grid">
+    <!-- Build Process Showcase Grid -->
+    <!-- This grid displays different aspects of our building process -->
+    <div class="build-process-grid">
       
-      <!-- Story Moment 1: Late Night Coding -->
-      <div class="story-moment animate-on-scroll" data-category="workshop">
-        <div class="moment-image">
-          <img src="https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" alt="Late night coding session">
-          <div class="story-overlay">
-            <div class="story-content">
-              <span class="timestamp">
-                <i class="fas fa-clock"></i> 2:30 AM - March 15th
-              </span>
-              <h4 class="story-title">Debugging Marathon</h4>
-              <p class="story-description">Fixing sensor calibration issues 2 hours before competition deadline</p>
-              <div class="story-details">
-                <span class="challenge-level high">
-                  <i class="fas fa-fire"></i> All-Nighter
-                </span>
-                <span class="team-count">
-                  <i class="fas fa-users"></i> 4 Members
-                </span>
-                <span class="mood-indicator">
-                  ☕ 6th Coffee
-                </span>
+      <!-- Process Card 1: Design Phase -->
+      <!-- Shows the initial design and planning stage -->
+      <div class="process-card animate-on-scroll slide-left" data-phase="design">
+        <div class="process-card-header">
+          <div class="phase-badge design">
+            <i class="fas fa-drafting-compass"></i>
+            <span>Design Phase</span>
+          </div>
+          <h3 class="process-title">Concept to <span>Blueprint</span></h3>
+        </div>
+        
+        <div class="process-content">
+          <!-- Before/After Comparison Container -->
+          <div class="comparison-container">
+            <div class="comparison-item before">
+              <div class="comparison-label">Initial Sketch</div>
+              <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400" alt="Initial robot sketch">
+            </div>
+            <div class="comparison-divider">
+              <i class="fas fa-arrow-right"></i>
+            </div>
+            <div class="comparison-item after">
+              <div class="comparison-label">CAD Model</div>
+              <img src="https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400" alt="3D CAD model">
+            </div>
+          </div>
+          
+          <!-- Process Story -->
+          <div class="process-story">
+            <p class="story-text">
+              "Every great robot starts with a vision. Our design phase involves countless hours of sketching, CAD modeling, and simulation testing before a single component is manufactured."
+            </p>
+            <div class="story-metrics">
+              <div class="metric">
+                <i class="fas fa-clock"></i>
+                <span>72 hours</span>
+                <small>Design Time</small>
               </div>
+              <div class="metric">
+                <i class="fas fa-redo"></i>
+                <span>15 iterations</span>
+                <small>Revisions</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Expandable Details Section -->
+        <div class="process-details" id="design-details">
+          <h4>Design Tools & Software</h4>
+          <div class="tools-grid">
+            <div class="tool-item">
+              <i class="fas fa-cube"></i>
+              <span>SolidWorks 2024</span>
+            </div>
+            <div class="tool-item">
+              <i class="fas fa-microchip"></i>
+              <span>Arduino IDE</span>
+            </div>
+            <div class="tool-item">
+              <i class="fas fa-calculator"></i>
+              <span>MATLAB Simulink</span>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Story Moment 2: Workshop Session -->
-      <div class="story-moment animate-on-scroll" data-category="building">
-        <div class="moment-image">
-          <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" alt="Workshop session">
-          <div class="story-overlay">
-            <div class="story-content">
-              <span class="timestamp">
-                <i class="fas fa-clock"></i> 4:00 PM - January 8th
-              </span>
-              <h4 class="story-title">Chassis Assembly</h4>
-              <p class="story-description">Building the mechanical foundation for our new soccer bot</p>
-              <div class="story-details">
-                <span class="challenge-level medium">
-                  <i class="fas fa-wrench"></i> Steady Progress
-                </span>
-                <span class="team-count">
-                  <i class="fas fa-users"></i> 3 Members
-                </span>
-                <span class="outcome success">
-                  <i class="fas fa-check"></i> Success
-                </span>
+      <!-- Process Card 2: Prototyping Phase -->
+      <!-- Shows the prototype development and testing -->
+      <div class="process-card animate-on-scroll slide-right" data-phase="prototype">
+        <div class="process-card-header">
+          <div class="phase-badge prototype">
+            <i class="fas fa-hammer"></i>
+            <span>Prototyping</span>
+          </div>
+          <h3 class="process-title">Building the <span>Vision</span></h3>
+        </div>
+        
+        <div class="process-content">
+          <!-- Prototype Evolution Timeline -->
+          <div class="evolution-timeline">
+            <div class="evolution-item" data-version="v1">
+              <div class="evolution-image">
+                <img src="https://images.unsplash.com/photo-1581092335878-2d9ff86ca2bf?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300" alt="Prototype v1">
+                <div class="version-label">v1.0</div>
+              </div>
+              <div class="evolution-description">Basic frame</div>
+            </div>
+            <div class="evolution-arrow">→</div>
+            <div class="evolution-item" data-version="v2">
+              <div class="evolution-image">
+                <img src="https://images.unsplash.com/photo-1574680178050-55c6a6a96e0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300" alt="Prototype v2">
+                <div class="version-label">v2.0</div>
+              </div>
+              <div class="evolution-description">Added sensors</div>
+            </div>
+            <div class="evolution-arrow">→</div>
+            <div class="evolution-item current" data-version="v3">
+              <div class="evolution-image">
+                <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300" alt="Final prototype">
+                <div class="version-label">v3.0</div>
+              </div>
+              <div class="evolution-description">Competition ready</div>
+            </div>
+          </div>
+          
+          <!-- Process Story -->
+          <div class="process-story">
+            <p class="story-text">
+              "Prototyping is where theory meets reality. Each version teaches us something new, leading to breakthroughs that make our robots competition-ready."
+            </p>
+            <div class="story-metrics">
+              <div class="metric">
+                <i class="fas fa-layer-group"></i>
+                <span>8 prototypes</span>
+                <small>Built & Tested</small>
+              </div>
+              <div class="metric">
+                <i class="fas fa-bug"></i>
+                <span>47 issues</span>
+                <small>Resolved</small>
               </div>
             </div>
           </div>
         </div>
-      </div>
-
-      <!-- Story Moment 3: Testing Phase -->
-      <div class="story-moment animate-on-scroll large" data-category="testing">
-        <div class="moment-image">
-          <img src="https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=600" alt="Robot testing">
-          <div class="story-overlay">
-            <div class="story-content">
-              <span class="timestamp">
-                <i class="fas fa-clock"></i> 6:15 PM - February 22nd
-              </span>
-              <h4 class="story-title">First Movement Test</h4>
-              <p class="story-description">The moment our robot took its first steps - pure magic!</p>
-              <div class="story-details">
-                <span class="challenge-level low">
-                  <i class="fas fa-smile"></i> Breakthrough
-                </span>
-                <span class="team-count">
-                  <i class="fas fa-users"></i> 5 Members
-                </span>
-                <span class="outcome celebration">
-                  <i class="fas fa-star"></i> Milestone
-                </span>
-              </div>
+        
+        <!-- Expandable Details -->
+        <div class="process-details" id="prototype-details">
+          <h4>Manufacturing Equipment</h4>
+          <div class="tools-grid">
+            <div class="tool-item">
+              <i class="fas fa-print"></i>
+              <span>3D Printer</span>
+            </div>
+            <div class="tool-item">
+              <i class="fas fa-cut"></i>
+              <span>Laser Cutter</span>
+            </div>
+            <div class="tool-item">
+              <i class="fas fa-wrench"></i>
+              <span>CNC Machine</span>
             </div>
           </div>
         </div>
-      </div>
-
-      <!-- Story Moment 4: Problem Solving -->
-      <div class="story-moment animate-on-scroll" data-category="debugging">
-        <div class="moment-image">
-          <img src="https://images.unsplash.com/photo-1581092335878-2d9ff86ca2bf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" alt="Team problem solving">
-          <div class="story-overlay">
-            <div class="story-content">
-              <span class="timestamp">
-                <i class="fas fa-clock"></i> 11:00 AM - March 3rd
-              </span>
-              <h4 class="story-title">Brainstorming Session</h4>
-              <p class="story-description">Solving motor synchronization issues through collaborative thinking</p>
-              <div class="story-details">
-                <span class="challenge-level medium">
-                  <i class="fas fa-brain"></i> Problem Solving
-                </span>
-                <span class="team-count">
-                  <i class="fas fa-users"></i> 6 Members
-                </span>
-                <span class="lesson-learned">
-                  💡 Team Work
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Story Moment 5: Competition Prep -->
-      <div class="story-moment animate-on-scroll" data-category="competition">
-        <div class="moment-image">
-          <img src="https://images.unsplash.com/photo-1531746790731-6c087fecd65a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" alt="Competition preparation">
-          <div class="story-overlay">
-            <div class="story-content">
-              <span class="timestamp">
-                <i class="fas fa-clock"></i> 7:00 AM - March 16th
-              </span>
-              <h4 class="story-title">Competition Day Prep</h4>
-              <p class="story-description">Final calibrations and packing before heading to nationals</p>
-              <div class="story-details">
-                <span class="challenge-level high">
-                  <i class="fas fa-trophy"></i> Competition
-                </span>
-                <span class="team-count">
-                  <i class="fas fa-users"></i> 8 Members
-                </span>
-                <span class="mood-indicator">
-                  🚀 Ready to Win
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Story Moment 6: Failed Experiment -->
-      <div class="story-moment animate-on-scroll" data-category="learning">
-        <div class="moment-image">
-          <img src="https://images.unsplash.com/photo-1574680178050-55c6a6a96e0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" alt="Failed experiment">
-          <div class="story-overlay">
-            <div class="story-content">
-              <span class="timestamp">
-                <i class="fas fa-clock"></i> 3:45 PM - January 28th
-              </span>
-              <h4 class="story-title">Learning from Failure</h4>
-              <p class="story-description">When our prototype completely fell apart - but we learned so much!</p>
-              <div class="story-details">
-                <span class="challenge-level high">
-                  <i class="fas fa-exclamation-triangle"></i> Epic Fail
-                </span>
-                <span class="team-count">
-                  <i class="fas fa-users"></i> 4 Members
-                </span>
-                <span class="lesson-learned">
-                  📚 Valuable Lesson
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- Filter Buttons (Optional Enhancement) -->
-    <div class="filter-controls animate-on-scroll">
-      <button class="filter-btn active" data-filter="all">
-        <i class="fas fa-th"></i> All Moments
-      </button>
-      <button class="filter-btn" data-filter="workshop">
-        <i class="fas fa-tools"></i> Workshop
-      </button>
-      <button class="filter-btn" data-filter="testing">
-        <i class="fas fa-flask"></i> Testing
-      </button>
-      <button class="filter-btn" data-filter="competition">
-        <i class="fas fa-trophy"></i> Competition
-      </button>
-      <button class="filter-btn" data-filter="learning">
-        <i class="fas fa-lightbulb"></i> Learning
-      </button>
-    </div>
-
-  </div>
-</section>
-
-<!-- Timeline Section - Add this where you want the timeline -->
-<section id="timeline" class="section">
-  <div class="container">
-    <!-- Timeline Header -->
-    <div class="timeline-header animate-on-scroll">
-      <div class="category-badge">
-        <i class="fas fa-history"></i>
-        Our Journey
-      </div>
-      <h2 class="timeline-header__title">Texcelerators</h2>
-      <h3 class="timeline-header__subtitle">From Concept to Champions</h3>
-    </div>
-
-    <!-- Timeline Container -->
-    <div class="timeline">
+        
       
-      <!-- Timeline Item 1: Formation -->
-      <div class="timeline-item" data-text="THE BEGINNING">
-        <div class="timeline__content">
-          <img class="timeline__img" src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" alt="Team formation">
-          <h2 class="timeline__content-title">2023</h2>
-          <p class="timeline__content-desc">
-            Texcelerators Robotics Club was founded by passionate engineering students at SVPCET. Starting with just 5 members and a shared dream to innovate in robotics, we began our journey in a small corner of the college lab.
-          </p>
-        </div>
       </div>
 
-      <!-- Timeline Item 2: First Robot -->
-      <div class="timeline-item" data-text="FIRST CREATION">
-        <div class="timeline__content">
-          <img class="timeline__img" src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" alt="First robot">
-          <h2 class="timeline__content-title">Early 2023</h2>
-          <p class="timeline__content-desc">
-            After months of learning and experimenting, we built our first functional robot - a simple line-following bot. Though basic, it marked our transition from theory to practical robotics and ignited our passion for innovation.
-          </p>
+      <!-- Process Card 3: Testing & Refinement -->
+      <!-- Shows testing process and final refinements -->
+      <div class="process-card animate-on-scroll slide-up" data-phase="testing">
+        <div class="process-card-header">
+          <div class="phase-badge testing">
+            <i class="fas fa-flask"></i>
+            <span>Testing</span>
+          </div>
+          <h3 class="process-title">Perfecting <span>Performance</span></h3>
         </div>
-      </div>
-
-      <!-- Timeline Item 3: Team Growth -->
-      <div class="timeline-item" data-text="EXPANDING HORIZONS">
-        <div class="timeline__content">
-          <img class="timeline__img" src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" alt="Team collaboration">
-          <h2 class="timeline__content-title">Mid 2023</h2>
-          <p class="timeline__content-desc">
-            Word spread about our innovative approach and dedication. Our team grew to 15+ members from different engineering branches, bringing diverse skills in mechanical design, electronics, programming, and project management.
-          </p>
+        
+        <div class="process-content">
+          <!-- Testing Stages -->
+          <div class="testing-stages">
+            <div class="stage-item">
+              <div class="stage-icon">
+                <i class="fas fa-play"></i>
+              </div>
+              <h4>Functional Testing</h4>
+              <p>Basic movement and sensor validation</p>
+            </div>
+            <div class="stage-item">
+              <div class="stage-icon">
+                <i class="fas fa-tachometer-alt"></i>
+              </div>
+              <h4>Performance Testing</h4>
+              <p>Speed, accuracy, and endurance tests</p>
+            </div>
+            <div class="stage-item">
+              <div class="stage-icon">
+                <i class="fas fa-shield-alt"></i>
+              </div>
+              <h4>Stress Testing</h4>
+              <p>Competition simulation and edge cases</p>
+            </div>
+          </div>
+          
+          <!-- Process Story -->
+          <div class="process-story">
+            <p class="story-text">
+              "Testing reveals the truth about our designs. Every failure teaches us something valuable, making our robots more robust and reliable."
+            </p>
+            <div class="story-metrics">
+              <div class="metric">
+                <i class="fas fa-stopwatch"></i>
+                <span>120 hours</span>
+                <small>Testing Time</small>
+              </div>
+              <div class="metric">
+                <i class="fas fa-chart-line"></i>
+                <span>95%</span>
+                <small>Success Rate</small>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-
-      <!-- Timeline Item 4: First Competition -->
-      <div class="timeline-item" data-text="STEPPING UP">
-        <div class="timeline__content">
-          <img class="timeline__img" src="https://images.unsplash.com/photo-1531746790731-6c087fecd65a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" alt="Competition">
-          <h2 class="timeline__content-title">Late 2023</h2>
-          <p class="timeline__content-desc">
-            We participated in our first inter-college robotics competition. Despite finishing 4th, the experience taught us valuable lessons about competition pressure, time management, and the importance of robust design.
-          </p>
-        </div>
-      </div>
-
-      <!-- Timeline Item 5: Major Achievement -->
-      <div class="timeline-item" data-text="BREAKTHROUGH MOMENT">
-        <div class="timeline__content">
-          <img class="timeline__img" src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" alt="Award ceremony">
-          <h2 class="timeline__content-title">Early 2024</h2>
-          <p class="timeline__content-desc">
-            Our breakthrough came when we won 1st place at the State Level Robotics Championship with our autonomous navigation robot. This victory put Texcelerators on the map and validated our innovative approach to robotics.
-          </p>
-        </div>
-      </div>
-
-      <!-- Timeline Item 6: Current State -->
-      <div class="timeline-item" data-text="PRESENT DAY">
-        <div class="timeline__content">
-          <img class="timeline__img" src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" alt="Advanced robotics">
-          <h2 class="timeline__content-title">2024</h2>
-          <p class="timeline__content-desc">
-            Today, Texcelerators has 25+ active members, multiple award-winning robots, and partnerships with local industries. We're preparing for national competitions while mentoring the next generation of robotics enthusiasts.
-          </p>
-        </div>
+        
+       
       </div>
 
     </div>
+
+    <!-- Team Stories Section -->
+    <!-- Personal stories from team members about memorable build moments -->
+    <div class="team-stories-section animate-on-scroll">
+      <h3 class="stories-title">Stories from the <span>Workshop</span></h3>
+      
+      <div class="stories-grid">
+        <!-- Story 1: Breakthrough Moment -->
+        <div class="story-card" data-story="breakthrough">
+          <div class="story-image">
+            <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400" alt="Breakthrough moment">
+            <div class="story-overlay">
+              <button class="play-story-btn" onclick="playStory('breakthrough')">
+                <i class="fas fa-play"></i>
+              </button>
+            </div>
+          </div>
+          <div class="story-content">
+            <h4>"The 3 AM Breakthrough"</h4>
+            <p class="story-author">- Rahul, Lead Programmer</p>
+            <p class="story-preview">"After 14 hours of debugging, the robot finally moved perfectly at 3 AM. The whole team erupted in celebration..."</p>
+            <div class="story-tags">
+              <span class="tag">#NightOwl</span>
+              <span class="tag">#Breakthrough</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Story 2: Learning Experience -->
+        <div class="story-card" data-story="learning">
+          <div class="story-image">
+            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400" alt="Learning experience">
+            <div class="story-overlay">
+              <button class="play-story-btn" onclick="playStory('learning')">
+                <i class="fas fa-play"></i>
+              </button>
+            </div>
+          </div>
+          <div class="story-content">
+            <h4>"When Everything Went Wrong"</h4>
+            <p class="story-author">- Priya, Mechanical Lead</p>
+            <p class="story-preview">"Our robot fell apart during the first test. But that failure taught us more than any success could..."</p>
+            <div class="story-tags">
+              <span class="tag">#LearningMoment</span>
+              <span class="tag">#Resilience</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Story 3: Team Collaboration -->
+        <div class="story-card" data-story="teamwork">
+          <div class="story-image">
+            <img src="https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400" alt="Team collaboration">
+            <div class="story-overlay">
+              <button class="play-story-btn" onclick="playStory('teamwork')">
+                <i class="fas fa-play"></i>
+              </button>
+            </div>
+          </div>
+          <div class="story-content">
+            <h4>"Power of Collaboration"</h4>
+            <p class="story-author">- Amit, Team Captain</p>
+            <p class="story-preview">"Different perspectives, one goal. How our diverse team solved an 'impossible' design challenge..."</p>
+            <div class="story-tags">
+              <span class="tag">#Teamwork</span>
+              <span class="tag">#Innovation</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Interactive Tools Showcase -->
+    <!-- Display the tools and software we use with interactive elements -->
+    <div class="tools-showcase animate-on-scroll">
+      <h3 class="tools-title">Our Digital <span>Arsenal</span></h3>
+      
+      <div class="tools-categories">
+        <!-- Tool Category Tabs -->
+        <div class="tool-tabs">
+          <button class="tool-tab active" data-category="design" onclick="switchToolCategory('design')">
+            <i class="fas fa-drafting-compass"></i>
+            <span>Design</span>
+          </button>
+          <button class="tool-tab" data-category="programming" onclick="switchToolCategory('programming')">
+            <i class="fas fa-code"></i>
+            <span>Programming</span>
+          </button>
+          <button class="tool-tab" data-category="simulation" onclick="switchToolCategory('simulation')">
+            <i class="fas fa-play-circle"></i>
+            <span>Simulation</span>
+          </button>
+          <button class="tool-tab" data-category="analysis" onclick="switchToolCategory('analysis')">
+            <i class="fas fa-chart-bar"></i>
+            <span>Analysis</span>
+          </button>
+        </div>
+
+        <!-- Tool Content Areas -->
+        <div class="tool-content-area">
+          <!-- Design Tools -->
+          <div class="tool-category-content active" id="design-tools">
+            <div class="tools-grid-large">
+              <div class="tool-card featured" data-tool="solidworks">
+                <div class="tool-icon">
+                  <i class="fas fa-cube"></i>
+                </div>
+                <div class="tool-info">
+                  <h4>SolidWorks 2024</h4>
+                  <p>3D CAD modeling and assembly design</p>
+                  <div class="tool-stats">
+                    <span class="usage-level expert">Expert</span>
+                    <span class="usage-frequency">Daily Use</span>
+                  </div>
+                </div>
+                <button class="tool-details-btn" onclick="showToolDetails('solidworks')">
+                  <i class="fas fa-external-link-alt"></i>
+                </button>
+              </div>
+              
+              <div class="tool-card" data-tool="fusion360">
+                <div class="tool-icon">
+                  <i class="fas fa-project-diagram"></i>
+                </div>
+                <div class="tool-info">
+                  <h4>Fusion 360</h4>
+                  <p>Integrated CAD/CAM/CAE platform</p>
+                  <div class="tool-stats">
+                    <span class="usage-level intermediate">Intermediate</span>
+                    <span class="usage-frequency">Weekly</span>
+                  </div>
+                </div>
+                <button class="tool-details-btn" onclick="showToolDetails('fusion360')">
+                  <i class="fas fa-external-link-alt"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Programming Tools -->
+          <div class="tool-category-content" id="programming-tools">
+            <div class="tools-grid-large">
+              <div class="tool-card featured" data-tool="arduino">
+                <div class="tool-icon">
+                  <i class="fas fa-microchip"></i>
+                </div>
+                <div class="tool-info">
+                  <h4>Arduino IDE</h4>
+                  <p>Microcontroller programming environment</p>
+                  <div class="tool-stats">
+                    <span class="usage-level expert">Expert</span>
+                    <span class="usage-frequency">Daily Use</span>
+                  </div>
+                </div>
+                <button class="tool-details-btn" onclick="showToolDetails('arduino')">
+                  <i class="fas fa-external-link-alt"></i>
+                </button>
+              </div>
+              
+              <div class="tool-card" data-tool="python">
+                <div class="tool-icon">
+                  <i class="fab fa-python"></i>
+                </div>
+                <div class="tool-info">
+                  <h4>Python</h4>
+                  <p>AI algorithms and data processing</p>
+                  <div class="tool-stats">
+                    <span class="usage-level expert">Expert</span>
+                    <span class="usage-frequency">Daily Use</span>
+                  </div>
+                </div>
+                <button class="tool-details-btn" onclick="showToolDetails('python')">
+                  <i class="fas fa-external-link-alt"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Simulation Tools -->
+          <div class="tool-category-content" id="simulation-tools">
+            <div class="tools-grid-large">
+              <div class="tool-card featured" data-tool="gazebo">
+                <div class="tool-icon">
+                  <i class="fas fa-play-circle"></i>
+                </div>
+                <div class="tool-info">
+                  <h4>Gazebo Simulator</h4>
+                  <p>3D robot simulation environment</p>
+                  <div class="tool-stats">
+                    <span class="usage-level intermediate">Intermediate</span>
+                    <span class="usage-frequency">Weekly</span>
+                  </div>
+                </div>
+                <button class="tool-details-btn" onclick="showToolDetails('gazebo')">
+                  <i class="fas fa-external-link-alt"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Analysis Tools -->
+          <div class="tool-category-content" id="analysis-tools">
+            <div class="tools-grid-large">
+              <div class="tool-card featured" data-tool="matlab">
+                <div class="tool-icon">
+                  <i class="fas fa-chart-bar"></i>
+                </div>
+                <div class="tool-info">
+                  <h4>MATLAB</h4>
+                  <p>Mathematical modeling and analysis</p>
+                  <div class="tool-stats">
+                    <span class="usage-level intermediate">Intermediate</span>
+                    <span class="usage-frequency">Project-based</span>
+                  </div>
+                </div>
+                <button class="tool-details-btn" onclick="showToolDetails('matlab')">
+                  <i class="fas fa-external-link-alt"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
 
