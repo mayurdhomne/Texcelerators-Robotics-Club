@@ -419,13 +419,29 @@ function showStoryModal(storyId) {
   // Story content database - customize these stories for your team
   const stories = {
     breakthrough: {
-      title: "The 3 AM Breakthrough",
-      author: "Rahul, Lead Programmer",
-      fullText: `It was 3 AM and we'd been debugging for 14 straight hours. The robot would move forward but kept veering left during autonomous mode. We tried everything - sensor calibration, motor adjustments, even rewrote the entire navigation algorithm.
+      title: "🚤 When the Waters Turned",
+      author: "Ashutosh Maske , Mentor",
+      fullText: `We thought we had it figured out.
+After weeks of prototypes — from foam floats to sleek carbon shells — we had a lineup of RC boats that looked fast, felt powerful, and screamed potential.
+Except for one thing: the turn.
 
-Then Sarah noticed something in the debug output that we'd all missed. A single line of code where we were reading the gyroscope data incorrectly. One small fix, and suddenly our robot was moving perfectly straight.
+No matter how hard we pushed, the turning radius just wouldn’t tighten. We'd glide fast, but wide — too wide. And while some of us kept tweaking rudder angles, others simply practiced longer, adapting to the curve.
 
-The whole team erupted in celebration. That moment taught us that sometimes the biggest problems have the smallest solutions, and that fresh eyes can see what tired ones miss.`,
+It was fine. Not perfect, but fine.
+
+And then, just a week before we were set to leave for IIT Bombay 🧳 — when the tension was high and changes seemed too risky — something happened.
+
+Two quiet members from our boat squad, working mostly under the radar, rolled out a fresh design.
+No noise. No fuss. Just precision.
+
+The new boat was leaner, lighter, and cut through turns like it was reading our minds.
+It didn’t just handle better — it flipped our mindset.
+
+While we were working to fix a problem, they had quietly reimagined the solution.
+That boat didn’t just corner tight.
+It cornered everything we thought we knew. 🌊⚙️
+
+`,
       image: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
       timestamp: "3:00 AM - March 15th, 2024",
       tags: ["Debugging", "Breakthrough", "Teamwork"]

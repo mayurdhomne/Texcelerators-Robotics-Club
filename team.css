@@ -287,10 +287,7 @@
     transition: right 0.3s ease;
   }
   
-  /* Move robot assistant when sidebar is active */
-  body.sidebar-active .robot-assistant {
-    right: 110px; /* Move it past the sidebar */
-  }
+
   
   .robot-assistant-icon {
     width: 60px;
@@ -460,10 +457,7 @@
     font-size: 20px;
   }
   
-  /* Adjust back-to-top position when sidebar is active */
-  body.sidebar-active .back-to-top {
-    right: 110px;
-  }
+
   
   /* Mobile adjustments */
   @media (max-width: 768px) {

@@ -202,60 +202,58 @@
 }
 
 /* ===== MOBILE NAVIGATION ===== */
-/* ===== MOBILE LOGO SIZE ENHANCEMENT ===== */
+/* ===== MOBILE NAVIGATION ===== */
 .mobile-center {
-  align-items: center !important;
-  gap: 0.8rem !important;  /* Reduced gap to prevent pushing menu button */
-  flex: 1 !important;
-  justify-content: flex-start !important;
-  padding-left: 0.5rem !important;  /* Reduced padding */
-  max-width: calc(100% - 100px) !important;  /* Ensure space for menu button */
+  display: none;
+  align-items: center;
+  gap: 1rem;
+  flex: 1;
+  justify-content: flex-start;
+  padding-left: 1rem;
 }
 
+/* Mobile Logo Containers */
 .mobile-college-logo,
 .mobile-club-logo {
-  width: 55px !important;  /* Slightly smaller to fit better */
-  height: 55px !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  flex-shrink: 0 !important;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
 }
 
 .mobile-college-logo img,
 .mobile-club-logo img {
-  width: 100% !important;
-  height: 100% !important;
-  object-fit: contain !important;
-  border-radius: 6px !important;
-  border: none !important;
-  outline: none !important;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 4px;
 }
 
+/* Mobile Text */
 .mobile-text {
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: flex-start !important;
-  min-width: 0 !important;  /* Prevent text overflow */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .mobile-title {
-  font-size: 1.1rem !important;  /* Slightly smaller to fit */
-  font-weight: bold !important;
-  font-family: 'Space Grotesk', sans-serif !important;
-  color: var(--foreground) !important;
-  white-space: nowrap !important;
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-family: 'Space Grotesk', sans-serif;
+  color: var(--foreground);
 }
 
 .mobile-subtitle {
-  font-size: 0.7rem !important;
-  font-family: 'Outfit', sans-serif !important;
-  color: var(--muted-foreground) !important;
-  text-transform: uppercase !important;
-  letter-spacing: 1px !important;
-  margin-top: -2px !important;
-  white-space: nowrap !important;
+  font-size: 0.7rem;
+  font-family: 'Outfit', sans-serif;
+  color: var(--muted-foreground);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: -2px;
 }
+
 
 /* ===== HAMBURGER MENU ===== */
 .hamburger-container {
