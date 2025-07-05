@@ -420,7 +420,7 @@ function showStoryModal(storyId) {
   const stories = {
     breakthrough: {
       title: "🚤 When the Waters Turned",
-      author: "Ashutosh Maske , Mentor",
+      author: "Palak Khonde, Core Member",
       fullText: `We thought we had it figured out.
 After weeks of prototypes — from foam floats to sleek carbon shells — we had a lineup of RC boats that looked fast, felt powerful, and screamed potential.
 Except for one thing: the turn.
@@ -442,20 +442,28 @@ That boat didn’t just corner tight.
 It cornered everything we thought we knew. 🌊⚙️
 
 `,
-      image: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+      image: "Assets/images/Robots/Story/Sail.jpg",
       timestamp: "3:00 AM - March 15th, 2024",
       tags: ["Debugging", "Breakthrough", "Teamwork"]
     },
     learning: {
-      title: "When Everything Went Wrong",
-      author: "Priya, Mechanical Lead",
-      fullText: `Our first prototype was a disaster. During the initial test, the chassis literally fell apart, motors stopped working, and the sensors gave random readings. It was embarrassing.
+      title: "🚫 No Backup. No Victory.",
+      author: "Ashutosh Maske, Mentor",
+      fullText: `The night before Technex, around 7 PM, what was meant to be a final check turned into a moment we’ll never forget. During testing at our college, our most reliable bot — the one that had powered through every challenge over the past six months — suddenly slammed into an iron chair while reversing.
 
-But that failure was the best thing that happened to us. It forced us to question every design decision, research better materials, and understand the physics behind our mechanisms.
+In an instant, its acrylic chassis cracked from the front-right. The damage was irreversible. With no way to rejoin the broken parts and no backup ready, panic quickly replaced confidence.
 
-Three weeks later, we built a robot that was 10x better than our original design. Sometimes you need to fail spectacularly to succeed brilliantly.`,
-      image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
-      timestamp: "2:30 PM - January 28th, 2024",
+We had trusted that bot like a teammate. But in that trust, we’d overlooked routine checkups. The constant wear had taken its toll, silently weakening it — and we failed to notice.
+
+That night, a few of us stayed up working tirelessly, trying to salvage what we could. But no quick fix could undo months of fatigue or our lack of preparation.
+
+We couldn’t give our best at Overdrive. And we didn’t win.
+
+But that loss became a turning point. It taught us what no victory ever could: that reliability isn’t just built — it’s maintained. And that behind every successful run lies discipline, foresight, and a team that learns from its setbacks.
+
+`,
+      image: "assets/images/Robots/Story/Acrylic.png",
+      timestamp: "8:00 PM - January 19th, 2025",
       tags: ["Learning", "Failure", "Growth"]
     },
     teamwork: {
