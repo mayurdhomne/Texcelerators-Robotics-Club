@@ -156,6 +156,54 @@ body {
   margin-top: -2px;
 }
 
+/* ===== SVPCET BANNER SPECIFIC STYLING ===== */
+.svpcet-banner {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  height: auto !important;
+  max-width: none !important;
+  flex-shrink: 0;
+}
+
+.svpcet-banner-img {
+  height: 220px !important;
+  width: auto !important;
+  max-width: 500px !important;
+  object-fit: contain !important;
+  transition: transform 0.3s ease !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+}
+
+.svpcet-banner-img:hover {
+  transform: scale(1.08) !important;
+}
+
+/* Responsive for SVPCET Banner */
+@media (max-width: 1200px) {
+  .svpcet-banner-img {
+    height: 180px !important;
+    max-width: 420px !important;
+  }
+}
+
+@media (max-width: 992px) {
+  .svpcet-banner-img {
+    height: 150px !important;
+    max-width: 350px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .svpcet-banner {
+    display: none !important;
+  }
+}
+
+
 /* ===== MOBILE NAVIGATION ===== */
 .mobile-center {
   display: none;
