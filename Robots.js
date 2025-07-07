@@ -467,16 +467,27 @@ But that loss became a turning point. It taught us what no victory ever could: t
       tags: ["Learning", "Failure", "Growth"]
     },
     teamwork: {
-      title: "Power of Collaboration",
+      title: "⚙️ From Chaos to Combat",
       author: "Amit, Team Captain",
-      fullText: `We had an 'impossible' design challenge: create a mechanism that could pick up objects of different shapes and sizes with 90% accuracy. Individual approaches weren't working.
+      fullText: `When we stepped into BITS Pilani Goa for Quark 2025, we were already racing the clock.
+Not a single bot was ready — and three events were just hours away: Robo Race 🏎️, Robo Soccer ⚽, and Robo Sumo 🤖.
 
-Then we tried something different. Instead of one person leading, we made it a true collaborative effort. The mechanical team designed the physical gripper, programmers created adaptive algorithms, and the electronics team built smart sensors.
+But this time, we didn’t panic.
+We remembered what went wrong before — when poor coordination and missing backups had cost us dearly 🧠.
+We’d promised ourselves: never again.
 
-The result? A gripper that exceeded our 90% target and reached 96% accuracy. It showed us that diverse perspectives aren't just nice to have - they're essential for innovation.`,
-      image: "https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+So we built — together 🤝.
+Some shaped claws for Soccer, others carved wedges for Sumo, some worked endlessly on motor assemblies 🔧.
+Hours blurred 🌙. Palms ached. But the team held strong.
+
+When the arenas opened, we entered all three 💥.
+We fought hard in Race and Soccer. But in Robo Sumo, our bot stood its ground — and brought home 🥉 3rd place.
+
+We didn’t just build machines that night.
+We built trust, confidence — and a team we could finally be proud of 💪. `,
+      image: "assets/images/Robots/Story/Quark.jpg",
       timestamp: "4:45 PM - February 10th, 2024",
-      tags: ["Collaboration", "Innovation", "Success"]
+      tags: ["Collaboration", "Team Spirit", "Success"]   
     }
   };
   
@@ -562,182 +573,182 @@ function initializeStoryPlayback() {
     }
   });
 }
-
+// ===== FOR FUTURE USE =====
 // ===== TOOL SHOWCASE FUNCTIONALITY =====
-// Handles tool category switching and details display
-function switchToolCategory(category) {
-  // Update active tab
-  const tabs = document.querySelectorAll('.tool-tab');
-  tabs.forEach(tab => {
-    tab.classList.remove('active');
-    if (tab.getAttribute('data-category') === category) {
-      tab.classList.add('active');
-    }
-  });
+// // Handles tool category switching and details display
+// function switchToolCategory(category) {
+//   // Update active tab
+//   const tabs = document.querySelectorAll('.tool-tab');
+//   tabs.forEach(tab => {
+//     tab.classList.remove('active');
+//     if (tab.getAttribute('data-category') === category) {
+//       tab.classList.add('active');
+//     }
+//   });
   
-  // Update active content
-  const contents = document.querySelectorAll('.tool-category-content');
-  contents.forEach(content => {
-    content.classList.remove('active');
-    if (content.id === category + '-tools') {
-      content.classList.add('active');
-    }
-  });
+//   // Update active content
+//   const contents = document.querySelectorAll('.tool-category-content');
+//   contents.forEach(content => {
+//     content.classList.remove('active');
+//     if (content.id === category + '-tools') {
+//       content.classList.add('active');
+//     }
+//   });
   
-  // Add smooth transition effect
-  const activeContent = document.querySelector('.tool-category-content.active');
-  if (activeContent) {
-    activeContent.style.opacity = '0';
-    setTimeout(() => {
-      activeContent.style.opacity = '1';
-    }, 150);
-  }
-}
+//   // Add smooth transition effect
+//   const activeContent = document.querySelector('.tool-category-content.active');
+//   if (activeContent) {
+//     activeContent.style.opacity = '0';
+//     setTimeout(() => {
+//       activeContent.style.opacity = '1';
+//     }, 150);
+//   }
+// }
 
-function showToolDetails(toolId) {
-  // Tool information database - customize for your actual tools
-  const toolDetails = {
-    solidworks: {
-      name: "SolidWorks 2024",
-      description: "Professional 3D CAD software for mechanical design",
-      website: "https://www.solidworks.com",
-      features: ["3D Modeling", "Assembly Design", "Simulation", "Rendering"],
-      usedFor: "Robot chassis design, mechanism modeling, stress analysis"
-    },
-    fusion360: {
-      name: "Fusion 360",
-      description: "Cloud-based 3D CAD/CAM/CAE platform",
-      website: "https://www.autodesk.com/products/fusion-360",
-      features: ["Integrated CAD/CAM", "Cloud Collaboration", "Simulation"],
-      usedFor: "Collaborative design, manufacturing preparation"
-    },
-    arduino: {
-      name: "Arduino IDE",
-      description: "Integrated development environment for Arduino boards",
-      website: "https://www.arduino.cc",
-      features: ["Code Editor", "Library Manager", "Serial Monitor"],
-      usedFor: "Microcontroller programming, sensor integration"
-    },
-    python: {
-      name: "Python",
-      description: "High-level programming language for AI and automation",
-      website: "https://www.python.org",
-      features: ["Machine Learning", "Computer Vision", "Data Analysis"],
-      usedFor: "AI algorithms, image processing, automation scripts"
-    },
-    gazebo: {
-      name: "Gazebo Simulator",
-      description: "3D robotics simulation environment",
-      website: "http://gazebosim.org",
-      features: ["Physics Simulation", "Sensor Modeling", "Multi-robot"],
-      usedFor: "Robot testing, algorithm validation, virtual competitions"
-    },
-    matlab: {
-      name: "MATLAB",
-      description: "Technical computing platform for analysis and design",
-      website: "https://www.mathworks.com/products/matlab.html",
-      features: ["Mathematical Modeling", "Data Analysis", "Visualization"],
-      usedFor: "Control system design, signal processing, data analysis"
-    }
-  };
+// function showToolDetails(toolId) {
+//   // Tool information database - customize for your actual tools
+//   const toolDetails = {
+//     solidworks: {
+//       name: "SolidWorks 2024",
+//       description: "Professional 3D CAD software for mechanical design",
+//       website: "https://www.solidworks.com",
+//       features: ["3D Modeling", "Assembly Design", "Simulation", "Rendering"],
+//       usedFor: "Robot chassis design, mechanism modeling, stress analysis"
+//     },
+//     fusion360: {
+//       name: "Fusion 360",
+//       description: "Cloud-based 3D CAD/CAM/CAE platform",
+//       website: "https://www.autodesk.com/products/fusion-360",
+//       features: ["Integrated CAD/CAM", "Cloud Collaboration", "Simulation"],
+//       usedFor: "Collaborative design, manufacturing preparation"
+//     },
+//     arduino: {
+//       name: "Arduino IDE",
+//       description: "Integrated development environment for Arduino boards",
+//       website: "https://www.arduino.cc",
+//       features: ["Code Editor", "Library Manager", "Serial Monitor"],
+//       usedFor: "Microcontroller programming, sensor integration"
+//     },
+//     python: {
+//       name: "Python",
+//       description: "High-level programming language for AI and automation",
+//       website: "https://www.python.org",
+//       features: ["Machine Learning", "Computer Vision", "Data Analysis"],
+//       usedFor: "AI algorithms, image processing, automation scripts"
+//     },
+//     gazebo: {
+//       name: "Gazebo Simulator",
+//       description: "3D robotics simulation environment",
+//       website: "http://gazebosim.org",
+//       features: ["Physics Simulation", "Sensor Modeling", "Multi-robot"],
+//       usedFor: "Robot testing, algorithm validation, virtual competitions"
+//     },
+//     matlab: {
+//       name: "MATLAB",
+//       description: "Technical computing platform for analysis and design",
+//       website: "https://www.mathworks.com/products/matlab.html",
+//       features: ["Mathematical Modeling", "Data Analysis", "Visualization"],
+//       usedFor: "Control system design, signal processing, data analysis"
+//     }
+//   };
   
-  const tool = toolDetails[toolId];
-  if (!tool) return;
+//   const tool = toolDetails[toolId];
+//   if (!tool) return;
   
-  // Create tool details modal
-  const modalHTML = `
-    <div class="tool-modal-overlay" onclick="closeToolModal()">
-      <div class="tool-modal" onclick="event.stopPropagation()">
-        <button class="tool-modal-close" onclick="closeToolModal()">
-          <i class="fas fa-times"></i>
-        </button>
-        <div class="tool-modal-header">
-          <h3>${tool.name}</h3>
-          <p>${tool.description}</p>
-          <a href="${tool.website}" target="_blank" class="tool-website-link">
-            <i class="fas fa-external-link-alt"></i> Visit Website
-          </a>
-        </div>
-        <div class="tool-modal-content">
-          <div class="tool-modal-section">
-            <h4>Key Features</h4>
-            <ul class="tool-features-list">
-              ${tool.features.map(feature => `<li>${feature}</li>`).join('')}
-            </ul>
-          </div>
-          <div class="tool-modal-section">
-            <h4>How We Use It</h4>
-            <p>${tool.usedFor}</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  `;
+//   // Create tool details modal
+//   const modalHTML = `
+//     <div class="tool-modal-overlay" onclick="closeToolModal()">
+//       <div class="tool-modal" onclick="event.stopPropagation()">
+//         <button class="tool-modal-close" onclick="closeToolModal()">
+//           <i class="fas fa-times"></i>
+//         </button>
+//         <div class="tool-modal-header">
+//           <h3>${tool.name}</h3>
+//           <p>${tool.description}</p>
+//           <a href="${tool.website}" target="_blank" class="tool-website-link">
+//             <i class="fas fa-external-link-alt"></i> Visit Website
+//           </a>
+//         </div>
+//         <div class="tool-modal-content">
+//           <div class="tool-modal-section">
+//             <h4>Key Features</h4>
+//             <ul class="tool-features-list">
+//               ${tool.features.map(feature => `<li>${feature}</li>`).join('')}
+//             </ul>
+//           </div>
+//           <div class="tool-modal-section">
+//             <h4>How We Use It</h4>
+//             <p>${tool.usedFor}</p>
+//           </div>
+//         </div>
+//       </div>
+//     </div>
+//   `;
   
-  // Add modal to page
-  document.body.insertAdjacentHTML('beforeend', modalHTML);
+//   // Add modal to page
+//   document.body.insertAdjacentHTML('beforeend', modalHTML);
   
-  // Add entrance animation
-  const modal = document.querySelector('.tool-modal-overlay');
-  setTimeout(() => {
-    modal.style.opacity = '1';
-    modal.querySelector('.tool-modal').style.transform = 'scale(1)';
-  }, 10);
-}
+//   // Add entrance animation
+//   const modal = document.querySelector('.tool-modal-overlay');
+//   setTimeout(() => {
+//     modal.style.opacity = '1';
+//     modal.querySelector('.tool-modal').style.transform = 'scale(1)';
+//   }, 10);
+// }
 
-function closeToolModal() {
-  const modal = document.querySelector('.tool-modal-overlay');
-  if (modal) {
-    modal.style.opacity = '0';
-    modal.querySelector('.tool-modal').style.transform = 'scale(0.9)';
-    setTimeout(() => {
-      modal.remove();
-    }, 300);
-  }
-}
+// function closeToolModal() {
+//   const modal = document.querySelector('.tool-modal-overlay');
+//   if (modal) {
+//     modal.style.opacity = '0';
+//     modal.querySelector('.tool-modal').style.transform = 'scale(0.9)';
+//     setTimeout(() => {
+//       modal.remove();
+//     }, 300);
+//   }
+// }
 
-function initializeToolShowcase() {
-  // Add click handlers for tool tabs
-  const toolTabs = document.querySelectorAll('.tool-tab');
-  toolTabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-      const category = tab.getAttribute('data-category');
-      if (category) {
-        switchToolCategory(category);
-      }
-    });
+// function initializeToolShowcase() {
+//   // Add click handlers for tool tabs
+//   const toolTabs = document.querySelectorAll('.tool-tab');
+//   toolTabs.forEach(tab => {
+//     tab.addEventListener('click', () => {
+//       const category = tab.getAttribute('data-category');
+//       if (category) {
+//         switchToolCategory(category);
+//       }
+//     });
     
-    // Add keyboard accessibility
-    tab.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
-        tab.click();
-      }
-    });
-  });
+//     // Add keyboard accessibility
+//     tab.addEventListener('keydown', (e) => {
+//       if (e.key === 'Enter' || e.key === ' ') {
+//         e.preventDefault();
+//         tab.click();
+//       }
+//     });
+//   });
   
-  // Add click handlers for tool detail buttons
-  const toolDetailButtons = document.querySelectorAll('.tool-details-btn');
-  toolDetailButtons.forEach(button => {
-    const toolCard = button.closest('.tool-card');
-    if (toolCard) {
-      const toolId = toolCard.getAttribute('data-tool');
-      if (toolId) {
-        button.addEventListener('click', (e) => {
-          e.stopPropagation();
-          showToolDetails(toolId);
-        });
-      }
-    }
-  });
+//   // Add click handlers for tool detail buttons
+//   const toolDetailButtons = document.querySelectorAll('.tool-details-btn');
+//   toolDetailButtons.forEach(button => {
+//     const toolCard = button.closest('.tool-card');
+//     if (toolCard) {
+//       const toolId = toolCard.getAttribute('data-tool');
+//       if (toolId) {
+//         button.addEventListener('click', (e) => {
+//           e.stopPropagation();
+//           showToolDetails(toolId);
+//         });
+//       }
+//     }
+//   });
   
-  // Add escape key handler for tool modal
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') {
-      closeToolModal();
-    }
-  });
-}
+//   // Add escape key handler for tool modal
+//   document.addEventListener('keydown', (e) => {
+//     if (e.key === 'Escape') {
+//       closeToolModal();
+//     }
+//   });
+// }
 
 // ===== RESPONSIVE FEATURES =====
 // Handle responsive behavior for mobile devices
@@ -873,3 +884,4 @@ document.addEventListener('DOMContentLoaded', function() {
   // Add this to your existing initialization
   initializeBackToTop();
 });
+
