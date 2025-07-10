@@ -420,7 +420,7 @@ function showStoryModal(storyId) {
   const stories = {
     breakthrough: {
       title: "🚤 When the Waters Turned",
-      author: "Palak Khonde, Core Member",
+      author: ", Core Member",
       fullText: `We thought we had it figured out.
 After weeks of prototypes — from foam floats to sleek carbon shells — we had a lineup of RC boats that looked fast, felt powerful, and screamed potential.
 Except for one thing: the turn.
@@ -443,7 +443,7 @@ It cornered everything we thought we knew. 🌊⚙️
 
 `,
       image: "Assets/images/Robots/Story/Sail.jpg",
-      timestamp: "3:00 AM - March 15th, 2024",
+      timestamp: "9:00 PM - March 15th, 2024",
       tags: ["Debugging", "Breakthrough", "Teamwork"]
     },
     learning: {
