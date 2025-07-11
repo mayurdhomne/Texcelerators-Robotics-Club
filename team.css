@@ -141,9 +141,6 @@
     transition: transform 0.3s ease;
   }
   
-  .logo-image:hover {
-    transform: scale(1.1);
-  }
   
   .logo-image img,
   .sidebar-logo img {
@@ -162,8 +159,7 @@
   }
   
   .logo-text {
-    font-size: 1.5rem;
-    font-weight: bold;
+    font-size: 1.8rem;
     font-family: 'Equinox', sans-serif;
     margin: 0;
   }
@@ -173,7 +169,7 @@
   }
   
   .tagline {
-    font-size: 0.8rem;
+    font-size: 1rem;
     font-family: 'Equinox', sans-serif;
     font-weight: 400;
     color: rgba(148, 163, 184, 0.8);
@@ -365,6 +361,71 @@
     font-size: 1rem;
   }
   
+
+    /* College Logo Styling (Left Side) */
+.navbar-text.left-text img {
+  height: 220px; /* Adjust height as needed */
+  width: auto; /* Maintain aspect ratio */
+  max-width: 400px; /* Maximum width to prevent overflow */
+  object-fit: contain;
+  margin-left: -7.5rem; /* Keeps the Banner towards the left */
+}
+
+
+
+/* Responsive adjustments for the left college logo */
+@media (max-width: 1200px) {
+  .navbar-text.left-text img {
+    height: 50px;
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 992px) {
+  .navbar-text.left-text img {
+    height: 45px;
+    max-width: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-text.left-text {
+    display: none; /* Hide on mobile as it's in mobile-center */
+  }
+}
+  
+  /* College Logo Styling */
+.navbar-text.right-text img {
+  height: 150px; /* Adjust height as needed */
+  width: auto; /* Maintain aspect ratio */
+  max-width: 350px; /* Maximum width to prevent overflow */
+  object-fit: contain;
+
+}
+
+
+
+/* Responsive adjustments for the college logo */
+@media (max-width: 1200px) {
+  .navbar-text.right-text img {
+    height: 50px;
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 992px) {
+  .navbar-text.right-text img {
+    height: 45px;
+    max-width: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-text.right-text {
+    display: none; /* Hide on mobile as it's in mobile-center */
+  }
+}
+
   /* ===============================
      5. SIDEBAR NAVIGATION
      =============================== */
@@ -1193,120 +1254,9 @@
 } 
  
 
-  /* College Logo Styling (Left Side) */
-.navbar-text.left-text img {
-  height: 150px; /* Adjust height as needed */
-  width: auto; /* Maintain aspect ratio */
-  max-width: 350px; /* Maximum width to prevent overflow */
-  object-fit: contain;
-  transition: transform 0.3s ease;
-}
-
-.navbar-text.left-text img:hover {
-  transform: scale(1.05);
-}
-
-/* Responsive adjustments for the left college logo */
-@media (max-width: 1200px) {
-  .navbar-text.left-text img {
-    height: 50px;
-    max-width: 250px;
-  }
-}
-
-@media (max-width: 992px) {
-  .navbar-text.left-text img {
-    height: 45px;
-    max-width: 200px;
-  }
-}
-
-@media (max-width: 768px) {
-  .navbar-text.left-text {
-    display: none; /* Hide on mobile as it's in mobile-center */
-  }
-}
-  
-  /* College Logo Styling */
-.navbar-text.right-text img {
-  height: 150px; /* Adjust height as needed */
-  width: auto; /* Maintain aspect ratio */
-  max-width: 350px; /* Maximum width to prevent overflow */
-  object-fit: contain;
-  transition: transform 0.3s ease;
-}
-
-.navbar-text.right-text img:hover {
-  transform: scale(1.05);
-}
-
-/* Responsive adjustments for the college logo */
-@media (max-width: 1200px) {
-  .navbar-text.right-text img {
-    height: 50px;
-    max-width: 250px;
-  }
-}
-
-@media (max-width: 992px) {
-  .navbar-text.right-text img {
-    height: 45px;
-    max-width: 200px;
-  }
-}
-
-@media (max-width: 768px) {
-  .navbar-text.right-text {
-    display: none; /* Hide on mobile as it's in mobile-center */
-  }
-}
 
 /* ===== SVPCET BANNER SPECIFIC STYLING ===== */
-.svpcet-banner {
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  height: auto !important;
-  max-width: none !important;
-  flex-shrink: 0;
-}
 
-.svpcet-banner-img {
-  height: 220px !important;
-  width: auto !important;
-  max-width: 500px !important;
-  object-fit: contain !important;
-  transition: transform 0.3s ease !important;
-  border: none !important;
-  outline: none !important;
-  box-shadow: none !important;
-  background: transparent !important;
-}
-
-.svpcet-banner-img:hover {
-  transform: scale(1.08) !important;
-}
-
-/* Responsive for SVPCET Banner */
-@media (max-width: 1200px) {
-  .svpcet-banner-img {
-    height: 180px !important;
-    max-width: 420px !important;
-  }
-}
-
-@media (max-width: 992px) {
-  .svpcet-banner-img {
-    height: 150px !important;
-    max-width: 350px !important;
-  }
-}
-
-@media (max-width: 768px) {
-  .svpcet-banner {
-    display: none !important;
-  }
-}
 
   /* ===============================
      4. COMMON TEAM SECTION STYLES

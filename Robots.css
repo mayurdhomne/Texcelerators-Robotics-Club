@@ -154,52 +154,32 @@
   margin-top: -2px;
 }
 
-/* ===== SVPCET BANNER SPECIFIC STYLING ===== */
-.svpcet-banner {
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  height: auto !important;
-  max-width: none !important;
-  flex-shrink: 0;
+.navbar-text.left-text img {
+  height: 180px;
+  width: auto;
+  max-width: 400px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
 }
 
-.svpcet-banner-img {
-  height: 220px !important;
-  width: auto !important;
-  max-width: 500px !important;
-  object-fit: contain !important;
-  transition: transform 0.3s ease !important;
-  border: none !important;
-  outline: none !important;
-  box-shadow: none !important;
-  background: transparent !important;
+/* Group left side elements together */
+.navbar-logo.left-logo {
+  margin-right: -1rem;
 }
 
-.svpcet-banner-img:hover {
-  transform: scale(1.08) !important;
+.navbar-text.left-text {
+  margin-left: -7.5rem;
 }
 
-/* Responsive for SVPCET Banner */
-@media (max-width: 1200px) {
-  .svpcet-banner-img {
-    height: 180px !important;
-    max-width: 420px !important;
-  }
+/* Group right side elements together */
+.navbar-text.right-text {
+  margin-right: -4rem;
 }
 
-@media (max-width: 992px) {
-  .svpcet-banner-img {
-    height: 150px !important;
-    max-width: 350px !important;
-  }
+.navbar-logo.right-logo {
+  margin-left: -1rem;
 }
 
-@media (max-width: 768px) {
-  .svpcet-banner {
-    display: none !important;
-  }
-}
 
 /* ===== MOBILE NAVIGATION ===== */
 /* ===== MOBILE NAVIGATION ===== */
@@ -523,6 +503,21 @@
 @media (max-width: 768px) {
   .navbar-text.left-text {
     display: none; /* Hide on mobile as it's in mobile-center */
+  }
+}
+
+/* Responsive adjustments for the left college logo */
+@media (max-width: 1200px) {
+  .navbar-text.left-text img {
+    height: 50px;
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 992px) {
+  .navbar-text.left-text img {
+    height: 45px;
+    max-width: 200px;
   }
 }
 
