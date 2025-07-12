@@ -1359,6 +1359,15 @@
     text-transform: uppercase;
     letter-spacing: 0.5px;
   }
+
+  .team-class {
+    font-size: 0.875rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
   
   .team-bio {
     font-size: 0.875rem;
