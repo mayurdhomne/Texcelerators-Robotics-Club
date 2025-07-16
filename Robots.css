@@ -2351,3 +2351,7 @@ body.sidebar-active #main-content {
     font-size: 1.5rem;
   }
 }
+
+.bg-instagram {
+  background-color: #c32aa3;
+}

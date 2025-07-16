@@ -1984,3 +1984,7 @@
           grid-template-columns: 1fr;
         }
       }
+
+      .bg-instagram {
+        background-color: #c32aa3;
+      }
